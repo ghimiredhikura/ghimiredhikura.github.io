@@ -1108,7 +1108,7 @@ h3 {
   align-content: center;
   justify-items: center;
   min-height: 190px;
-  padding: 18px 14px;
+  padding: 4px;
   border-right: 1px solid var(--line);
   background:
     linear-gradient(135deg, rgba(143, 29, 24, 0.08), transparent 44%),
@@ -1119,6 +1119,19 @@ h3 {
 .pub-visual .pub-icon {
   width: 82px;
   height: 82px;
+}
+
+.pub-abstract {
+  width: 100%;
+  max-width: 200px;
+  aspect-ratio: 3 / 2;
+  margin-bottom: 8px;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  object-fit: contain;
+  padding: 0;
+  box-shadow: none;
 }
 
 .pub-visual em {
