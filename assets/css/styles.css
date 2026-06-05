@@ -1820,9 +1820,18 @@ h3 {
 
   .timeline-meta {
     grid-column: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     justify-items: start;
+    gap: 10px;
     padding-top: 0;
     text-align: left;
+  }
+
+  .timeline-meta span {
+    min-width: 0;
+    white-space: nowrap;
   }
 
   .timeline-content {
