@@ -743,7 +743,7 @@ h3 {
   grid-column: 3;
   position: relative;
   margin-bottom: 7px;
-  padding: 14px 94px 14px 16px;
+  padding: 14px 16px;
   border: 1px solid var(--line);
   border-radius: var(--radius);
   background: var(--surface);
@@ -763,19 +763,22 @@ h3 {
   line-height: 1.25;
 }
 
-.timeline-content > p:not(.timeline-org) {
+.timeline-summary-row {
   margin-bottom: 0;
+}
+
+.timeline-summary-row p {
+  display: inline;
+  margin: 0 8px 0 0;
+  color: var(--muted);
   line-height: 1.55;
 }
 
 .timeline details {
-  margin-top: 0;
+  display: inline;
 }
 
 .timeline summary {
-  position: absolute;
-  top: 12px;
-  right: 12px;
   display: inline-flex;
   align-items: center;
   min-height: 26px;
@@ -806,6 +809,7 @@ h3 {
 }
 
 .timeline ul {
+  display: block;
   margin: 12px 0 0;
   padding-left: 18px;
   color: var(--muted);
@@ -1974,7 +1978,6 @@ h3 {
 
   .timeline-content {
     grid-column: 2;
-    padding-right: 86px;
   }
 
   .timeline-meta .timeline-date {
@@ -2037,23 +2040,30 @@ h3 {
 
   .professional-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
   }
 
   .professional-grid a:not(.consulting-profile) {
-    min-height: 72px;
-    padding: 9px 6px;
+    min-width: 0;
+    min-height: 68px;
+    padding: 8px 4px;
     flex-direction: column;
     justify-content: center;
-    gap: 6px;
-    font-size: 0.75rem;
-    line-height: 1.15;
+    gap: 5px;
+    font-size: 0.68rem;
+    line-height: 1.1;
     text-align: center;
   }
 
+  .professional-grid a:not(.consulting-profile) span:last-child {
+    width: 100%;
+    overflow-wrap: anywhere;
+  }
+
   .professional-grid a:not(.consulting-profile) .text-logo {
-    width: 30px;
-    height: 30px;
-    font-size: 0.78rem;
+    width: 28px;
+    height: 28px;
+    font-size: 0.72rem;
   }
 
   .metrics-band {
