@@ -53,15 +53,22 @@
                 </div>
                 <div>
                   <dt>Authors</dt>
-                  <dd>Deepak Ghimire, Dayoung Kil, Seonghwan Jeong, Jaesik Park, Seong-heum Kim</dd>
+                  <dd class="author-list">Deepak Ghimire<sup>1</sup>, Dayoung Kil<sup>2</sup>, Seonghwan Jeong<sup>1</sup>, Jaesik Park<sup>3</sup>, Seong-heum Kim<sup>2,*</sup></dd>
                 </div>
                 <div>
                   <dt>Affiliations</dt>
-                  <dd>IT Application Research Center, Korea Electronics Technology Institute; Department of Intelligent Semiconductors, Soongsil University; Department of Computer Science &amp; Engineering, Seoul National University.</dd>
+                  <dd>
+                    <ol class="affiliation-list">
+                      <li>IT Application Research Center, Korea Electronics Technology Institute</li>
+                      <li>Department of Intelligent Semiconductors, Soongsil University</li>
+                      <li>Department of Computer Science &amp; Engineering, Seoul National University</li>
+                    </ol>
+                    <span class="corresponding-note">* Corresponding author</span>
+                  </dd>
                 </div>
                 <div>
-                  <dt>Abstract Summary</dt>
-                  <dd>The paper introduces a one-cycle structured pruning framework that combines pre-training, pruning, and fine-tuning into a single training cycle. It searches for stable subnetworks during early training using group saliency, structured sparsity regularization, and a stability indicator based on subnetwork similarity across epochs. Experiments on CIFAR-10/100 and ImageNet with VGGNet, ResNet, and MobileNet show competitive accuracy with strong training-time efficiency.</dd>
+                  <dt>Abstract</dt>
+                  <dd>Existing structured pruning methods typically rely on multi-stage training procedures that incur high computational costs. Pruning at initialization aims to reduce this burden but often suffers from degraded performance. To address these limitations, we propose an efficient one-cycle structured pruning framework that integrates pre-training, pruning, and fine-tuning into a single training cycle without sacrificing accuracy. The key idea is to identify an optimal sub-network during the early stages of training, guided by norm-based group saliency criteria and structured sparsity regularization. We introduce a novel pruning indicator that detects a stable pruning epoch by measuring the similarity between pruning sub-networks across consecutive training epochs. In addition, group sparsity regularization accelerates convergence, further reducing overall training time. Extensive experiments on CIFAR-10, CIFAR-100, and ImageNet using VGG, ResNet, and MobileNet architectures demonstrate that the proposed method achieves state-of-the-art accuracy while being among the most efficient structured pruning frameworks in terms of training cost. Code is available at <a href="https://github.com/ghimiredhikura/OCSPruner" target="_blank" rel="noopener">ghimiredhikura/OCSPruner</a>.</dd>
                 </div>
               </dl>
             </div>
