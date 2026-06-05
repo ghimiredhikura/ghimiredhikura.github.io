@@ -1105,7 +1105,7 @@ h3 {
 
 .pub-visual {
   display: grid;
-  align-content: stretch;
+  align-content: center;
   justify-items: center;
   min-height: 205px;
   padding: 0;
@@ -1121,11 +1121,23 @@ h3 {
   height: 82px;
 }
 
+.pub-visual .pub-meta {
+  align-self: start;
+  width: 100%;
+  margin: 0;
+  padding: 10px 10px 8px;
+  border-bottom: 1px solid rgba(223, 228, 226, 0.85);
+  color: var(--deep-red);
+  font-size: 0.72rem;
+  line-height: 1.25;
+  text-align: center;
+}
+
 .pub-abstract {
   width: 100%;
   max-width: none;
-  height: 100%;
-  min-height: 168px;
+  height: auto;
+  min-height: 0;
   margin-bottom: 4px;
   border: 0;
   border-radius: 0;
