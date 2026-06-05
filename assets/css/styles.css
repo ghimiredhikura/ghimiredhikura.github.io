@@ -1120,6 +1120,10 @@ h3 {
   min-height: 0;
 }
 
+.origin-intro h2 {
+  font-size: clamp(1.12rem, 1.65vw, 1.65rem);
+}
+
 .origin-copy {
   display: grid;
   gap: 12px;
