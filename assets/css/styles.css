@@ -1227,13 +1227,14 @@ h3 {
 
 .publication-list {
   display: grid;
-  gap: 16px;
+  gap: 14px;
 }
 
 .publication-card {
   display: grid;
   grid-template-columns: minmax(220px, 0.34fr) minmax(0, 1fr);
-  gap: 22px;
+  align-items: start;
+  gap: 16px;
   padding: 0;
   overflow: hidden;
 }
@@ -1243,16 +1244,29 @@ h3 {
 }
 
 .publication-card h2 {
+  margin-bottom: 8px;
   font-size: 1.08rem;
-  line-height: 1.3;
+  line-height: 1.22;
 }
 
 .publication-card p {
-  margin-bottom: 14px;
+  margin-bottom: 10px;
+}
+
+.pub-summary-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: start;
+  gap: 8px 10px;
+  margin-bottom: 10px;
+}
+
+.pub-summary-row p {
+  margin-bottom: 0;
 }
 
 .pub-body {
-  padding: 10px 24px 20px 0;
+  padding: 8px 16px 12px 0;
 }
 
 .publication-card a,
@@ -1273,9 +1287,12 @@ h3 {
 
 .pub-visual {
   display: grid;
-  align-content: center;
+  grid-template-rows: auto minmax(96px, 1fr) auto;
+  align-self: start;
+  align-content: stretch;
   justify-items: center;
-  min-height: 205px;
+  height: 165px;
+  min-height: 165px;
   padding: 0;
   border-right: 1px solid var(--line);
   background:
@@ -1285,15 +1302,16 @@ h3 {
 }
 
 .pub-visual .pub-icon {
-  width: 82px;
-  height: 82px;
+  align-self: center;
+  width: 68px;
+  height: 68px;
 }
 
 .pub-visual .pub-meta {
   align-self: start;
   width: 100%;
   margin: 0;
-  padding: 10px 10px 8px;
+  padding: 10px 10px 7px;
   border-bottom: 1px solid rgba(223, 228, 226, 0.85);
   color: var(--deep-red);
   font-size: 0.72rem;
@@ -1302,6 +1320,7 @@ h3 {
 }
 
 .pub-abstract {
+  align-self: center;
   width: 100%;
   max-width: none;
   height: auto;
@@ -1315,10 +1334,44 @@ h3 {
   box-shadow: none;
 }
 
+.pub-visual::after {
+  align-self: end;
+  width: 100%;
+  padding: 7px 8px 8px;
+  border-top: 1px solid rgba(223, 228, 226, 0.78);
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  line-height: 1.2;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.publication-card[data-topic="edge-ai"] .pub-visual::after {
+  content: "Efficient AI";
+}
+
+.publication-card[data-topic="vision"] .pub-visual::after {
+  content: "Vision";
+}
+
+.publication-card[data-topic="agri"] .pub-visual::after {
+  content: "Agriculture";
+}
+
+.publication-card[data-topic="health"] .pub-visual::after {
+  content: "Healthcare AI";
+}
+
+.publication-card[data-topic="systems"] .pub-visual::after {
+  content: "Systems";
+}
+
 .pub-actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 9px;
+  gap: 8px;
 }
 
 .pub-actions a {
@@ -1338,6 +1391,90 @@ h3 {
 .pub-actions a:hover {
   border-color: rgba(29, 111, 120, 0.5);
   background: #f0f7f6;
+}
+
+.pub-details {
+  margin-top: 1px;
+}
+
+.pub-details[open] {
+  display: contents;
+}
+
+.pub-details[open] summary {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.pub-details[open] .pub-details-body {
+  grid-column: 1 / -1;
+  grid-row: 2;
+}
+
+.pub-details summary {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  padding: 4px 9px;
+  border: 1px solid rgba(143, 29, 24, 0.22);
+  border-radius: 999px;
+  background: #fbfcfa;
+  color: var(--deep-red);
+  cursor: pointer;
+  font-size: 0.76rem;
+  font-weight: 900;
+  line-height: 1;
+  list-style: none;
+  text-transform: uppercase;
+}
+
+.pub-details summary::-webkit-details-marker {
+  display: none;
+}
+
+.pub-details summary::after {
+  content: "+";
+  margin-left: 6px;
+}
+
+.pub-details[open] summary::after {
+  content: "-";
+}
+
+.pub-details-body {
+  margin-top: 10px;
+  padding: 12px 14px;
+  border: 1px solid rgba(29, 111, 120, 0.16);
+  border-radius: var(--radius);
+  background: #fbfcfa;
+}
+
+.pub-details dl {
+  display: grid;
+  gap: 9px;
+  margin: 0;
+}
+
+.pub-details dl div {
+  display: grid;
+  grid-template-columns: 112px 1fr;
+  gap: 12px;
+}
+
+.pub-details dt {
+  color: var(--deep-red);
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  line-height: 1.35;
+  text-transform: uppercase;
+}
+
+.pub-details dd {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.88rem;
+  line-height: 1.45;
 }
 
 .action-icon {
@@ -1931,6 +2068,15 @@ h3 {
 
   .pub-body {
     padding: 20px;
+  }
+
+  .pub-summary-row {
+    display: grid;
+  }
+
+  .pub-details dl div {
+    grid-template-columns: 1fr;
+    gap: 3px;
   }
 
   .gallery-grid {
