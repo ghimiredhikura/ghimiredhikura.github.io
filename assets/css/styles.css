@@ -188,7 +188,7 @@ h1 {
 }
 
 h2 {
-  margin-bottom: 18px;
+  margin-bottom: 12px;
   font-size: clamp(1.25rem, 1.85vw, 1.85rem);
   line-height: 1.22;
   letter-spacing: 0;
@@ -458,14 +458,19 @@ h3 {
 
 .section-grid {
   display: grid;
-  grid-template-columns: minmax(180px, 0.25fr) 1fr;
-  gap: 32px;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+.section-grid > div:first-child {
+  max-width: 680px;
 }
 
 .focus-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 16px;
+  min-width: 0;
 }
 
 .focus-card,
@@ -497,8 +502,34 @@ h3 {
 
 .focus-card {
   display: block;
+  min-width: 0;
   min-height: 172px;
   padding: 20px;
+  overflow: hidden;
+}
+
+.focus-card-visual {
+  padding-top: 12px;
+}
+
+.focus-card-image {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  margin: 14px 0 0;
+  aspect-ratio: 1482 / 359;
+  overflow: hidden;
+  border: 1px solid rgba(29, 111, 120, 0.14);
+  border-radius: 7px;
+  background: #f7f8f4;
+}
+
+.focus-card-image img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  object-fit: fill;
 }
 
 .focus-card h3 {
@@ -617,7 +648,7 @@ h3 {
 
 .section-heading {
   max-width: 680px;
-  margin-bottom: 22px;
+  margin-bottom: 12px;
 }
 
 .timeline {
@@ -631,7 +662,7 @@ h3 {
   display: grid;
   grid-template-columns: 160px 64px minmax(0, 1fr);
   gap: 18px;
-  min-height: 142px;
+  min-height: auto;
 }
 
 .timeline article::before {
@@ -708,8 +739,9 @@ h3 {
 
 .timeline-content {
   grid-column: 3;
-  margin-bottom: 12px;
-  padding: 20px 22px;
+  position: relative;
+  margin-bottom: 7px;
+  padding: 14px 94px 14px 16px;
   border: 1px solid var(--line);
   border-radius: var(--radius);
   background: var(--surface);
@@ -717,21 +749,35 @@ h3 {
   transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
 }
 
+.timeline h3 {
+  margin-bottom: 4px;
+  line-height: 1.18;
+}
+
 .timeline-org {
-  margin: -2px 0 12px;
+  margin: -1px 0 6px;
   color: var(--river);
   font-weight: 850;
+  line-height: 1.25;
+}
+
+.timeline-content > p:not(.timeline-org) {
+  margin-bottom: 0;
+  line-height: 1.55;
 }
 
 .timeline details {
-  margin-top: 8px;
+  margin-top: 0;
 }
 
 .timeline summary {
+  position: absolute;
+  top: 12px;
+  right: 12px;
   display: inline-flex;
   align-items: center;
-  min-height: 28px;
-  padding: 3px 9px;
+  min-height: 26px;
+  padding: 3px 7px;
   border: 1px solid rgba(143, 29, 24, 0.22);
   border-radius: 999px;
   background: #fbfcfa;
@@ -739,6 +785,7 @@ h3 {
   cursor: pointer;
   font-size: 0.76rem;
   font-weight: 900;
+  line-height: 1;
   list-style: none;
   text-transform: uppercase;
 }
@@ -757,7 +804,7 @@ h3 {
 }
 
 .timeline ul {
-  margin: 8px 0 0;
+  margin: 12px 0 0;
   padding-left: 18px;
   color: var(--muted);
   font-size: 0.94rem;
@@ -865,8 +912,8 @@ h3 {
 
 .profiles {
   display: grid;
-  grid-template-columns: 0.38fr 1fr;
-  gap: 40px;
+  grid-template-columns: 0.27fr 1fr;
+  gap: 32px;
 }
 
 .contact-section {
@@ -955,8 +1002,23 @@ h3 {
 
 .profile-links {
   display: grid;
+  gap: 14px;
+}
+
+.profile-group {
+  display: grid;
+  gap: 0;
+}
+
+.profile-group-grid {
+  display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 12px;
+}
+
+.professional-grid,
+.profile-group-grid:has(.consulting-profile) {
+  grid-template-columns: repeat(3, minmax(0, 1fr)) minmax(210px, 1.35fr);
 }
 
 .profile-links a {
@@ -971,6 +1033,10 @@ h3 {
   font-weight: 800;
 }
 
+.profile-links a > span:last-child {
+  min-width: 0;
+}
+
 .profile-links a:hover {
   border-color: var(--river);
   color: var(--river);
@@ -982,17 +1048,109 @@ h3 {
   object-fit: contain;
 }
 
+.consulting-profile {
+  align-items: flex-start;
+}
+
+.consulting-profile strong,
+.consulting-profile small {
+  display: block;
+}
+
+.consulting-profile strong {
+  color: var(--night);
+  font-size: 0.9rem;
+  line-height: 1.2;
+}
+
+.consulting-profile small {
+  margin-top: 3px;
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 750;
+  line-height: 1.25;
+}
+
+.consulting-note {
+  display: grid;
+  gap: 4px;
+  margin: 14px 0 14px;
+  padding: 13px 15px;
+  border: 1px solid rgba(29, 111, 120, 0.18);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.62);
+}
+
+.consulting-note strong {
+  color: var(--night);
+  font-size: 0.96rem;
+}
+
+.consulting-note span {
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
 .origin-band {
   display: grid;
-  grid-template-columns: 0.5fr 1fr;
-  gap: 40px;
+  grid-template-columns: 0.44fr 1fr;
+  gap: 30px;
+  align-items: stretch;
   background:
-    linear-gradient(90deg, rgba(143, 29, 24, 0.08), transparent 45%),
+    linear-gradient(135deg, rgba(143, 29, 24, 0.08), transparent 46%),
+    linear-gradient(90deg, rgba(29, 111, 120, 0.08), transparent 68%),
     var(--surface);
 }
 
-.origin-copy p {
-  margin-bottom: 18px;
+.origin-intro {
+  display: grid;
+  align-content: start;
+  gap: 10px;
+  min-height: 0;
+}
+
+.origin-copy {
+  display: grid;
+  gap: 12px;
+}
+
+.origin-path {
+  display: grid;
+  gap: 1px;
+  overflow: hidden;
+  border: 1px solid rgba(29, 111, 120, 0.18);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.54);
+}
+
+.origin-path div {
+  display: grid;
+  grid-template-columns: 142px 1fr;
+  gap: 18px;
+  padding: 14px 16px;
+  background: rgba(255, 255, 255, 0.58);
+}
+
+.origin-path span {
+  color: var(--deep-red);
+  font-size: 0.74rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  line-height: 1.35;
+  text-transform: uppercase;
+}
+
+.origin-path p {
+  margin: 0;
+  color: var(--night);
+  font-size: 0.96rem;
+  line-height: 1.35;
+}
+
+.origin-path strong {
+  color: var(--night);
+  font-weight: 900;
 }
 
 .global-footprint {
@@ -1001,7 +1159,7 @@ h3 {
   padding: 14px 16px;
   border: 1px solid rgba(29, 111, 120, 0.18);
   border-radius: var(--radius);
-  background: rgba(255, 255, 255, 0.64);
+  background: rgba(255, 255, 255, 0.72);
 }
 
 .global-footprint span {
@@ -1619,7 +1777,7 @@ h3 {
   }
 
   .metrics-band,
-  .profile-links,
+  .profile-group-grid,
   .publication-grid,
   .gallery-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1659,6 +1817,7 @@ h3 {
 
   .timeline-content {
     grid-column: 2;
+    padding-right: 86px;
   }
 
   .timeline-meta .timeline-date {
@@ -1711,10 +1870,14 @@ h3 {
 
   .metrics-band,
   .focus-grid,
-  .profile-links,
+  .profile-group-grid,
   .publication-grid,
   .gallery-grid {
     grid-template-columns: 1fr;
+  }
+
+  .consulting-profile {
+    grid-column: auto;
   }
 
   .publication-card {
@@ -1728,6 +1891,15 @@ h3 {
 
   .contact-form {
     grid-template-columns: 1fr;
+  }
+
+  .origin-intro {
+    min-height: auto;
+  }
+
+  .origin-path div {
+    grid-template-columns: 1fr;
+    gap: 5px;
   }
 
   .pub-visual {
