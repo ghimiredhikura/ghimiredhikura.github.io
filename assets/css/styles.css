@@ -1,7 +1,7 @@
 :root {
   --ink: #182126;
   --muted: #5e6a70;
-  --paper: #fbfaf6;
+  --paper: #f3f8ef;
   --surface: #ffffff;
   --line: #dfe4e2;
   --deep-red: #8f1d18;
@@ -931,7 +931,7 @@ h3 {
 }
 
 .service-row-group {
-  gap: 8px;
+  gap: 7px;
 }
 
 .service-sublist {
@@ -1072,16 +1072,22 @@ h3 {
   padding: 12px;
   border: 1px solid var(--line);
   border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.66);
+  font-size: 0.88rem;
   text-decoration: none;
   font-weight: 800;
+  backdrop-filter: blur(6px);
 }
 
 .profile-links a > span:last-child {
   min-width: 0;
+  font-size: 0.88rem;
+  line-height: 1.2;
 }
 
 .profile-links a:hover {
   border-color: var(--river);
+  background: rgba(240, 247, 246, 0.84);
   color: var(--river);
 }
 
@@ -1089,6 +1095,11 @@ h3 {
   width: 34px;
   height: 34px;
   object-fit: contain;
+}
+
+.profile-links .scopus-profile img {
+  width: 29px;
+  height: 29px;
 }
 
 .consulting-profile {
@@ -1232,7 +1243,7 @@ h3 {
 }
 
 .page-hero {
-  padding: 60px 0 42px;
+  padding: 60px 0 10px;
 }
 
 .page-hero h1 {
@@ -1329,15 +1340,16 @@ h3 {
 }
 
 .pub-visual {
-  display: grid;
-  grid-template-rows: auto minmax(96px, 1fr) auto;
-  row-gap: 5px;
+  --pub-meta-height: 30px;
+  --pub-tag-height: 22px;
+  --pub-visual-height: 198px;
+  position: relative;
+  display: block;
   align-self: start;
-  align-content: stretch;
-  justify-items: center;
-  height: 176px;
-  min-height: 176px;
+  height: var(--pub-visual-height);
+  min-height: var(--pub-visual-height);
   padding: 0;
+  overflow: hidden;
   border-right: 1px solid var(--line);
   background:
     linear-gradient(135deg, rgba(143, 29, 24, 0.08), transparent 44%),
@@ -1346,50 +1358,72 @@ h3 {
 }
 
 .pub-visual .pub-icon {
-  align-self: center;
+  position: absolute;
+  left: 50%;
+  top: calc(var(--pub-meta-height) + ((100% - var(--pub-meta-height) - var(--pub-tag-height)) / 2));
+  transform: translate(-50%, -50%);
   width: 68px;
   height: 68px;
 }
 
 .pub-visual .pub-meta {
-  align-self: start;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
+  height: var(--pub-meta-height);
   margin: 0;
-  padding: 10px 10px 7px;
+  padding: 6px 10px 5px;
   border-bottom: 1px solid rgba(223, 228, 226, 0.85);
+  background: #f7f8f4;
   color: var(--deep-red);
   font-size: 0.72rem;
   line-height: 1.25;
   text-align: center;
+  z-index: 2;
 }
 
 .pub-abstract {
-  align-self: center;
+  position: absolute;
+  top: var(--pub-meta-height);
+  left: 0;
+  display: block;
   width: 100%;
   max-width: none;
-  height: auto;
+  height: calc(var(--pub-visual-height) - var(--pub-meta-height) - var(--pub-tag-height));
+  max-height: none;
   min-height: 0;
+  min-width: 0;
   margin-bottom: 0;
   border: 0;
   border-radius: 0;
   background: transparent;
-  object-fit: contain;
+  object-fit: fill;
   padding: 0;
   box-shadow: none;
+  z-index: 1;
 }
 
 .pub-visual::after {
-  align-self: end;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 0;
+  bottom: 0;
   width: 100%;
-  padding: 7px 8px 8px;
+  height: var(--pub-tag-height);
+  padding: 0 8px;
   border-top: 1px solid rgba(223, 228, 226, 0.78);
+  background: #f7f8f4;
   color: var(--muted);
   font-size: 0.72rem;
   font-weight: 900;
   letter-spacing: 0.08em;
-  line-height: 1.2;
+  line-height: 1;
   text-align: center;
   text-transform: uppercase;
+  z-index: 2;
 }
 
 .publication-card[data-topic="edge-ai"] .pub-visual::after {
@@ -1514,6 +1548,11 @@ h3 {
   font-weight: 900;
 }
 
+.author-list strong {
+  color: var(--night);
+  font-weight: 900;
+}
+
 .affiliation-list {
   margin: 0;
   padding-left: 18px;
@@ -1525,7 +1564,7 @@ h3 {
 
 .corresponding-note {
   display: block;
-  margin-top: 6px;
+  margin-top: 4px;
   color: var(--deep-red);
   font-size: 0.8rem;
   font-weight: 850;
@@ -2081,12 +2120,16 @@ h3 {
     gap: 8px;
   }
 
+  .profile-links a,
+  .profile-links a > span:last-child {
+    font-size: 0.82rem;
+    line-height: 1.15;
+  }
+
   .professional-grid a:not(.consulting-profile) {
     min-width: 0;
     padding: 10px 6px;
     gap: 6px;
-    font-size: 0.72rem;
-    line-height: 1.15;
   }
 
   .professional-grid a:not(.consulting-profile) span:last-child {
@@ -2124,10 +2167,9 @@ h3 {
   }
 
   .pub-visual {
-    grid-template-rows: auto auto auto;
-    row-gap: 7px;
-    height: auto;
-    min-height: auto;
+    --pub-visual-height: 200px;
+    height: var(--pub-visual-height);
+    min-height: var(--pub-visual-height);
     padding: 0;
     border-right: 0;
     border-bottom: 1px solid var(--line);
@@ -2136,7 +2178,6 @@ h3 {
   .pub-abstract {
     min-height: 0;
     width: 100%;
-    height: auto;
     aspect-ratio: auto;
   }
 
