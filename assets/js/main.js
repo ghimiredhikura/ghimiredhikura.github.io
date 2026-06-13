@@ -10,8 +10,63 @@ if (navToggle && siteNav) {
 }
 
 const filterButtons = document.querySelectorAll(".filter-button");
-const publicationCards = document.querySelectorAll(".publication-card");
+const publicationList = document.querySelector("[data-publication-list]");
 const scrollCue = document.querySelector(".scroll-cue");
+
+const escapeHtml = (value = "") =>
+  String(value)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
+
+const actionIconClass = {
+  paper: "link-icon",
+  pdf: "pdf-icon",
+  arxiv: "arxiv-icon",
+  github: "github-icon",
+};
+
+const renderPublicationCard = (publication) => {
+  const visual = publication.image
+    ? `<img class="pub-abstract" src="${escapeHtml(publication.image)}" alt="${escapeHtml(publication.imageAlt || publication.title)}">`
+    : `<span class="pub-icon ${escapeHtml(publication.icon || "chip")}"></span>`;
+
+  const links = (publication.links || [])
+    .map((link) => {
+      const iconClass = actionIconClass[link.type] || "link-icon";
+      return `<a href="${escapeHtml(link.url)}" target="_blank" rel="noopener"><span class="action-icon ${iconClass}"></span>${escapeHtml(link.label)}</a>`;
+    })
+    .join("");
+
+  const details = publication.detailsHtml
+    ? `<details class="pub-details">
+        <summary>Expand</summary>
+        <div class="pub-details-body">${publication.detailsHtml}</div>
+      </details>`
+    : "";
+
+  return `
+    <article class="publication-card" data-topic="${escapeHtml(publication.topic)}">
+      <div class="pub-visual">
+        <span class="pub-meta">${escapeHtml(publication.venue)}</span>
+        ${visual}
+      </div>
+      <div class="pub-body">
+        <h2>${escapeHtml(publication.title)}</h2>
+        <div class="pub-summary-row">
+          <p>${escapeHtml(publication.summary)}</p>
+          ${details}
+        </div>
+        <div class="pub-actions">${links}</div>
+      </div>
+    </article>`;
+};
+
+if (publicationList && Array.isArray(window.PUBLICATIONS)) {
+  publicationList.innerHTML = window.PUBLICATIONS.map(renderPublicationCard).join("");
+}
 
 filterButtons.forEach((button) => {
   button.addEventListener("click", () => {
@@ -19,6 +74,7 @@ filterButtons.forEach((button) => {
     filterButtons.forEach((item) => item.classList.remove("active"));
     button.classList.add("active");
 
+    const publicationCards = document.querySelectorAll(".publication-card");
     publicationCards.forEach((card) => {
       const visible = filter === "all" || card.dataset.topic === filter;
       card.hidden = !visible;
