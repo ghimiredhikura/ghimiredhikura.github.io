@@ -30,7 +30,9 @@ const actionIconClass = {
 
 const renderPublicationCard = (publication) => {
   const visual = publication.image
-    ? `<img class="pub-abstract" src="${escapeHtml(publication.image)}" alt="${escapeHtml(publication.imageAlt || publication.title)}">`
+    ? `<button class="pub-image-button" type="button" data-full-image="${escapeHtml(publication.image)}" data-image-title="${escapeHtml(publication.title)}" aria-label="Expand graphical abstract for ${escapeHtml(publication.title)}">
+        <img class="pub-abstract" src="${escapeHtml(publication.image)}" alt="${escapeHtml(publication.imageAlt || publication.title)}">
+      </button>`
     : `<span class="pub-icon ${escapeHtml(publication.icon || "chip")}"></span>`;
 
   const links = (publication.links || [])
@@ -66,6 +68,54 @@ const renderPublicationCard = (publication) => {
 
 if (publicationList && Array.isArray(window.PUBLICATIONS)) {
   publicationList.innerHTML = window.PUBLICATIONS.map(renderPublicationCard).join("");
+}
+
+if (publicationList) {
+  const lightbox = document.createElement("div");
+  lightbox.className = "image-lightbox";
+  lightbox.setAttribute("aria-hidden", "true");
+  lightbox.innerHTML = `
+    <div class="image-lightbox-panel" role="dialog" aria-modal="true" aria-label="Expanded graphical abstract">
+      <button class="image-lightbox-close" type="button" aria-label="Close expanded image">&times;</button>
+      <img class="image-lightbox-img" alt="">
+      <p class="image-lightbox-title"></p>
+    </div>`;
+  document.body.appendChild(lightbox);
+
+  const lightboxImage = lightbox.querySelector(".image-lightbox-img");
+  const lightboxTitle = lightbox.querySelector(".image-lightbox-title");
+  const lightboxClose = lightbox.querySelector(".image-lightbox-close");
+  const desktopMedia = window.matchMedia("(min-width: 701px)");
+
+  const closeLightbox = () => {
+    lightbox.classList.remove("open");
+    lightbox.setAttribute("aria-hidden", "true");
+    document.body.classList.remove("lightbox-open");
+  };
+
+  publicationList.addEventListener("click", (event) => {
+    const button = event.target.closest(".pub-image-button");
+    if (!button || !desktopMedia.matches) return;
+    lightboxImage.src = button.dataset.fullImage;
+    lightboxImage.alt = button.querySelector("img")?.alt || "";
+    lightboxTitle.textContent = button.dataset.imageTitle || "";
+    lightbox.classList.add("open");
+    lightbox.setAttribute("aria-hidden", "false");
+    document.body.classList.add("lightbox-open");
+    lightboxClose.focus();
+  });
+
+  lightbox.addEventListener("click", (event) => {
+    if (event.target === lightbox || event.target === lightboxClose) {
+      closeLightbox();
+    }
+  });
+
+  window.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && lightbox.classList.contains("open")) {
+      closeLightbox();
+    }
+  });
 }
 
 filterButtons.forEach((button) => {
