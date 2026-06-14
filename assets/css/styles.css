@@ -2374,13 +2374,13 @@ body.lightbox-open {
 
   .timeline {
     grid-template-columns: 1fr;
-    gap: 16px;
+    gap: 12px;
     padding-left: 0;
   }
 
   .timeline article {
     grid-template-columns: 28px minmax(0, 1fr);
-    gap: 14px;
+    gap: 10px;
     min-height: auto;
   }
 
@@ -2403,7 +2403,7 @@ body.lightbox-open {
     align-items: center;
     justify-content: space-between;
     justify-items: start;
-    gap: 10px;
+    gap: 8px;
     padding-top: 0;
     text-align: left;
   }
@@ -2415,10 +2415,12 @@ body.lightbox-open {
 
   .timeline-content {
     grid-column: 2;
+    padding: 12px 13px;
+    margin-bottom: 4px;
   }
 
   .timeline-meta .timeline-date {
-    padding: 5px 9px;
+    padding: 4px 8px;
     background: #f7f8f4;
     color: var(--deep-red);
     text-align: left;
@@ -2429,15 +2431,95 @@ body.lightbox-open {
   main,
   .site-header,
   .site-footer {
-    width: min(100% - 24px, var(--max));
+    width: min(100% - 20px, var(--max));
+  }
+
+  .site-header {
+    padding: 10px 0;
+  }
+
+  .brand {
+    gap: 8px;
+  }
+
+  .brand-mark,
+  .text-logo {
+    width: 34px;
+    height: 34px;
+    font-size: 0.86rem;
+  }
+
+  .nav-toggle {
+    width: 38px;
+    height: 38px;
   }
 
   h1 {
-    font-size: 1.9rem;
+    margin-bottom: 14px;
+    font-size: 1.72rem;
+    line-height: 1.16;
+  }
+
+  h2 {
+    margin-bottom: 8px;
+  }
+
+  h3 {
+    margin-bottom: 6px;
+  }
+
+  p {
+    margin-bottom: 12px;
+  }
+
+  .eyebrow,
+  .section-kicker,
+  .pub-meta,
+  .post-type {
+    margin-bottom: 8px;
+    font-size: 0.72rem;
+  }
+
+  .hero {
+    gap: 22px;
+    padding: 24px 0 58px;
+  }
+
+  .hero-text,
+  .page-hero p,
+  .origin-band p {
+    font-size: 0.94rem;
+    line-height: 1.5;
+  }
+
+  .page-hero {
+    padding: 34px 0 2px;
+  }
+
+  .page-hero h1,
+  .writing-hero h1 {
+    font-size: 1.55rem;
+  }
+
+  .hero-actions {
+    gap: 8px;
+    margin-top: 18px;
+  }
+
+  .button {
+    min-height: 40px;
+    padding: 9px 14px;
+    font-size: 0.9rem;
+  }
+
+  .construction-note {
+    margin-bottom: 12px;
+    padding: 7px 10px;
+    font-size: 0.82rem;
   }
 
   .hero-visual {
-    min-height: 360px;
+    min-height: 310px;
   }
 
   .scroll-cue {
@@ -2458,7 +2540,7 @@ body.lightbox-open {
 
   .signal-card {
     width: 145px;
-    padding: 12px;
+    padding: 10px;
   }
 
   .signal-card strong {
@@ -2472,14 +2554,70 @@ body.lightbox-open {
     grid-template-columns: 1fr;
   }
 
+  .section-grid,
+  .timeline-section,
+  .two-column,
+  .writing-layout,
+  .gallery-grid,
+  .publication-grid,
+  .publication-list,
+  .writing-section,
+  .metrics-band,
+  .profiles,
+  .contact-section,
+  .origin-band {
+    margin-bottom: 22px;
+  }
+
+  .section-grid,
+  .focus-grid,
+  .writing-entry-list,
+  .post-list {
+    gap: 10px;
+  }
+
   .long-article {
-    padding-top: 32px;
+    padding-top: 24px;
   }
 
   .article-body {
-    padding: 24px 20px;
-    font-size: 0.98rem;
-    line-height: 1.82;
+    padding: 18px 16px;
+    font-size: 0.95rem;
+    line-height: 1.72;
+  }
+
+  .article-hero {
+    margin-bottom: 14px;
+  }
+
+  .article-hero h1 {
+    font-size: 1.5rem;
+  }
+
+  .article-deck {
+    font-size: 0.94rem;
+    line-height: 1.52;
+  }
+
+  .article-body h2 {
+    margin: 24px 0 8px;
+    font-size: 1.12rem;
+  }
+
+  .article-body p {
+    margin-bottom: 13px;
+  }
+
+  .article-bullet-list,
+  .article-number-list {
+    margin-bottom: 16px;
+    padding-left: 19px;
+    line-height: 1.62;
+  }
+
+  .article-bullet-list li,
+  .article-number-list li {
+    margin-bottom: 8px;
   }
 
   .profile-group-grid {
@@ -2493,8 +2631,8 @@ body.lightbox-open {
   }
 
   .writing-entry {
-    gap: 10px;
-    padding: 16px;
+    gap: 8px;
+    padding: 13px;
   }
 
   .writing-entry-meta {
@@ -2537,9 +2675,18 @@ body.lightbox-open {
     line-height: 1.15;
   }
 
+  .profile-links {
+    gap: 10px;
+  }
+
+  .profile-group-grid {
+    gap: 8px;
+  }
+
   .professional-grid a:not(.consulting-profile) {
     min-width: 0;
-    padding: 10px 6px;
+    min-height: 54px;
+    padding: 9px 6px;
     gap: 6px;
   }
 
@@ -2547,8 +2694,22 @@ body.lightbox-open {
     overflow-wrap: normal;
   }
 
+  .profile-links img {
+    width: 28px;
+    height: 28px;
+  }
+
   .metrics-band {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .metrics-band div {
+    min-height: 92px;
+    padding: 16px;
+  }
+
+  .metrics-band strong {
+    font-size: 1.72rem;
   }
 
   .consulting-profile {
@@ -2561,15 +2722,79 @@ body.lightbox-open {
 
   .focus-card {
     min-height: auto;
-    padding: 18px;
+    padding: 14px;
+  }
+
+  .focus-card-image {
+    margin-top: 10px;
+  }
+
+  .panel,
+  .feature-post,
+  .post-list article {
+    padding: 16px;
+  }
+
+  .stacked-list {
+    gap: 8px;
+  }
+
+  .stacked-list article {
+    padding-top: 9px;
+  }
+
+  .service-list {
+    gap: 8px;
+  }
+
+  .service-row {
+    padding: 11px;
+  }
+
+  .service-sublist {
+    gap: 6px;
+  }
+
+  .service-sublist a,
+  .thesis-link {
+    padding: 8px 9px;
   }
 
   .contact-form {
     grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .contact-section {
+    gap: 14px;
+    padding: 16px;
+  }
+
+  .contact-form label {
+    gap: 5px;
+    font-size: 0.8rem;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    padding: 9px 10px;
   }
 
   .origin-intro {
     min-height: auto;
+  }
+
+  .origin-band {
+    gap: 14px;
+    padding: 18px;
+  }
+
+  .origin-copy {
+    font-size: 1.02rem;
+  }
+
+  .origin-path {
+    gap: 8px;
   }
 
   .origin-path div {
@@ -2578,7 +2803,7 @@ body.lightbox-open {
   }
 
   .pub-visual {
-    --pub-visual-height: 200px;
+    --pub-visual-height: 178px;
     height: var(--pub-visual-height);
     min-height: var(--pub-visual-height);
     padding: 0;
@@ -2601,7 +2826,29 @@ body.lightbox-open {
   }
 
   .pub-body {
-    padding: 20px;
+    padding: 14px;
+  }
+
+  .publication-controls {
+    gap: 7px;
+    margin-bottom: 16px;
+  }
+
+  .filter-button {
+    min-height: 36px;
+    padding: 7px 10px;
+    font-size: 0.82rem;
+  }
+
+  .publication-card h2 {
+    margin-bottom: 6px;
+    font-size: 0.98rem;
+  }
+
+  .publication-card p,
+  .pub-details dd {
+    font-size: 0.86rem;
+    line-height: 1.45;
   }
 
   .pub-details dl div {
@@ -2610,7 +2857,7 @@ body.lightbox-open {
   }
 
   .gallery-grid {
-    grid-auto-rows: 220px;
+    grid-auto-rows: 180px;
   }
 
   .gallery-item.large {
@@ -2619,5 +2866,7 @@ body.lightbox-open {
 
   .site-footer {
     flex-direction: column;
+    gap: 8px;
+    padding: 24px 0 30px;
   }
 }
