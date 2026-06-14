@@ -1947,14 +1947,21 @@ body.lightbox-open {
 .writing-section {
   margin: 0 0 35px;
   display: grid;
-  grid-template-columns: minmax(220px, 0.32fr) minmax(0, 1fr);
-  gap: 24px;
+  grid-template-columns: minmax(150px, 0.2fr) minmax(0, 1fr);
+  gap: 18px;
   align-items: start;
 }
 
 .writing-section-heading {
   position: sticky;
   top: 96px;
+  padding-top: 2px;
+}
+
+.writing-section-heading .section-kicker {
+  margin-bottom: 0;
+  font-size: 0.86rem;
+  line-height: 1.25;
 }
 
 .writing-section-heading h2 {
@@ -2038,6 +2045,39 @@ body.lightbox-open {
 .writing-entry-copy a {
   color: var(--river);
   font-weight: 900;
+}
+
+.writing-entry-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.45;
+  font-weight: 800;
+}
+
+.writing-entry-actions a {
+  text-decoration: none;
+  transition: color 180ms ease;
+}
+
+.writing-entry-actions .read-local {
+  color: var(--river);
+}
+
+.writing-entry-actions .read-source {
+  color: var(--deep-red);
+}
+
+.writing-entry-actions .read-separator {
+  color: rgba(31, 49, 55, 0.34);
+}
+
+.writing-entry-actions a:hover {
+  color: var(--night);
 }
 
 .explore-more {
@@ -2153,6 +2193,15 @@ body.lightbox-open {
 
 .article-byline {
   color: var(--deep-red);
+  font-weight: 900;
+}
+
+.article-source-link {
+  margin-top: 10px;
+}
+
+.article-source-link a {
+  color: var(--river);
   font-weight: 900;
 }
 
@@ -2663,6 +2712,12 @@ body.lightbox-open {
   .writing-entry-copy p {
     font-size: 0.92rem;
     line-height: 1.5;
+  }
+
+  .writing-entry-actions {
+    gap: 3px 5px;
+    font-size: 0.86rem;
+    line-height: 1.35;
   }
 
   .writing-entry-copy a {
