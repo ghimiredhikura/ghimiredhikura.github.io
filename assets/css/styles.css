@@ -1102,12 +1102,6 @@ h3 {
   object-fit: contain;
 }
 
-.profile-links .wide-profile-logo {
-  width: 58px;
-  height: auto;
-  max-height: 26px;
-}
-
 .profile-links .researchgate-logo {
   width: 26px;
   height: 26px;
@@ -1212,7 +1206,7 @@ h3 {
 
 .origin-intro h2 {
   max-width: 500px;
-  font-size: clamp(1.18rem, 1.75vw, 1.72rem);
+  font-size: clamp(1.06rem, 1.58vw, 1.6rem);
   line-height: 1.25;
 }
 
@@ -2769,12 +2763,6 @@ body.lightbox-open {
   .profile-links img {
     width: 25px;
     height: 25px;
-  }
-
-  .profile-links .wide-profile-logo {
-    width: 52px;
-    height: auto;
-    max-height: 24px;
   }
 
   .profile-links .researchgate-logo {
