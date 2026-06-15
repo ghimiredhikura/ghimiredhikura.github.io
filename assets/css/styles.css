@@ -2808,10 +2808,11 @@ body.lightbox-open {
 
   .publication-card + .publication-card::before {
     content: "";
-    display: block;
-    width: calc(100% - 28px);
+    position: absolute;
+    top: -8px;
+    left: 14px;
+    right: 14px;
     height: 1px;
-    margin: -2px auto 12px;
     background: linear-gradient(90deg, transparent, rgba(29, 111, 120, 0.28), rgba(143, 29, 24, 0.18), transparent);
   }
 
@@ -2908,7 +2909,7 @@ body.lightbox-open {
   }
 
   .pub-visual {
-    --pub-visual-height: clamp(242px, 65vw, 314px);
+    --pub-visual-height: clamp(205px, 55vw, 268px);
     height: var(--pub-visual-height);
     min-height: var(--pub-visual-height);
     padding: 0;
