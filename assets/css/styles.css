@@ -1045,12 +1045,22 @@ h3 {
 
 .profile-links {
   display: grid;
-  gap: 14px;
+  gap: 12px;
 }
 
 .profile-group {
   display: grid;
-  gap: 0;
+  gap: 7px;
+}
+
+.profile-group-label {
+  margin: 0;
+  color: var(--deep-red);
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  line-height: 1.2;
+  text-transform: uppercase;
 }
 
 .profile-group-grid {
@@ -1059,9 +1069,8 @@ h3 {
   gap: 12px;
 }
 
-.professional-grid,
-.profile-group-grid:has(.consulting-profile) {
-  grid-template-columns: repeat(3, minmax(0, 1fr)) minmax(210px, 1.35fr);
+.professional-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .profile-links a {
@@ -1097,32 +1106,95 @@ h3 {
   object-fit: contain;
 }
 
+.profile-links .wide-profile-logo {
+  width: 72px;
+  height: auto;
+  max-height: 32px;
+}
+
+.profile-links .researchgate-logo {
+  width: 31px;
+  height: 31px;
+}
+
 .profile-links .scopus-profile img {
   width: 29px;
   height: 29px;
 }
 
 .consulting-profile {
-  align-items: flex-start;
+  align-items: center;
+  min-height: 92px;
+  gap: 14px;
+  padding: 15px 16px;
+  border-color: rgba(29, 111, 120, 0.26);
+  background:
+    linear-gradient(135deg, rgba(29, 111, 120, 0.14), transparent 50%),
+    linear-gradient(90deg, rgba(20, 168, 0, 0.07), transparent 72%),
+    rgba(255, 255, 255, 0.78);
 }
 
+.consulting-profile:hover {
+  background:
+    linear-gradient(135deg, rgba(29, 111, 120, 0.18), transparent 50%),
+    linear-gradient(90deg, rgba(20, 168, 0, 0.1), transparent 72%),
+    #ffffff;
+}
+
+.consulting-profile .upwork-logo {
+  width: 88px;
+  height: auto;
+  object-fit: contain;
+  padding: 7px 8px;
+  border: 1px solid rgba(20, 168, 0, 0.16);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.78);
+  flex: 0 0 auto;
+}
+
+.consulting-profile em,
 .consulting-profile strong,
 .consulting-profile small {
   display: block;
 }
 
+.consulting-profile em {
+  margin-bottom: 3px;
+  color: #108a00;
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
 .consulting-profile strong {
   color: var(--night);
-  font-size: 0.9rem;
-  line-height: 1.2;
+  max-width: 720px;
+  font-size: 0.98rem;
+  line-height: 1.28;
 }
 
 .consulting-profile small {
-  margin-top: 3px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.consulting-profile small b {
+  display: inline-flex;
+  align-items: center;
+  min-height: 24px;
+  padding: 4px 8px;
+  border: 1px solid rgba(29, 111, 120, 0.16);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.66);
   color: var(--muted);
-  font-size: 0.72rem;
-  font-weight: 750;
-  line-height: 1.25;
+  font-size: 0.74rem;
+  font-weight: 850;
+  line-height: 1.1;
 }
 
 .consulting-note {
@@ -1156,12 +1228,14 @@ h3 {
 
 .origin-band {
   display: grid;
-  grid-template-columns: 0.44fr 1fr;
-  gap: 30px;
-  align-items: stretch;
+  grid-template-columns: minmax(220px, 0.34fr) minmax(0, 1fr);
+  gap: 28px;
+  align-items: start;
+  position: relative;
+  overflow: hidden;
   background:
-    linear-gradient(135deg, rgba(143, 29, 24, 0.08), transparent 46%),
-    linear-gradient(90deg, rgba(29, 111, 120, 0.08), transparent 68%),
+    linear-gradient(135deg, rgba(29, 111, 120, 0.1), transparent 52%),
+    linear-gradient(90deg, rgba(143, 29, 24, 0.06), transparent 74%),
     var(--surface);
 }
 
@@ -1169,77 +1243,56 @@ h3 {
   display: grid;
   align-content: start;
   gap: 10px;
-  min-height: 0;
 }
 
 .origin-intro h2 {
-  font-size: clamp(1.12rem, 1.65vw, 1.65rem);
+  max-width: 430px;
+  font-size: clamp(1.18rem, 1.75vw, 1.72rem);
+  line-height: 1.25;
 }
 
 .origin-copy {
   display: grid;
-  gap: 12px;
+  gap: 14px;
+  max-width: 860px;
 }
 
-.origin-path {
-  display: grid;
-  gap: 1px;
-  overflow: hidden;
-  border: 1px solid rgba(29, 111, 120, 0.18);
-  border-radius: var(--radius);
+.origin-lead,
+.origin-footprint {
+  margin: 0;
+  color: var(--night);
+  font-size: 1.02rem;
+  line-height: 1.58;
+}
+
+.origin-lead strong,
+.origin-footprint strong {
+  color: var(--night);
+  font-weight: 900;
+}
+
+.origin-trail {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 10px;
+  margin: 2px 0;
+  padding: 10px 12px;
+  border-left: 3px solid rgba(29, 111, 120, 0.5);
   background: rgba(255, 255, 255, 0.54);
 }
 
-.origin-path div {
-  display: grid;
-  grid-template-columns: 142px 1fr;
-  gap: 18px;
-  padding: 14px 16px;
-  background: rgba(255, 255, 255, 0.58);
-}
-
-.origin-path span {
-  color: var(--deep-red);
-  font-size: 0.74rem;
-  font-weight: 900;
-  letter-spacing: 0.08em;
-  line-height: 1.35;
-  text-transform: uppercase;
-}
-
-.origin-path p {
-  margin: 0;
-  color: var(--night);
-  font-size: 0.96rem;
-  line-height: 1.35;
-}
-
-.origin-path strong {
-  color: var(--night);
+.origin-trail span {
+  color: var(--river);
+  font-size: 0.84rem;
   font-weight: 900;
 }
 
-.global-footprint {
-  display: grid;
-  gap: 5px;
-  padding: 14px 16px;
-  border: 1px solid rgba(29, 111, 120, 0.18);
-  border-radius: var(--radius);
-  background: rgba(255, 255, 255, 0.72);
-}
-
-.global-footprint span {
-  color: var(--deep-red);
-  font-size: 0.74rem;
+.origin-trail span + span::before {
+  content: ">";
+  margin-right: 8px;
+  color: rgba(143, 29, 24, 0.7);
   font-weight: 900;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.global-footprint strong {
-  color: var(--night);
-  font-size: 0.96rem;
-  line-height: 1.35;
 }
 
 .page-hero {
@@ -2673,8 +2726,7 @@ body.lightbox-open {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .profile-group-grid.professional-grid,
-  .profile-group-grid:has(.consulting-profile) {
+  .profile-group-grid.professional-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 8px;
   }
@@ -2738,20 +2790,31 @@ body.lightbox-open {
     gap: 8px;
   }
 
-  .professional-grid a:not(.consulting-profile) {
+  .professional-grid a {
     min-width: 0;
     min-height: 54px;
     padding: 9px 6px;
     gap: 6px;
   }
 
-  .professional-grid a:not(.consulting-profile) span:last-child {
+  .professional-grid a span:last-child {
     overflow-wrap: normal;
   }
 
   .profile-links img {
     width: 28px;
     height: 28px;
+  }
+
+  .profile-links .wide-profile-logo {
+    width: 58px;
+    height: auto;
+    max-height: 26px;
+  }
+
+  .profile-links .researchgate-logo {
+    width: 27px;
+    height: 27px;
   }
 
   .metrics-band {
@@ -2768,7 +2831,12 @@ body.lightbox-open {
   }
 
   .consulting-profile {
-    grid-column: 1 / -1;
+    min-height: 64px;
+  }
+
+  .consulting-profile .upwork-logo {
+    width: 74px;
+    padding: 5px 6px;
   }
 
   .publication-card {
@@ -2845,16 +2913,26 @@ body.lightbox-open {
   }
 
   .origin-copy {
-    font-size: 1.02rem;
+    gap: 11px;
   }
 
-  .origin-path {
-    gap: 8px;
+  .origin-lead,
+  .origin-footprint {
+    font-size: 0.95rem;
+    line-height: 1.5;
   }
 
-  .origin-path div {
-    grid-template-columns: 1fr;
-    gap: 5px;
+  .origin-trail {
+    gap: 5px 8px;
+    padding: 9px 10px;
+  }
+
+  .origin-trail span {
+    font-size: 0.78rem;
+  }
+
+  .origin-trail span + span::before {
+    margin-right: 6px;
   }
 
   .pub-visual {
