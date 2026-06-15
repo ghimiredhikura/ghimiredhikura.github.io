@@ -1045,12 +1045,12 @@ h3 {
 
 .profile-links {
   display: grid;
-  gap: 12px;
+  gap: 9px;
 }
 
 .profile-group {
   display: grid;
-  gap: 7px;
+  gap: 5px;
 }
 
 .profile-group-label {
@@ -1066,19 +1066,15 @@ h3 {
 .profile-group-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 12px;
-}
-
-.professional-grid {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
 }
 
 .profile-links a {
   display: flex;
   align-items: center;
-  gap: 10px;
-  min-height: 64px;
-  padding: 12px;
+  gap: 8px;
+  min-height: 50px;
+  padding: 9px 10px;
   border: 1px solid var(--line);
   border-radius: var(--radius);
   background: rgba(255, 255, 255, 0.66);
@@ -1101,32 +1097,33 @@ h3 {
 }
 
 .profile-links img {
-  width: 34px;
-  height: 34px;
+  width: 28px;
+  height: 28px;
   object-fit: contain;
 }
 
 .profile-links .wide-profile-logo {
-  width: 72px;
+  width: 58px;
   height: auto;
-  max-height: 32px;
+  max-height: 26px;
 }
 
 .profile-links .researchgate-logo {
-  width: 31px;
-  height: 31px;
+  width: 26px;
+  height: 26px;
 }
 
 .profile-links .scopus-profile img {
-  width: 29px;
-  height: 29px;
+  width: 25px;
+  height: 25px;
 }
 
 .consulting-profile {
+  display: flex;
   align-items: center;
-  min-height: 92px;
-  gap: 14px;
-  padding: 15px 16px;
+  min-height: 68px;
+  gap: 12px;
+  padding: 11px 13px;
   border-color: rgba(29, 111, 120, 0.26);
   background:
     linear-gradient(135deg, rgba(29, 111, 120, 0.14), transparent 50%),
@@ -1142,10 +1139,10 @@ h3 {
 }
 
 .consulting-profile .upwork-logo {
-  width: 88px;
+  width: 74px;
   height: auto;
   object-fit: contain;
-  padding: 7px 8px;
+  padding: 5px 7px;
   border: 1px solid rgba(20, 168, 0, 0.16);
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.78);
@@ -1159,7 +1156,7 @@ h3 {
 }
 
 .consulting-profile em {
-  margin-bottom: 3px;
+  margin-bottom: 2px;
   color: #108a00;
   font-size: 0.75rem;
   font-style: normal;
@@ -1172,63 +1169,31 @@ h3 {
 .consulting-profile strong {
   color: var(--night);
   max-width: 720px;
-  font-size: 0.98rem;
-  line-height: 1.28;
+  font-size: 0.9rem;
+  line-height: 1.22;
 }
 
 .consulting-profile small {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-  margin-top: 8px;
-}
-
-.consulting-profile small b {
-  display: inline-flex;
-  align-items: center;
-  min-height: 24px;
-  padding: 4px 8px;
-  border: 1px solid rgba(29, 111, 120, 0.16);
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.66);
+  margin-top: 4px;
   color: var(--muted);
-  font-size: 0.74rem;
+  font-size: 0.76rem;
   font-weight: 850;
-  line-height: 1.1;
+  line-height: 1.2;
 }
 
 .consulting-note {
-  display: grid;
-  gap: 4px;
   margin: 12px 0 0;
-  padding: 11px 13px;
-  border: 1px solid rgba(29, 111, 120, 0.18);
-  border-radius: var(--radius);
-  background: rgba(255, 255, 255, 0.62);
   text-decoration: none;
-  transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
 }
 
 .consulting-note:hover {
-  border-color: rgba(29, 111, 120, 0.42);
   box-shadow: 0 14px 34px rgba(21, 38, 44, 0.1);
   transform: translateY(-1px);
 }
 
-.consulting-note strong {
-  color: var(--night);
-  font-size: 0.96rem;
-}
-
-.consulting-note span {
-  color: var(--muted);
-  font-size: 0.9rem;
-  line-height: 1.4;
-}
-
 .origin-band {
   display: grid;
-  grid-template-columns: minmax(220px, 0.34fr) minmax(0, 1fr);
+  grid-template-columns: minmax(280px, 0.42fr) minmax(0, 1fr);
   gap: 28px;
   align-items: start;
   position: relative;
@@ -1246,7 +1211,7 @@ h3 {
 }
 
 .origin-intro h2 {
-  max-width: 430px;
+  max-width: 500px;
   font-size: clamp(1.18rem, 1.75vw, 1.72rem);
   line-height: 1.25;
 }
@@ -2783,17 +2748,17 @@ body.lightbox-open {
   }
 
   .profile-links {
-    gap: 10px;
+    gap: 8px;
   }
 
   .profile-group-grid {
-    gap: 8px;
+    gap: 7px;
   }
 
   .professional-grid a {
     min-width: 0;
-    min-height: 54px;
-    padding: 9px 6px;
+    min-height: 48px;
+    padding: 8px 6px;
     gap: 6px;
   }
 
@@ -2802,19 +2767,19 @@ body.lightbox-open {
   }
 
   .profile-links img {
-    width: 28px;
-    height: 28px;
+    width: 25px;
+    height: 25px;
   }
 
   .profile-links .wide-profile-logo {
-    width: 58px;
+    width: 52px;
     height: auto;
-    max-height: 26px;
+    max-height: 24px;
   }
 
   .profile-links .researchgate-logo {
-    width: 27px;
-    height: 27px;
+    width: 24px;
+    height: 24px;
   }
 
   .metrics-band {
@@ -2831,12 +2796,14 @@ body.lightbox-open {
   }
 
   .consulting-profile {
-    min-height: 64px;
+    min-height: 60px;
+    align-items: flex-start;
+    gap: 9px;
   }
 
   .consulting-profile .upwork-logo {
-    width: 74px;
-    padding: 5px 6px;
+    width: 64px;
+    padding: 4px 5px;
   }
 
   .publication-card {
