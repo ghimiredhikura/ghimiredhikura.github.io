@@ -432,9 +432,9 @@ window.PUBLICATIONS = [
     "venue": "IWPR / SPIE, 2016 · Conference",
     "title": "Object Tracking via Background Subtraction for Monitoring Illegal Activity in Crossroad",
     "summary": "Tracks vehicles and pedestrians at intersections using background subtraction. The system is designed to monitor illegal crossing behavior and support automated traffic-surveillance analysis.",
-    "image": "",
-    "imageAlt": "",
-    "icon": "traffic",
+    "image": "assets/images/crossroad.png",
+    "imageAlt": "Graphical abstract for Object Tracking via Background Subtraction for Monitoring Illegal Activity in Crossroad",
+    "icon": "",
     "links": [
       {
         "label": "Paper",
@@ -449,9 +449,9 @@ window.PUBLICATIONS = [
     "venue": "Multimedia Tools and Applications, 2016",
     "title": "Facial Expression Recognition Based on Local Region Specific Features and Support Vector Machines",
     "summary": "Improves expression recognition by extracting discriminative features from local facial regions. These features are classified with SVMs to capture expression-related variation more effectively than using global facial appearance alone.",
-    "image": "",
-    "imageAlt": "",
-    "icon": "face",
+    "image": "assets/images/expression_local_features_svm.png",
+    "imageAlt": "Graphical abstract for Facial Expression Recognition Based on Local Region Specific Features and Support Vector Machines",
+    "icon": "",
     "links": [
       {
         "label": "Paper",
@@ -471,9 +471,9 @@ window.PUBLICATIONS = [
     "venue": "Multimedia Tools and Applications, 2016",
     "title": "Recognition of Facial Expressions Based on Salient Geometric Features and Support Vector Machines",
     "summary": "Uses salient geometric facial features and SVM classification for facial expression recognition. The work focuses on shape and landmark-based cues, complementing appearance-based facial analysis approaches.",
-    "image": "",
-    "imageAlt": "",
-    "icon": "face",
+    "image": "assets/images/salient_gem_feature.png",
+    "imageAlt": "Graphical abstract for Recognition of Facial Expressions Based on Salient Geometric Features and Support Vector Machines",
+    "icon": "",
     "links": [
       {
         "label": "Paper",
@@ -493,9 +493,9 @@ window.PUBLICATIONS = [
     "venue": "Green and Smart Technology, 2015 · Conference / arXiv",
     "title": "Real-Time Sleepiness Detection for Driver State Monitoring System",
     "summary": "Detects driver sleepiness in real time for driver monitoring and ADAS safety applications. The work connects computer vision perception with practical in-vehicle safety systems where fast response is essential.",
-    "image": "",
-    "imageAlt": "",
-    "icon": "driver",
+    "image": "assets/images/sleepiness_detection.png",
+    "imageAlt": "Graphical abstract for Real-Time Sleepiness Detection for Driver State Monitoring System",
+    "icon": "",
     "links": [
       {
         "label": "Paper",
@@ -520,9 +520,9 @@ window.PUBLICATIONS = [
     "venue": "ICDIM 2015 · IEEE Conference",
     "title": "Facial Expression Recognition Based on Region Specific Appearance and Geometric Features",
     "summary": "Combines region-specific appearance features with geometric facial cues for expression recognition. The method uses complementary information from facial texture and shape to improve robustness.",
-    "image": "",
-    "imageAlt": "",
-    "icon": "face",
+    "image": "assets/images/expression_local_features.png",
+    "imageAlt": "Graphical abstract for Facial Expression Recognition Based on Region Specific Appearance and Geometric Features",
+    "icon": "",
     "links": [
       {
         "label": "Paper",
