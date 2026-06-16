@@ -808,6 +808,16 @@ h3 {
   content: "-";
 }
 
+.timeline details[open] summary {
+  font-size: 0;
+  gap: 0;
+}
+
+.timeline details[open] summary::before {
+  content: "Hide";
+  font-size: 0.78rem;
+}
+
 .timeline ul {
   display: block;
   margin: 12px 0 0;
@@ -1180,8 +1190,22 @@ h3 {
 }
 
 .consulting-note {
+  display: block;
   margin: 12px 0 0;
   text-decoration: none;
+}
+
+.consulting-note .upwork-logo {
+  float: left;
+  width: 96px;
+  padding: 2px 4px;
+  margin: 0 12px 4px 0;
+}
+
+.consulting-note::after {
+  content: "";
+  display: block;
+  clear: both;
 }
 
 .consulting-note:hover {
@@ -1627,6 +1651,16 @@ body.lightbox-open {
 
 .pub-details[open] summary::after {
   content: "-";
+}
+
+.pub-details[open] summary {
+  font-size: 0;
+  gap: 0;
+}
+
+.pub-details[open] summary::before {
+  content: "Hide";
+  font-size: 0.82rem;
 }
 
 .pub-details-body {
@@ -2797,23 +2831,25 @@ body.lightbox-open {
   }
 
   .consulting-profile .upwork-logo {
-    width: 64px;
+    width: 84px;
     padding: 4px 5px;
   }
 
   .publication-card {
     position: relative;
     grid-template-columns: 1fr;
+    overflow: visible;
   }
 
   .publication-card + .publication-card::before {
     content: "";
     position: absolute;
-    top: -8px;
-    left: 14px;
-    right: 14px;
+    top: -13px;
+    left: 18px;
+    right: 18px;
     height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(29, 111, 120, 0.28), rgba(143, 29, 24, 0.18), transparent);
+    background: linear-gradient(90deg, transparent, rgba(29, 111, 120, 0.34), rgba(143, 29, 24, 0.18), transparent);
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
   }
 
   .focus-card {
@@ -2909,12 +2945,17 @@ body.lightbox-open {
   }
 
   .pub-visual {
-    --pub-visual-height: clamp(205px, 55vw, 268px);
+    --pub-tag-height: 0px;
+    --pub-visual-height: clamp(183px, 49vw, 239px);
     height: var(--pub-visual-height);
     min-height: var(--pub-visual-height);
     padding: 0;
     border-right: 0;
     border-bottom: 1px solid var(--line);
+  }
+
+  .pub-visual::after {
+    display: none;
   }
 
   .pub-abstract {
@@ -2932,7 +2973,7 @@ body.lightbox-open {
   }
 
   .pub-body {
-    padding: 6px 14px 14px;
+    padding: 4px 14px 14px;
   }
 
   .publication-controls {
