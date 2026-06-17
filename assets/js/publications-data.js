@@ -537,8 +537,8 @@ window.PUBLICATIONS = [
     "venue": "SPIE Medical Imaging, 2014 · Conference",
     "title": "A Local Technique for Contrast Preserving Medical Image Enhancement",
     "summary": "Enhances medical images using a local contrast-preserving technique. The goal is to improve visual interpretability without destroying subtle image details that may matter in medical analysis.",
-    "image": "",
-    "imageAlt": "",
+    "image": "assets/images/clahe.png",
+    "imageAlt": "Graphical abstract for A Local Technique for Contrast Preserving Medical Image Enhancement",
     "icon": "color",
     "links": [
       {
@@ -554,8 +554,8 @@ window.PUBLICATIONS = [
     "venue": "Sensors, 2013 · Q2 Journal",
     "title": "Geometric Feature-Based Facial Expression Recognition in Image Sequences Using Multi-Class AdaBoost and Support Vector Machines",
     "summary": "Uses geometric facial features with multi-class AdaBoost and SVMs to recognize expressions in image sequences. The work emphasizes temporal facial shape information rather than relying only on static appearance.",
-    "image": "",
-    "imageAlt": "",
+    "image": "assets/images/thesis_sensor_paper.png",
+    "imageAlt": "Graphical abstract for Geometric Feature-Based Facial Expression Recognition in Image Sequences",
     "icon": "face",
     "links": [
       {
@@ -581,8 +581,8 @@ window.PUBLICATIONS = [
     "venue": "Smart Media Journal, 2012 · Journal / arXiv",
     "title": "Comparison of Two Methods for Stationary Incident Detection Based on Background Image",
     "summary": "Compares two background-image-based methods for detecting stationary incidents in surveillance scenes. The work fits the traffic-monitoring line of research, where reliable background modeling is important for abnormal-event detection.",
-    "image": "",
-    "imageAlt": "",
+    "image": "assets/images/stationary_object_detection.png",
+    "imageAlt": "Graphical abstract for Comparison of Two Methods for Stationary Incident Detection",
     "icon": "traffic",
     "links": [
       {
@@ -603,8 +603,8 @@ window.PUBLICATIONS = [
     "venue": "ICGIP / SPIE, 2013 · Conference",
     "title": "Automatic Facial Expression Recognition Based on Features Extracted from Tracking of Landmarks",
     "summary": "Tracks facial landmarks over image sequences and extracts expression-related features from their movement. The paper contributes to automatic expression recognition using dynamic geometric facial information.",
-    "image": "",
-    "imageAlt": "",
+    "image": "assets/images/expression_conf.png",
+    "imageAlt": "Graphical abstract for Automatic Facial Expression Recognition Based on Tracking of Landmarks",
     "icon": "face",
     "links": [
       {
@@ -620,8 +620,8 @@ window.PUBLICATIONS = [
     "venue": "SCET 2012 · IEEE Conference",
     "title": "A Lighting Insensitive Face Detection Method on Color Images",
     "summary": "Designs a color-image face detector that is more robust to lighting variation. The approach targets practical face-detection conditions where illumination can change significantly across scenes.",
-    "image": "",
-    "imageAlt": "",
+    "image": "assets/images/master_thesis.png",
+    "imageAlt": "Graphical abstract for A Lighting Insensitive Face Detection Method on Color Images",
     "icon": "face",
     "links": [
       {
@@ -637,8 +637,8 @@ window.PUBLICATIONS = [
     "venue": "PSIVT 2011 · Springer LNCS Conference",
     "title": "Nonlinear Transfer Function-Based Image Detail Preserving Dynamic Range Compression for Color Image Enhancement",
     "summary": "Compresses image dynamic range while preserving important visual details. The method improves color image enhancement by using nonlinear transfer behavior designed to avoid flattening local structure.",
-    "image": "",
-    "imageAlt": "",
+    "image": "assets/images/hsv_enhancement_conf.png",
+    "imageAlt": "Graphical abstract for Nonlinear Transfer Function-Based Image Detail Preserving Dynamic Range Compression",
     "icon": "color",
     "links": [
       {
@@ -654,8 +654,8 @@ window.PUBLICATIONS = [
     "venue": "IEEE Transactions on Consumer Electronics, 2011 · Q1",
     "title": "Nonlinear Transfer Function-Based Local Approach for Color Image Enhancement",
     "summary": "Enhances color images through local nonlinear transfer functions while preserving details. The paper addresses common image-enhancement problems where global contrast changes can damage local visual quality.",
-    "image": "",
-    "imageAlt": "",
+    "image": "assets/images/hsv_enhancement_ieee_ce.png",
+    "imageAlt": "Graphical abstract for Nonlinear Transfer Function-Based Local Approach for Color Image Enhancement",
     "icon": "color",
     "links": [
       {
@@ -671,8 +671,8 @@ window.PUBLICATIONS = [
     "venue": "International Journal of Contents, 2010",
     "title": "Infrared Sensitive Camera Based Finger-Friendly Interactive Display System",
     "summary": "Builds a touchless interaction system that maps fingertip positions from an infrared-sensitive camera to large-display coordinates. The work demonstrates early practical computer-vision interaction beyond keyboard and mouse input.",
-    "image": "",
-    "imageAlt": "",
+    "image": "assets/images/finger_mouse.png",
+    "imageAlt": "Graphical abstract for Infrared Sensitive Camera Based Finger-Friendly Interactive Display System",
     "icon": "interaction",
     "links": [
       {
@@ -693,8 +693,8 @@ window.PUBLICATIONS = [
     "venue": "PSIVT 2010 · IEEE Conference",
     "title": "Color Image Enhancement in HSV Space Using Nonlinear Transfer Function and Neighborhood Dependent Approach with Preserving Details",
     "summary": "Enhances color images in HSV space using nonlinear transfer functions and neighborhood-dependent information. The method aims to improve visual quality while preserving fine image details and natural color appearance.",
-    "image": "",
-    "imageAlt": "",
+    "image": "assets/images/color_enchncement_psivt.png",
+    "imageAlt": "Graphical abstract for Color Image Enhancement in HSV Space Using Nonlinear Transfer Function",
     "icon": "color",
     "links": [
       {
