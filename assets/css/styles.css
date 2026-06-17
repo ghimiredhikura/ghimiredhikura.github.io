@@ -1,3 +1,5 @@
+/* ===== Design Tokens ===== */
+
 :root {
   --ink: #182126;
   --muted: #5e6a70;
@@ -13,6 +15,8 @@
   --radius: 8px;
   --max: 1160px;
 }
+
+/* ===== Base Reset & Elements ===== */
 
 * {
   box-sizing: border-box;
@@ -39,6 +43,8 @@ a {
   color: inherit;
 }
 
+/* ===== Header & Navigation ===== */
+
 .site-header {
   position: sticky;
   top: 0;
@@ -62,8 +68,7 @@ a {
   letter-spacing: 0;
 }
 
-.brand-mark,
-.text-logo {
+.brand-mark {
   display: grid;
   place-items: center;
   width: 38px;
@@ -149,6 +154,8 @@ main {
   width: min(var(--max), calc(100% - 32px));
   margin: 0 auto;
 }
+
+/* ===== Home: Hero ===== */
 
 .hero {
   position: relative;
@@ -420,6 +427,8 @@ h3 {
   box-shadow: 0 16px 45px rgba(21, 38, 44, 0.06);
 }
 
+/* ===== Home: Metrics Band ===== */
+
 .metrics-band {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -465,6 +474,8 @@ h3 {
 .publication-list {
   margin: 0 0 35px;
 }
+
+/* ===== Home: Highlights & Focus Cards ===== */
 
 .section-grid {
   display: grid;
@@ -566,6 +577,8 @@ h3 {
   font-weight: 900;
 }
 
+/* ===== Shared Icon Pictograms (.mini-icon / .pub-icon) ===== */
+
 .mini-icon,
 .pub-icon {
   display: block;
@@ -655,6 +668,8 @@ h3 {
   background: var(--leaf);
   transform: rotate(35deg);
 }
+
+/* ===== Section Heading & Career Timeline ===== */
 
 .section-heading {
   max-width: 680px;
@@ -842,6 +857,8 @@ h3 {
 }
 
 .two-column,
+/* ===== Home: Writing & Service Preview ===== */
+
 .writing-layout {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1006,6 +1023,8 @@ h3 {
   letter-spacing: 0;
   text-transform: none;
 }
+
+/* ===== Home: Profiles & Contact ===== */
 
 .profiles {
   display: grid;
@@ -1244,6 +1263,8 @@ h3 {
   transform: translateY(-1px);
 }
 
+/* ===== Home: Origin / About Band ===== */
+
 .origin-band {
   display: grid;
   grid-template-columns: minmax(280px, 0.42fr) minmax(0, 1fr);
@@ -1313,6 +1334,8 @@ h3 {
   font-weight: 900;
 }
 
+/* ===== Subpage Hero (Publications / Writing / Gallery) ===== */
+
 .page-hero {
   padding: 60px 0 10px;
 }
@@ -1334,6 +1357,8 @@ h3 {
 .writing-hero h1 {
   font-size: clamp(1.55rem, 2.35vw, 2.2rem);
 }
+
+/* ===== Publications Page: Filters & Cards ===== */
 
 .publication-controls {
   display: flex;
@@ -1369,6 +1394,8 @@ h3 {
   display: grid;
   gap: 14px;
 }
+
+/* ===== Publications Page: Additional Papers List ===== */
 
 .other-publications {
   margin: 10px 0 35px;
@@ -1641,6 +1668,8 @@ h3 {
   content: "Systems";
 }
 
+/* ===== Publications Page: Image Lightbox ===== */
+
 .image-lightbox {
   position: fixed;
   inset: 0;
@@ -1711,6 +1740,8 @@ h3 {
 body.lightbox-open {
   overflow: hidden;
 }
+
+/* ===== Publications Page: Card Actions & Expandable Details ===== */
 
 .pub-actions {
   display: flex;
@@ -1846,6 +1877,8 @@ body.lightbox-open {
   font-weight: 850;
 }
 
+/* ===== Action Icons (Paper / PDF / arXiv / GitHub) ===== */
+
 .action-icon {
   position: relative;
   display: inline-block;
@@ -1929,6 +1962,8 @@ body.lightbox-open {
   border-radius: 0 0 3px 3px;
   background: currentColor;
 }
+
+/* ===== Publication Topic Icon Variants ===== */
 
 .pub-icon.pruning::before {
   width: 36px;
@@ -2107,6 +2142,8 @@ body.lightbox-open {
   background: white;
   box-shadow: 0 -7px white;
 }
+
+/* ===== Writing Page ===== */
 
 .writing-layout {
   align-items: start;
@@ -2333,6 +2370,8 @@ body.lightbox-open {
   font-weight: 800;
 }
 
+/* ===== Article Page (Long-form Writing) ===== */
+
 .article-page {
   max-width: 1040px;
 }
@@ -2437,6 +2476,8 @@ body.lightbox-open {
   border-top: 1px solid var(--line);
 }
 
+/* ===== Gallery Page ===== */
+
 .gallery-grid {
   display: grid;
   grid-template-columns: 1.25fr 1fr 1fr;
@@ -2504,6 +2545,8 @@ body.lightbox-open {
     #eef5ed;
 }
 
+/* ===== Footer ===== */
+
 .site-footer {
   width: min(var(--max), calc(100% - 32px));
   margin: 0 auto;
@@ -2529,6 +2572,8 @@ body.lightbox-open {
   color: var(--river);
   font-weight: 900;
 }
+
+/* ===== Responsive: Tablet (<=900px) ===== */
 
 @media (max-width: 900px) {
   .nav-toggle {
@@ -2651,6 +2696,8 @@ body.lightbox-open {
   }
 }
 
+/* ===== Responsive: Mobile (<=620px) ===== */
+
 @media (max-width: 620px) {
   main,
   .site-header,
@@ -2666,8 +2713,7 @@ body.lightbox-open {
     gap: 8px;
   }
 
-  .brand-mark,
-  .text-logo {
+  .brand-mark {
     width: 34px;
     height: 34px;
     font-size: 0.86rem;
