@@ -2511,12 +2511,18 @@ body.lightbox-open {
   border-top: 1px solid var(--line);
   color: var(--muted);
   display: flex;
-  justify-content: space-between;
-  gap: 18px;
+  flex-direction: column;
+  gap: 14px;
 }
 
 .site-footer p {
   margin: 0;
+}
+
+.site-footer .copyright {
+  font-size: 0.78rem;
+  color: var(--muted);
+  opacity: 0.85;
 }
 
 .site-footer a {
@@ -3136,7 +3142,6 @@ body.lightbox-open {
   }
 
   .site-footer {
-    flex-direction: column;
     gap: 8px;
     padding: 24px 0 30px;
   }
