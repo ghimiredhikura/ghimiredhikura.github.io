@@ -1787,6 +1787,12 @@ h3 {
   cursor: zoom-in;
 }
 
+.pub-image-button picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
 .pub-image-button:focus-visible {
   outline: 2px solid var(--river);
   outline-offset: -3px;
@@ -3346,11 +3352,31 @@ body.lightbox-open {
   }
 
   .pub-image-button {
-    cursor: default;
+    cursor: zoom-in;
   }
 
   .image-lightbox {
-    display: none !important;
+    padding: 12px;
+  }
+
+  .image-lightbox-panel {
+    width: min(100%, 96vw);
+    max-height: 88vh;
+    padding: 10px 10px 12px;
+  }
+
+  .image-lightbox-img {
+    max-height: 72vh;
+  }
+
+  .image-lightbox-title {
+    margin: 8px 38px 0 0;
+    font-size: 0.78rem;
+  }
+
+  .image-lightbox-close {
+    right: 10px;
+    top: 8px;
   }
 
   .pub-body {

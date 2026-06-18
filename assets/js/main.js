@@ -38,9 +38,16 @@ const thumbnailSrc = (imagePath) => {
 };
 
 const renderPublicationCard = (publication) => {
+  const fullImage = publication.image ? escapeHtml(publication.image) : "";
+  const thumbImage = publication.image ? escapeHtml(thumbnailSrc(publication.image)) : "";
+  const imageAlt = escapeHtml(publication.imageAlt || publication.title);
+  const imageTitle = escapeHtml(publication.title);
   const visual = publication.image
-    ? `<button class="pub-image-button" type="button" data-full-image="${escapeHtml(publication.image)}" data-image-title="${escapeHtml(publication.title)}" aria-label="Expand graphical abstract for ${escapeHtml(publication.title)}">
-        <img class="pub-abstract" src="${escapeHtml(thumbnailSrc(publication.image))}" loading="lazy" decoding="async" alt="${escapeHtml(publication.imageAlt || publication.title)}">
+    ? `<button class="pub-image-button" type="button" data-full-image="${fullImage}" data-image-title="${imageTitle}" aria-label="Expand graphical abstract for ${imageTitle}">
+        <picture>
+          <source media="(max-width: 700px)" srcset="${fullImage}">
+          <img class="pub-abstract" src="${thumbImage}" loading="lazy" decoding="async" alt="${imageAlt}">
+        </picture>
       </button>`
     : `<span class="pub-icon ${escapeHtml(publication.icon || "chip")}"></span>`;
 
@@ -147,7 +154,6 @@ if (lightboxTriggers.length) {
   const lightboxImage = lightbox.querySelector(".image-lightbox-img");
   const lightboxTitle = lightbox.querySelector(".image-lightbox-title");
   const lightboxClose = lightbox.querySelector(".image-lightbox-close");
-  const desktopMedia = window.matchMedia("(min-width: 701px)");
 
   const closeLightbox = () => {
     lightbox.classList.remove("open");
@@ -157,7 +163,7 @@ if (lightboxTriggers.length) {
 
   document.addEventListener("click", (event) => {
     const button = event.target.closest(".pub-image-button, .focus-image-button");
-    if (!button || !desktopMedia.matches) return;
+    if (!button) return;
     lightboxImage.src = button.dataset.fullImage;
     lightboxImage.alt = button.querySelector("img")?.alt || "";
     lightboxTitle.textContent = button.dataset.imageTitle || "";
