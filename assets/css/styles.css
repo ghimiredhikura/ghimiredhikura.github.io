@@ -3352,7 +3352,8 @@ body.lightbox-open {
   }
 
   .pub-image-button {
-    cursor: zoom-in;
+    cursor: default;
+    pointer-events: none;
   }
 
   .image-lightbox {

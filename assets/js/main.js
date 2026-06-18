@@ -154,6 +154,7 @@ if (lightboxTriggers.length) {
   const lightboxImage = lightbox.querySelector(".image-lightbox-img");
   const lightboxTitle = lightbox.querySelector(".image-lightbox-title");
   const lightboxClose = lightbox.querySelector(".image-lightbox-close");
+  const desktopMedia = window.matchMedia("(min-width: 701px)");
 
   const closeLightbox = () => {
     lightbox.classList.remove("open");
@@ -163,7 +164,7 @@ if (lightboxTriggers.length) {
 
   document.addEventListener("click", (event) => {
     const button = event.target.closest(".pub-image-button, .focus-image-button");
-    if (!button) return;
+    if (!button || !desktopMedia.matches) return;
     lightboxImage.src = button.dataset.fullImage;
     lightboxImage.alt = button.querySelector("img")?.alt || "";
     lightboxTitle.textContent = button.dataset.imageTitle || "";
