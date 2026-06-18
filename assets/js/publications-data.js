@@ -23,7 +23,7 @@
 window.PUBLICATIONS = [
   {
     "topic": "edge-ai",
-    "venue": "WACV 2026 · IEEE/CVF Conference",
+    "venue": "WACV 2026, Tucson, USA · IEEE/CVF Conference",
     "title": "One-cycle Structured Pruning with Stability Driven Subnetwork Search",
     "summary": "Introduces a one-cycle structured pruning strategy that searches for stable subnetworks while the model is being compressed. The goal is to make deep vision models lighter and more deployable without relying on a long, multi-stage pruning pipeline.",
     "image": "assets/images/ocspruner.webp",
@@ -165,7 +165,7 @@ window.PUBLICATIONS = [
   },
   {
     "topic": "vision",
-    "venue": "IICC 2025 · Conference / arXiv",
+    "venue": "IICC 2025, Jeonju, South Korea · Conference / arXiv",
     "title": "Study on Real-Time Road Surface Reconstruction Using Stereo Vision",
     "summary": "Studies stereo-vision-based reconstruction for real-time understanding of road surfaces. The work is relevant to autonomous mobility and field robotics where ground shape, surface quality, and depth cues must be estimated from camera data.",
     "image": "assets/images/roadbev.webp",
@@ -209,7 +209,7 @@ window.PUBLICATIONS = [
   },
   {
     "topic": "edge-ai",
-    "venue": "ICCAS, 2024 · IEEE Conference",
+    "venue": "ICCAS 2024, Jeju, South Korea · IEEE Conference",
     "title": "A Study of Structured Pruning for Hybrid Neural Networks",
     "summary": "Examines structured pruning strategies for hybrid neural networks, with attention to deployment efficiency. The paper contributes to the broader goal of reducing neural-network complexity while maintaining practical model performance.",
     "image": "assets/images/hybrid_cnn_vit_prune.webp",
@@ -412,7 +412,7 @@ window.PUBLICATIONS = [
   },
   {
     "topic": "vision",
-    "venue": "ACIVS 2017 · Springer LNCS Conference",
+    "venue": "ACIVS 2017, Antwerp, Belgium · Springer LNCS Conference",
     "title": "Facial Expression Recognition Using Local Region Specific Dense Optical Flow and LBP Features",
     "summary": "Combines dense optical flow and LBP features extracted from local facial regions. The method captures both motion and texture cues, improving expression recognition in image sequences.",
     "image": "assets/images/expression_optical_flow_lbp.webp",
@@ -429,7 +429,7 @@ window.PUBLICATIONS = [
   },
   {
     "topic": "vision",
-    "venue": "IWPR / SPIE, 2016 · Conference",
+    "venue": "IWPR 2016, Japan · SPIE Conference",
     "title": "Object Tracking via Background Subtraction for Monitoring Illegal Activity in Crossroad",
     "summary": "Tracks vehicles and pedestrians at intersections using background subtraction. The system is designed to monitor illegal crossing behavior and support automated traffic-surveillance analysis.",
     "image": "assets/images/crossroad.webp",
@@ -512,7 +512,7 @@ window.PUBLICATIONS = [
   },
   {
     "topic": "vision",
-    "venue": "Green and Smart Technology, 2015 · Conference / arXiv",
+    "venue": "GST 2015, South Korea · Conference / arXiv",
     "title": "Real-Time Sleepiness Detection for Driver State Monitoring System",
     "summary": "Detects driver sleepiness in real time for driver monitoring and ADAS safety applications. The work connects computer vision perception with practical in-vehicle safety systems where fast response is essential.",
     "image": "assets/images/sleepiness_detection.webp",
@@ -539,7 +539,7 @@ window.PUBLICATIONS = [
   },
   {
     "topic": "vision",
-    "venue": "ICDIM 2015 · IEEE Conference",
+    "venue": "ICDIM 2015, Jeju, South Korea · IEEE Conference",
     "title": "Facial Expression Recognition Based on Region Specific Appearance and Geometric Features",
     "summary": "Combines region-specific appearance features with geometric facial cues for expression recognition. The method uses complementary information from facial texture and shape to improve robustness.",
     "image": "assets/images/expression_local_features.webp",
@@ -556,7 +556,7 @@ window.PUBLICATIONS = [
   },
   {
     "topic": "vision",
-    "venue": "SPIE Medical Imaging, 2014 · Conference",
+    "venue": "SPIE Medical Imaging 2014, San Diego, USA · Conference",
     "title": "A Local Technique for Contrast Preserving Medical Image Enhancement",
     "summary": "Enhances medical images using a local contrast-preserving technique. The goal is to improve visual interpretability without destroying subtle image details that may matter in medical analysis.",
     "image": "assets/images/clahe.webp",
@@ -622,7 +622,7 @@ window.PUBLICATIONS = [
   },
   {
     "topic": "vision",
-    "venue": "ICGIP / SPIE, 2013 · Conference",
+    "venue": "ICGIP 2013, Hong Kong, China · SPIE Conference",
     "title": "Automatic Facial Expression Recognition Based on Features Extracted from Tracking of Landmarks",
     "summary": "Tracks facial landmarks over image sequences and extracts expression-related features from their movement. The paper contributes to automatic expression recognition using dynamic geometric facial information.",
     "image": "assets/images/expression_conf.webp",
@@ -639,7 +639,7 @@ window.PUBLICATIONS = [
   },
   {
     "topic": "vision",
-    "venue": "SCET 2012 · IEEE Conference",
+    "venue": "SCET 2012, Xi'an, China · IEEE Conference",
     "title": "A Lighting Insensitive Face Detection Method on Color Images",
     "summary": "Designs a color-image face detector that is more robust to lighting variation. The approach targets practical face-detection conditions where illumination can change significantly across scenes.",
     "image": "assets/images/master_thesis.webp",
@@ -656,7 +656,7 @@ window.PUBLICATIONS = [
   },
   {
     "topic": "vision",
-    "venue": "PSIVT 2011 · Springer LNCS Conference",
+    "venue": "PSIVT 2011, Gwangju, South Korea · Springer LNCS Conference",
     "title": "Nonlinear Transfer Function-Based Image Detail Preserving Dynamic Range Compression for Color Image Enhancement",
     "summary": "Compresses image dynamic range while preserving important visual details. The method improves color image enhancement by using nonlinear transfer behavior designed to avoid flattening local structure.",
     "image": "assets/images/hsv_enhancement_conf.webp",
@@ -712,7 +712,7 @@ window.PUBLICATIONS = [
   },
   {
     "topic": "vision",
-    "venue": "PSIVT 2010 · IEEE Conference",
+    "venue": "PSIVT 2010, Singapore · IEEE Conference",
     "title": "Color Image Enhancement in HSV Space Using Nonlinear Transfer Function and Neighborhood Dependent Approach with Preserving Details",
     "summary": "Enhances color images in HSV space using nonlinear transfer functions and neighborhood-dependent information. The method aims to improve visual quality while preserving fine image details and natural color appearance.",
     "image": "assets/images/color_enchncement_psivt.webp",
