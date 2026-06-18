@@ -26,7 +26,7 @@ window.PUBLICATIONS = [
     "venue": "WACV 2026 · IEEE/CVF Conference",
     "title": "One-cycle Structured Pruning with Stability Driven Subnetwork Search",
     "summary": "Introduces a one-cycle structured pruning strategy that searches for stable subnetworks while the model is being compressed. The goal is to make deep vision models lighter and more deployable without relying on a long, multi-stage pruning pipeline.",
-    "image": "assets/images/ocspruner.png",
+    "image": "assets/images/ocspruner.webp",
     "imageAlt": "Graphical abstract for OCSPruner",
     "icon": "",
     "links": [
@@ -58,7 +58,7 @@ window.PUBLICATIONS = [
     "venue": "Diagnostics, 2026, Q1 Journal",
     "title": "Precision Biomarker Identification in Gynecological Cancers Using Coexpression Networks and Attention-Based LSTM in Healthcare 4.0",
     "summary": "Background: Cervical cancer (CC) and ovarian cancer (OC) are among the most prevalent and lethal gynecological malignancies in women, necessitating the identification of reliable biomarkers for early diagnosis and prognosis.",
-    "image": "assets/images/precision_biomaker_hiot4.0.png",
+    "image": "assets/images/precision_biomaker_hiot4.0.webp",
     "imageAlt": "Graphical abstract for precision biomarker identification",
     "icon": "",
     "links": [
@@ -80,7 +80,7 @@ window.PUBLICATIONS = [
     "venue": "Diagnostics, 2025, Q1 Journal",
     "title": "Temporal Trends and Machine Learning-Based Risk Prediction of Female Infertility: A Cross-Cohort Analysis Using NHANES Data (2015-2023)",
     "summary": "Background: Female infertility represents a significant global public health concern, yet its evolving trends and data-driven risk prediction remain under examined in nationally representative cohorts. This study investigates temporal changes in infertility prevalence and evaluates Machine Learning (ML) models for infertility risk prediction.",
-    "image": "assets/images/temporal_trend_f_infertility.png",
+    "image": "assets/images/temporal_trend_f_infertility.webp",
     "imageAlt": "Graphical abstract for Temporal Trends and Machine Learning-Based Risk Prediction of Female Infertility",
     "icon": "",
     "links": [
@@ -102,7 +102,7 @@ window.PUBLICATIONS = [
     "venue": "Sensors, 2025 · Q2 Journal",
     "title": "FUSE-Net: Multi-Scale CNN for NIR Band Prediction from RGB Using GNDVI-Guided Green Channel Enhancement",
     "summary": "Predicts near-infrared information from ordinary RGB imagery using a multi-scale CNN and GNDVI-guided enhancement. This can reduce reliance on expensive sensors while supporting crop health monitoring and smart vertical farming applications.",
-    "image": "assets/images/fusenet.png",
+    "image": "assets/images/fusenet.webp",
     "imageAlt": "Graphical abstract for FUSE-Net",
     "icon": "",
     "links": [
@@ -124,7 +124,7 @@ window.PUBLICATIONS = [
     "venue": "Diagnostics, 2025 · Q1 Journal",
     "title": "Association of Polycystic Ovary Syndrome with Clinical, Physical, and Reproductive Factors: A Data-Driven Analysis",
     "summary": "Uses data-driven clinical analysis to examine how PCOS relates to reproductive, physical, and health factors. The work supports more evidence-based interpretation of clinical indicators and risk patterns in women's health data.",
-    "image": "assets/images/pcos.png",
+    "image": "assets/images/pcos.webp",
     "imageAlt": "Graphical abstract for PCOS",
     "icon": "",
     "links": [
@@ -146,7 +146,7 @@ window.PUBLICATIONS = [
     "venue": "IEEE Access, 2025 · Q2 Open Access",
     "title": "Federated Explainable AI-Based Alzheimer's Disease Prediction With Multimodal Data",
     "summary": "Combines federated learning and explainable AI to predict Alzheimer's disease from multimodal clinical and imaging-related data. The approach targets privacy-aware healthcare AI while keeping model decisions more interpretable for medical analysis.",
-    "image": "assets/images/alzimer.png",
+    "image": "assets/images/alzimer.webp",
     "imageAlt": "Graphical abstract for Alzheimer's Disease",
     "icon": "",
     "links": [
@@ -168,7 +168,7 @@ window.PUBLICATIONS = [
     "venue": "IICC 2025 · Conference / arXiv",
     "title": "Study on Real-Time Road Surface Reconstruction Using Stereo Vision",
     "summary": "Studies stereo-vision-based reconstruction for real-time understanding of road surfaces. The work is relevant to autonomous mobility and field robotics where ground shape, surface quality, and depth cues must be estimated from camera data.",
-    "image": "assets/images/roadbev.png",
+    "image": "assets/images/roadbev.webp",
     "imageAlt": "Graphical abstract for road surface reconstruction",
     "icon": "",
     "links": [
@@ -195,7 +195,7 @@ window.PUBLICATIONS = [
     "venue": "Smart Media Journal, 2024",
     "title": "Searching Spectrum Band of Crop Area Based on Deep Learning Using Hyper-spectral Image",
     "summary": "Uses deep learning with hyperspectral imagery to search for informative spectral bands in crop regions. The study supports more efficient agricultural sensing by identifying which wavelength ranges are most useful for crop-area analysis.",
-    "image": "assets/images/band_selection.png",
+    "image": "assets/images/band_selection.webp",
     "imageAlt": "Graphical abstract for hyperspectral band selection",
     "icon": "",
     "links": [
@@ -212,7 +212,7 @@ window.PUBLICATIONS = [
     "venue": "ICCAS, 2024 · IEEE Conference",
     "title": "A Study of Structured Pruning for Hybrid Neural Networks",
     "summary": "Examines structured pruning strategies for hybrid neural networks, with attention to deployment efficiency. The paper contributes to the broader goal of reducing neural-network complexity while maintaining practical model performance.",
-    "image": "assets/images/hybrid_cnn_vit_prune.png",
+    "image": "assets/images/hybrid_cnn_vit_prune.webp",
     "imageAlt": "Graphical abstract for Pruning for Hybrid Neural Networks",
     "icon": "",
     "links": [
@@ -229,7 +229,7 @@ window.PUBLICATIONS = [
     "venue": "IEEE Access, 2024 · Q2 Open Access",
     "title": "Exploring Deep Learning and Machine Learning Approaches for Brain Hemorrhage Detection",
     "summary": "Compares machine learning and deep learning approaches for automated brain hemorrhage detection. The paper helps organize model choices and performance tradeoffs for medical image analysis tasks where rapid and accurate detection is important.",
-    "image": "assets/images/brain_hamorrhage.png",
+    "image": "assets/images/brain_hamorrhage.webp",
     "imageAlt": "Graphical abstract for Brain Hemorrhage Detection",
     "icon": "",
     "links": [
@@ -251,7 +251,7 @@ window.PUBLICATIONS = [
     "venue": "Electronics, 2024 · Q2 Journal",
     "title": "Exploring Machine Learning for Predicting Cerebral Stroke: A Study in Discovery",
     "summary": "Applies machine learning models to discover predictive patterns for cerebral stroke risk. The study explores how clinical and related data can be modeled to support early risk assessment and data-driven discovery.",
-    "image": "assets/images/cerebral_stroke.png",
+    "image": "assets/images/cerebral_stroke.webp",
     "imageAlt": "Graphical abstract for Cerebral Stroke Prediction",
     "icon": "",
     "links": [
@@ -273,7 +273,7 @@ window.PUBLICATIONS = [
     "venue": "IEEE Access, 2023 · Q2 Open Access",
     "title": "A Review on the Detection Techniques of Polycystic Ovary Syndrome Using Machine Learning",
     "summary": "Reviews machine-learning methods, datasets, and feature patterns used for PCOS detection. It is useful as a clinical-AI overview for understanding existing approaches, limitations, and opportunities for decision-support systems.",
-    "image": "assets/images/pcos_ml_review.png",
+    "image": "assets/images/pcos_ml_review.webp",
     "imageAlt": "Graphical abstract for A Review on Polycystic Ovary Syndrome",
     "icon": "",
     "links": [
@@ -295,7 +295,7 @@ window.PUBLICATIONS = [
     "venue": "IEEE Access, 2023 · Q2 Open Access",
     "title": "RNN-CNN Based Cancer Prediction Model for Gene Expression",
     "summary": "Combines recurrent and convolutional neural-network components for cancer prediction using gene-expression data. The architecture is designed to capture both sequential and local patterns in biomedical signals.",
-    "image": "assets/images/rnn_cnn_cancer.png",
+    "image": "assets/images/rnn_cnn_cancer.webp",
     "imageAlt": "Graphical abstract for RNN-CNN Based Cancer Prediction Model for Gene Expression",
     "icon": "",
     "links": [
@@ -317,7 +317,7 @@ window.PUBLICATIONS = [
     "venue": "Image and Vision Computing, 2023 · Q1 Journal",
     "title": "Loss-Aware Automatic Selection of Structured Pruning Criteria for Deep Neural Network Acceleration",
     "summary": "Automatically selects structured pruning criteria by observing loss behavior during compression. This helps compressed neural networks retain accuracy while improving inference speed and reducing model complexity.",
-    "image": "assets/images/laasp.png",
+    "image": "assets/images/laasp.webp",
     "imageAlt": "Graphical abstract for LAASP",
     "icon": "",
     "links": [
@@ -344,7 +344,7 @@ window.PUBLICATIONS = [
     "venue": "Electronics, 2023 · Q2 Journal",
     "title": "Healthcare Internet of Things (H-IoT): Current Trends, Future Prospects, Applications, Challenges, and Security Issues",
     "summary": "Surveys healthcare IoT applications, current trends, security concerns, and future prospects. The paper connects sensing, connected devices, healthcare services, and privacy/security issues in modern H-IoT systems.",
-    "image": "assets/images/hiot.png",
+    "image": "assets/images/hiot.webp",
     "imageAlt": "Graphical abstract for Healthcare Internet of Things (H-IoT)",
     "icon": "",
     "links": [
@@ -366,7 +366,7 @@ window.PUBLICATIONS = [
     "venue": "Applied Sciences, 2022 · Q2 Journal",
     "title": "Magnitude and Similarity Based Variable Rate Filter Pruning for Efficient Convolution Neural Networks",
     "summary": "Removes convolutional filters using both magnitude and similarity cues, with variable pruning rates across layers. The method targets efficient CNN inference while trying to preserve representation quality and accuracy.",
-    "image": "assets/images/mag_sim_prune.png",
+    "image": "assets/images/mag_sim_prune.webp",
     "imageAlt": "Graphical abstract for Magnitude and Similarity Based Variable Rate Filter Pruning",
     "icon": "",
     "links": [
@@ -393,7 +393,7 @@ window.PUBLICATIONS = [
     "venue": "Electronics, 2022 · Q2 Journal",
     "title": "A Survey on Efficient Convolutional Neural Networks and Hardware Acceleration",
     "summary": "Reviews compact CNN architectures, pruning, quantization, and hardware acceleration strategies. It provides a broad map of techniques for making deep learning practical on constrained and embedded platforms.",
-    "image": "assets/images/efficient_cnn_survey.png",
+    "image": "assets/images/efficient_cnn_survey.webp",
     "imageAlt": "Graphical abstract for A Survey on Efficient Convolutional Neural Networks and Hardware Acceleration",
     "icon": "",
     "links": [
@@ -415,7 +415,7 @@ window.PUBLICATIONS = [
     "venue": "ACIVS 2017 · Springer LNCS Conference",
     "title": "Facial Expression Recognition Using Local Region Specific Dense Optical Flow and LBP Features",
     "summary": "Combines dense optical flow and LBP features extracted from local facial regions. The method captures both motion and texture cues, improving expression recognition in image sequences.",
-    "image": "assets/images/expression_optical_flow_lbp.png",
+    "image": "assets/images/expression_optical_flow_lbp.webp",
     "imageAlt": "Graphical abstract for Facial Expression Recognition Using Local Region Specific Dense Optical Flow and LBP Features",
     "icon": "",
     "links": [
@@ -432,7 +432,7 @@ window.PUBLICATIONS = [
     "venue": "IWPR / SPIE, 2016 · Conference",
     "title": "Object Tracking via Background Subtraction for Monitoring Illegal Activity in Crossroad",
     "summary": "Tracks vehicles and pedestrians at intersections using background subtraction. The system is designed to monitor illegal crossing behavior and support automated traffic-surveillance analysis.",
-    "image": "assets/images/crossroad.png",
+    "image": "assets/images/crossroad.webp",
     "imageAlt": "Graphical abstract for Object Tracking via Background Subtraction for Monitoring Illegal Activity in Crossroad",
     "icon": "",
     "links": [
@@ -449,7 +449,7 @@ window.PUBLICATIONS = [
     "venue": "Multimedia Tools and Applications, 2016",
     "title": "Facial Expression Recognition Based on Local Region Specific Features and Support Vector Machines",
     "summary": "Improves expression recognition by extracting discriminative features from local facial regions. These features are classified with SVMs to capture expression-related variation more effectively than using global facial appearance alone.",
-    "image": "assets/images/expression_local_features_svm.png",
+    "image": "assets/images/expression_local_features_svm.webp",
     "imageAlt": "Graphical abstract for Facial Expression Recognition Based on Local Region Specific Features and Support Vector Machines",
     "icon": "",
     "links": [
@@ -471,7 +471,7 @@ window.PUBLICATIONS = [
     "venue": "Multimedia Tools and Applications, 2016",
     "title": "Recognition of Facial Expressions Based on Salient Geometric Features and Support Vector Machines",
     "summary": "Uses salient geometric facial features and SVM classification for facial expression recognition. The work focuses on shape and landmark-based cues, complementing appearance-based facial analysis approaches.",
-    "image": "assets/images/salient_gem_feature.png",
+    "image": "assets/images/salient_gem_feature.webp",
     "imageAlt": "Graphical abstract for Recognition of Facial Expressions Based on Salient Geometric Features and Support Vector Machines",
     "icon": "",
     "links": [
@@ -493,7 +493,7 @@ window.PUBLICATIONS = [
     "venue": "Multimedia Tools and Applications, 2016",
     "title": "Online Sequential Extreme Learning Machine-Based Co-Training for Dynamic Moving Cast Shadow Detection",
     "summary": "Detects moving cast shadows in video using an online sequential extreme learning machine combined with a co-training scheme. Color, texture, gradient, and image-patch similarity features let the classifier keep adapting to dynamic lighting and scene changes without full retraining.",
-    "image": "assets/images/shadow_detection.png",
+    "image": "assets/images/shadow_detection.webp",
     "imageAlt": "Graphical abstract for Online Sequential Extreme Learning Machine-Based Co-Training for Dynamic Moving Cast Shadow Detection",
     "icon": "",
     "links": [
@@ -515,7 +515,7 @@ window.PUBLICATIONS = [
     "venue": "Green and Smart Technology, 2015 · Conference / arXiv",
     "title": "Real-Time Sleepiness Detection for Driver State Monitoring System",
     "summary": "Detects driver sleepiness in real time for driver monitoring and ADAS safety applications. The work connects computer vision perception with practical in-vehicle safety systems where fast response is essential.",
-    "image": "assets/images/sleepiness_detection.png",
+    "image": "assets/images/sleepiness_detection.webp",
     "imageAlt": "Graphical abstract for Real-Time Sleepiness Detection for Driver State Monitoring System",
     "icon": "",
     "links": [
@@ -542,7 +542,7 @@ window.PUBLICATIONS = [
     "venue": "ICDIM 2015 · IEEE Conference",
     "title": "Facial Expression Recognition Based on Region Specific Appearance and Geometric Features",
     "summary": "Combines region-specific appearance features with geometric facial cues for expression recognition. The method uses complementary information from facial texture and shape to improve robustness.",
-    "image": "assets/images/expression_local_features.png",
+    "image": "assets/images/expression_local_features.webp",
     "imageAlt": "Graphical abstract for Facial Expression Recognition Based on Region Specific Appearance and Geometric Features",
     "icon": "",
     "links": [
@@ -559,7 +559,7 @@ window.PUBLICATIONS = [
     "venue": "SPIE Medical Imaging, 2014 · Conference",
     "title": "A Local Technique for Contrast Preserving Medical Image Enhancement",
     "summary": "Enhances medical images using a local contrast-preserving technique. The goal is to improve visual interpretability without destroying subtle image details that may matter in medical analysis.",
-    "image": "assets/images/clahe.png",
+    "image": "assets/images/clahe.webp",
     "imageAlt": "Graphical abstract for A Local Technique for Contrast Preserving Medical Image Enhancement",
     "icon": "color",
     "links": [
@@ -576,7 +576,7 @@ window.PUBLICATIONS = [
     "venue": "Sensors, 2013 · Q2 Journal",
     "title": "Geometric Feature-Based Facial Expression Recognition in Image Sequences Using Multi-Class AdaBoost and Support Vector Machines",
     "summary": "Uses geometric facial features with multi-class AdaBoost and SVMs to recognize expressions in image sequences. The work emphasizes temporal facial shape information rather than relying only on static appearance.",
-    "image": "assets/images/thesis_sensor_paper.png",
+    "image": "assets/images/thesis_sensor_paper.webp",
     "imageAlt": "Graphical abstract for Geometric Feature-Based Facial Expression Recognition in Image Sequences",
     "icon": "face",
     "links": [
@@ -603,7 +603,7 @@ window.PUBLICATIONS = [
     "venue": "Smart Media Journal, 2012 · Journal / arXiv",
     "title": "Comparison of Two Methods for Stationary Incident Detection Based on Background Image",
     "summary": "Compares two background-image-based methods for detecting stationary incidents in surveillance scenes. The work fits the traffic-monitoring line of research, where reliable background modeling is important for abnormal-event detection.",
-    "image": "assets/images/stationary_object_detection.png",
+    "image": "assets/images/stationary_object_detection.webp",
     "imageAlt": "Graphical abstract for Comparison of Two Methods for Stationary Incident Detection",
     "icon": "traffic",
     "links": [
@@ -625,7 +625,7 @@ window.PUBLICATIONS = [
     "venue": "ICGIP / SPIE, 2013 · Conference",
     "title": "Automatic Facial Expression Recognition Based on Features Extracted from Tracking of Landmarks",
     "summary": "Tracks facial landmarks over image sequences and extracts expression-related features from their movement. The paper contributes to automatic expression recognition using dynamic geometric facial information.",
-    "image": "assets/images/expression_conf.png",
+    "image": "assets/images/expression_conf.webp",
     "imageAlt": "Graphical abstract for Automatic Facial Expression Recognition Based on Tracking of Landmarks",
     "icon": "face",
     "links": [
@@ -642,7 +642,7 @@ window.PUBLICATIONS = [
     "venue": "SCET 2012 · IEEE Conference",
     "title": "A Lighting Insensitive Face Detection Method on Color Images",
     "summary": "Designs a color-image face detector that is more robust to lighting variation. The approach targets practical face-detection conditions where illumination can change significantly across scenes.",
-    "image": "assets/images/master_thesis.png",
+    "image": "assets/images/master_thesis.webp",
     "imageAlt": "Graphical abstract for A Lighting Insensitive Face Detection Method on Color Images",
     "icon": "face",
     "links": [
@@ -659,7 +659,7 @@ window.PUBLICATIONS = [
     "venue": "PSIVT 2011 · Springer LNCS Conference",
     "title": "Nonlinear Transfer Function-Based Image Detail Preserving Dynamic Range Compression for Color Image Enhancement",
     "summary": "Compresses image dynamic range while preserving important visual details. The method improves color image enhancement by using nonlinear transfer behavior designed to avoid flattening local structure.",
-    "image": "assets/images/hsv_enhancement_conf.png",
+    "image": "assets/images/hsv_enhancement_conf.webp",
     "imageAlt": "Graphical abstract for Nonlinear Transfer Function-Based Image Detail Preserving Dynamic Range Compression",
     "icon": "color",
     "links": [
@@ -676,7 +676,7 @@ window.PUBLICATIONS = [
     "venue": "IEEE Transactions on Consumer Electronics, 2011 · Q1",
     "title": "Nonlinear Transfer Function-Based Local Approach for Color Image Enhancement",
     "summary": "Enhances color images through local nonlinear transfer functions while preserving details. The paper addresses common image-enhancement problems where global contrast changes can damage local visual quality.",
-    "image": "assets/images/hsv_enhancement_ieee_ce.png",
+    "image": "assets/images/hsv_enhancement_ieee_ce.webp",
     "imageAlt": "Graphical abstract for Nonlinear Transfer Function-Based Local Approach for Color Image Enhancement",
     "icon": "color",
     "links": [
@@ -693,7 +693,7 @@ window.PUBLICATIONS = [
     "venue": "International Journal of Contents, 2010",
     "title": "Infrared Sensitive Camera Based Finger-Friendly Interactive Display System",
     "summary": "Builds a touchless interaction system that maps fingertip positions from an infrared-sensitive camera to large-display coordinates. The work demonstrates early practical computer-vision interaction beyond keyboard and mouse input.",
-    "image": "assets/images/finger_mouse.png",
+    "image": "assets/images/finger_mouse.webp",
     "imageAlt": "Graphical abstract for Infrared Sensitive Camera Based Finger-Friendly Interactive Display System",
     "icon": "interaction",
     "links": [
@@ -715,7 +715,7 @@ window.PUBLICATIONS = [
     "venue": "PSIVT 2010 · IEEE Conference",
     "title": "Color Image Enhancement in HSV Space Using Nonlinear Transfer Function and Neighborhood Dependent Approach with Preserving Details",
     "summary": "Enhances color images in HSV space using nonlinear transfer functions and neighborhood-dependent information. The method aims to improve visual quality while preserving fine image details and natural color appearance.",
-    "image": "assets/images/color_enchncement_psivt.png",
+    "image": "assets/images/color_enchncement_psivt.webp",
     "imageAlt": "Graphical abstract for Color Image Enhancement in HSV Space Using Nonlinear Transfer Function",
     "icon": "color",
     "links": [
