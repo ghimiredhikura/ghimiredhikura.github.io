@@ -79,6 +79,17 @@
       </div>
     </section>
 
+    <section class="news-section" aria-label="News and updates">
+      <div class="section-heading">
+        <p class="section-kicker">Recent News</p>
+      </div>
+      <div class="news-card">
+        <div class="news-list" data-news-list></div>
+        <noscript>Enable JavaScript to view recent news.</noscript>
+        <button class="news-toggle" type="button" data-news-toggle aria-expanded="false">More</button>
+      </div>
+    </section>
+
     <section class="timeline-section">
       <div class="section-heading">
         <p class="section-kicker">Experience</p>
@@ -233,28 +244,36 @@
           <h3>2D and 3D Perception</h3>
           <p>Object detection, tracking, stereo depth, bird's-eye-view perception, facial expression analysis, and traffic surveillance.</p>
           <div class="focus-card-image">
-            <img src="assets/images/2dand3dperception.png" alt="2D and 3D perception visual">
+            <button class="focus-image-button" type="button" data-full-image="assets/images/2dand3dperception.png" data-image-title="2D and 3D Perception" aria-label="Expand 2D and 3D perception visual">
+              <img src="assets/images/2dand3dperception.png" alt="2D and 3D perception visual" loading="lazy" decoding="async">
+            </button>
           </div>
         </article>
         <article class="focus-card focus-card-visual">
           <h3>Efficient Edge AI</h3>
           <p>Structured pruning, model compression, TensorRT, OpenVINO, NCNN, MNN, and deployment on Jetson, Raspberry Pi, and ARM systems.</p>
           <div class="focus-card-image">
-            <img src="assets/images/efficient_edge.png" alt="Efficient edge AI visual">
+            <button class="focus-image-button" type="button" data-full-image="assets/images/efficient_edge.png" data-image-title="Efficient Edge AI" aria-label="Expand efficient edge AI visual">
+              <img src="assets/images/efficient_edge.png" alt="Efficient edge AI visual" loading="lazy" decoding="async">
+            </button>
           </div>
         </article>
         <article class="focus-card focus-card-visual">
           <h3>Robotics and Autonomy</h3>
           <p>Perception systems for delta-robot pick and place, autonomous tractor guidance, smart assist robots, GPS, IMU, LiDAR, and cameras.</p>
           <div class="focus-card-image">
-            <img src="assets/images/robot_autonomy.png" alt="Robotics and autonomy visual">
+            <button class="focus-image-button" type="button" data-full-image="assets/images/robot_autonomy.png" data-image-title="Robotics and Autonomy" aria-label="Expand robotics and autonomy visual">
+              <img src="assets/images/robot_autonomy.png" alt="Robotics and autonomy visual" loading="lazy" decoding="async">
+            </button>
           </div>
         </article>
         <article class="focus-card focus-card-visual">
           <h3>Agriculture and Healthcare AI</h3>
           <p>Smart farming, hyperspectral crop monitoring, risk prediction, explainable medical AI, and multimodal data-driven analysis.</p>
           <div class="focus-card-image">
-            <img src="assets/images/agri_health_ai.png" alt="Agriculture and healthcare AI visual">
+            <button class="focus-image-button" type="button" data-full-image="assets/images/agri_health_ai.png" data-image-title="Agriculture and Healthcare AI" aria-label="Expand agriculture and healthcare AI visual">
+              <img src="assets/images/agri_health_ai.png" alt="Agriculture and healthcare AI visual" loading="lazy" decoding="async">
+            </button>
           </div>
         </article>
       </div>
@@ -430,6 +449,7 @@
     <p class="copyright">&copy; 2026 Deepak Ghimire. All rights reserved.</p>
   </footer>
 
+  <script src="assets/js/news-data.js"></script>
   <script src="assets/js/main.js"></script>
 </body>
 </html>

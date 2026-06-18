@@ -490,6 +490,28 @@ window.PUBLICATIONS = [
   },
   {
     "topic": "vision",
+    "venue": "Multimedia Tools and Applications, 2016",
+    "title": "Online Sequential Extreme Learning Machine-Based Co-Training for Dynamic Moving Cast Shadow Detection",
+    "summary": "Detects moving cast shadows in video using an online sequential extreme learning machine combined with a co-training scheme. Color, texture, gradient, and image-patch similarity features let the classifier keep adapting to dynamic lighting and scene changes without full retraining.",
+    "image": "assets/images/shadow_detection.png",
+    "imageAlt": "Graphical abstract for Online Sequential Extreme Learning Machine-Based Co-Training for Dynamic Moving Cast Shadow Detection",
+    "icon": "",
+    "links": [
+      {
+        "label": "Paper",
+        "url": "https://doi.org/10.1007/s11042-015-2839-3",
+        "type": "paper"
+      },
+      {
+        "label": "PDF",
+        "url": "https://www.researchgate.net/publication/280843874_Online_sequential_extreme_learning_machine-based_co-training_for_dynamic_moving_cast_shadow_detection",
+        "type": "pdf"
+      }
+    ],
+    "detailsHtml": "<dl>\n  <div>\n    <dt>Venue</dt>\n    <dd>Multimedia Tools and Applications, 75: 11181-11197. Published 2016. DOI: <a href=\"https://doi.org/10.1007/s11042-015-2839-3\" target=\"_blank\" rel=\"noopener\">10.1007/s11042-015-2839-3</a>.</dd>\n  </div>\n  <div>\n    <dt>Authors</dt>\n    <dd class=\"author-list\"><strong>Deepak Ghimire</strong>, Joonwhoan Lee</dd>\n  </div>\n  <div>\n    <dt>Affiliation</dt>\n    <dd>All authors: Division of Computer Engineering, Chonbuk National University, Jeonju-si, Jeollabuk-do, Republic of Korea.</dd>\n  </div>\n  <div>\n    <dt>Abstract</dt>\n    <dd>Cast shadow detection and removal are among the key problems in vision-based systems for accurate and robust segmentation of moving objects. This paper proposes a co-training-based adaptive method for detecting moving shadows in video sequences. Shadow detection methods based on static models cannot adapt to a changing environment, such as gradual illumination changes. To address this problem, we propose an online sequential extreme learning machine (OS-ELM)-based semi-supervised technique for moving cast shadow detection. Online learning with OS-ELM is much faster and provides better generalization performance than other popular online learning algorithms. First, we extract color, texture, gradient, and image-patch similarity features from the background model and the input video frame, which are useful for discriminating moving shadows from objects. A co-training scheme is used to update the OS-ELM classifier online so that it adapts to the dynamic environment. Experimental results on several benchmark video sequences show that the proposed method achieves better shadow detection and discrimination performance compared with other methods.</dd>\n  </div>\n  <div>\n    <dt>Keywords</dt>\n    <dd>Moving cast shadow detection; online sequential extreme learning machine; co-training; semi-supervised learning; video surveillance.</dd>\n  </div>\n</dl>"
+  },
+  {
+    "topic": "vision",
     "venue": "Green and Smart Technology, 2015 · Conference / arXiv",
     "title": "Real-Time Sleepiness Detection for Driver State Monitoring System",
     "summary": "Detects driver sleepiness in real time for driver monitoring and ADAS safety applications. The work connects computer vision perception with practical in-vehicle safety systems where fast response is essential.",
