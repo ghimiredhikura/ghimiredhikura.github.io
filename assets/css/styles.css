@@ -3153,7 +3153,7 @@ body.lightbox-open {
 
   .writing-entry:has(.source-logo) {
     display: grid;
-    grid-template-columns: 76px minmax(0, 1fr);
+    grid-template-columns: 110px minmax(0, 1fr);
     column-gap: 10px;
     row-gap: 5px;
   }
@@ -3168,10 +3168,11 @@ body.lightbox-open {
     grid-row: 1;
     align-self: end;
     justify-self: start;
-    width: 76px;
-    max-height: 40px;
+    width: 110px;
+    height: 60px;
+    max-height: none;
     object-fit: contain;
-    padding: 4px;
+    padding: 3px;
   }
 
   .writing-entry:has(.source-logo) .writing-entry-copy h3 {
