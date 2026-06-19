@@ -103,6 +103,26 @@ const isNewsRecent = (date) => {
   return monthsAgo >= 0 && monthsAgo <= NEWS_RECENT_MONTHS;
 };
 
+const newsHighlights = [
+  "Elsevier Journal of Systems Architecture",
+  "Discover Artificial Intelligence",
+  "Springer Nature",
+  "IEEE Access",
+  "WACV 2026",
+  "Diagnostics",
+  "ICCAS 2024",
+  "Sensors",
+];
+
+const highlightNewsText = (text) => {
+  let html = escapeHtml(text);
+  newsHighlights.forEach((term) => {
+    const safeTerm = escapeHtml(term);
+    html = html.split(safeTerm).join(`<span class="news-highlight">${safeTerm}</span>`);
+  });
+  return html;
+};
+
 const renderNewsItem = (item, index) => {
   const itemClass = index >= NEWS_VISIBLE_COUNT ? "news-item news-extra" : "news-item";
   const hiddenAttr = index >= NEWS_VISIBLE_COUNT ? " hidden" : "";
@@ -112,7 +132,7 @@ const renderNewsItem = (item, index) => {
     <article class="${itemClass}"${hiddenAttr}>
       <time datetime="${escapeHtml(item.date)}">${escapeHtml(formatNewsDate(item.date))}</time>
       <span class="news-tags"><span class="news-tag news-tag--${escapeHtml(item.tag)}">${escapeHtml(item.tagLabel)}</span><span class="news-new"${newBadgeHidden}>New</span></span>
-      <p>${escapeHtml(item.text)}</p>
+      <p>${highlightNewsText(item.text)}</p>
     </article>`;
 };
 

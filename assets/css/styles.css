@@ -595,6 +595,14 @@ h3 {
   line-height: 1.4;
 }
 
+.news-highlight {
+  padding: 0 3px;
+  border-radius: 4px;
+  background: rgba(195, 139, 43, 0.13);
+  color: #604415;
+  font-weight: 650;
+}
+
 .news-toggle {
   display: inline-flex;
   align-items: center;

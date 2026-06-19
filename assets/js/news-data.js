@@ -19,19 +19,25 @@ window.NEWS = [
     date: "2026-06",
     tag: "review",
     tagLabel: "Under Review",
+    text: "Deployment-Stack Effects for ARM Edge DNN Inference paper submitted to Elsevier Journal of Systems Architecture."
+  },
+  {
+    date: "2026-06",
+    tag: "review",
+    tagLabel: "Under Review",
     text: "Video-based fire and smoke detection and verification paper submitted to IEEE Access."
   },
   {
     date: "2026-03",
     tag: "conference",
     tagLabel: "Conference",
-    text: "Paper on one-cycle structured pruning accepted to WACV 2026."
+    text: "Paper on one-cycle structured pruning published at WACV 2026, held March 6–10, 2026, in Tucson, Arizona."
   },
   {
     date: "2025-09",
     tag: "journal",
     tagLabel: "Journal",
-    text: "Diagnostics paper on infertility risk prediction published."
+    text: "Paper on infertility risk prediction published in Diagnostics."
   },
   {
     date: "2025-06",
@@ -43,7 +49,7 @@ window.NEWS = [
     date: "2025-03",
     tag: "health",
     tagLabel: "Healthcare AI",
-    text: "Diagnostics paper on PCOS and clinical risk factors published."
+    text: "Paper on PCOS and clinical risk factors published in Diagnostics."
   },
   {
     date: "2025-01",
