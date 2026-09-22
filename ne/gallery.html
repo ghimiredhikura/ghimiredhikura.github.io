@@ -3,67 +3,64 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="दीपक घिमिरेको photo gallery: research, travel, academic events, Nepal, Korea, and personal moments.">
+  <meta name="description" content="दीपक घिमिरेको अनुसन्धान, यात्रा र जीवनसँग जोडिएको फोटो ग्यालरी।">
   <title>फोटो | दीपक घिमिरे</title>
-  <link rel="stylesheet" href="../assets/css/styles.css?v=6">
+  <link rel="stylesheet" href="../assets/css/styles.css?v=7">
+  <link rel="stylesheet" href="../assets/css/redesign.css?v=17">
 </head>
 <body>
   <header class="site-header">
-    <a class="brand" href="index.html"><span class="brand-mark">DG</span><span>दीपक घिमिरे</span></a>
-    <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav"><span></span><span></span><span></span></button>
+    <a class="brand" href="index.html" aria-label="दीपक घिमिरेको गृहपृष्ठ"><span class="brand-mark"><img src="../assets/images/deepak-profile.jpg" alt="" width="43" height="43"></span><span>दीपक घिमिरे, विद्यावारिधि</span></a>
+    <button class="nav-toggle" aria-label="मेनु खोल्नुहोस्" aria-expanded="false" aria-controls="site-nav"><span></span><span></span><span></span></button>
     <nav id="site-nav" class="site-nav">
       <a href="index.html">गृहपृष्ठ</a>
       <a href="publications.html">प्रकाशन</a>
       <a href="writing.html">लेख</a>
       <a class="active" href="gallery.html">फोटो</a>
-      <span class="language-switch"><a href="../gallery.html">EN</a><span>|</span><a class="active-lang" href="gallery.html">नेपाली</a></span>
+      <span class="language-switch"><a href="../gallery.html">EN</a><span>|</span><a href="gallery.html" class="active-lang">नेपाली</a></span>
     </nav>
   </header>
 
   <main>
     <section class="page-hero gallery-hero">
       <p class="eyebrow">फोटो ग्यालरी</p>
-      <h1>अनुसन्धान, जरा, यात्रा र दैनिक जीवनका झलक।</h1>
-      <p>यो gallery research life, conferences, KETI projects, Nepal visits, family landscapes, lab moments र public talks जस्ता albums का लागि तयार गरिएको visual archive हो।</p>
+      <h1>काम र यात्राका केही झलक।</h1>
+      <p>अर्घाखाँचीको गाउँदेखि कोरियाको अनुसन्धान प्रयोगशालासम्म, मेरो जीवन र कामसँग जोडिएका केही तस्वीर।</p>
     </section>
 
     <section class="gallery-grid">
       <figure class="gallery-item large">
-        <img src="../assets/images/deepak-portrait.jpg" alt="Deepak Ghimire portrait">
-        <figcaption>Portrait</figcaption>
+        <img src="../assets/images/deepak-portrait.jpg" alt="दीपक घिमिरेको तस्वीर">
+        <figcaption>परिचय</figcaption>
       </figure>
       <figure class="gallery-item generated-tile">
-        <span>Dhikura</span>
-        <figcaption>जरा र गाउँसँग जोडिएको album placeholder</figcaption>
+        <span>ढिकुरा</span>
+        <figcaption>मेरो गाउँ, अर्घाखाँची</figcaption>
       </figure>
       <figure class="gallery-item generated-tile alt">
-        <span>Jeonju</span>
-        <figcaption>अनुसन्धान जीवन placeholder</figcaption>
+        <span>जिओन्जु</span>
+        <figcaption>कोरियामा अनुसन्धान</figcaption>
       </figure>
       <figure class="gallery-item">
-        <img src="../assets/images/globe.png" alt="Globe icon representing international work">
-        <figcaption>अन्तर्राष्ट्रिय अनुसन्धान यात्रा</figcaption>
+        <img src="../assets/images/globe.png" alt="अन्तर्राष्ट्रिय काम दर्शाउने पृथ्वीको चित्र">
+        <figcaption>विभिन्न देशमा अनुसन्धान र सहकार्य</figcaption>
       </figure>
       <figure class="gallery-item generated-tile warm">
         <span>KETI</span>
-        <figcaption>Project work placeholder</figcaption>
+        <figcaption>केटीआईका परियोजना</figcaption>
       </figure>
       <figure class="gallery-item generated-tile green">
-        <span>Fields</span>
-        <figcaption>Agriculture AI placeholder</figcaption>
+        <span>खेतबारी</span>
+        <figcaption>कृषिमा कृत्रिम बुद्धिमत्ता</figcaption>
       </figure>
     </section>
 
-    <section class="gallery-note">
-      <h2>फोटो कसरी थप्ने</h2>
-      <p><code>assets/images/gallery/</code> भित्र images राखेर यो page मा <code>gallery-item</code> block copy गरी image path र caption update गर्न सकिन्छ।</p>
-    </section>
   </main>
 
   <footer class="site-footer">
-    <p>दीपक घिमिरे, Ph.D. - Computer Vision, AI/ML, Robotics, and Autonomous Systems</p>
-    <p class="copyright">&copy; २०२६ दीपक घिमिरे. सर्वाधिकार सुरक्षित.</p>
+    <p>दीपक घिमिरे — कम्प्युटर दृष्टि, साना उपकरणमै चल्ने कृत्रिम बुद्धिमत्ता, रोबोट र स्वचालित प्रणाली</p>
+    <p class="copyright">© २०२६ दीपक घिमिरे। सर्वाधिकार सुरक्षित।</p>
   </footer>
-  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/main.js?v=2"></script>
 </body>
 </html>

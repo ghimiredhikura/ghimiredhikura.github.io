@@ -1,100 +1,129 @@
 <!DOCTYPE html>
 <html lang="ne">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="दीपक घिमिरेका प्रमुख प्रकाशन, संक्षिप्त सार, paper links, PDF, arXiv र code.">
-  <title>प्रकाशन | दीपक घिमिरे</title>
-  <link rel="stylesheet" href="../assets/css/styles.css?v=6">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="दीपक घिमिरेका कम्प्युटर दृष्टि, कृत्रिम बुद्धिमत्ता, रोबोटिक्स, कृषि र स्वास्थ्यसम्बन्धी अनुसन्धान प्रकाशनहरू।">
+<title>प्रकाशन | दीपक घिमिरे</title>
+<link rel="stylesheet" href="../assets/css/styles.css?v=7">
+<link rel="stylesheet" href="../assets/css/redesign.css?v=17">
 </head>
 <body>
-  <header class="site-header">
-    <a class="brand" href="index.html"><span class="brand-mark">DG</span><span>दीपक घिमिरे</span></a>
-    <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav"><span></span><span></span><span></span></button>
-    <nav id="site-nav" class="site-nav">
-      <a href="index.html">गृहपृष्ठ</a>
-      <a class="active" href="publications.html">प्रकाशन</a>
-      <a href="writing.html">लेख</a>
-      <a href="gallery.html">फोटो</a>
-      <span class="language-switch"><a href="../publications.html">EN</a><span>|</span><a class="active-lang" href="publications.html">नेपाली</a></span>
-    </nav>
-  </header>
-
-  <main>
-    <section class="page-hero">
-      <p class="eyebrow">अनुसन्धान प्रकाशन</p>
-      <h1>AI, कम्प्युटर भिजन र real-world perception सम्बन्धी प्रकाशित काम।</h1>
-      <p>यहाँ efficient AI, कम्प्युटर भिजन, intelligent systems, कृषि, स्वास्थ्य क्षेत्रमा AI, र real-world perception सम्बन्धी प्रमुख प्रकाशनहरू राखिएका छन्। Paper titles आधिकारिक citation अनुसार अंग्रेजीमै राखिएका छन्।</p>
-    </section>
-
-    <section class="publication-list">
-      <article class="publication-card" data-topic="edge-ai">
-        <div class="pub-visual"><span class="pub-icon pruning"></span><em>Efficient AI</em></div>
-        <div class="pub-body">
-          <span class="pub-meta">WACV 2026 · IEEE/CVF Conference</span>
-          <h2>One-cycle Structured Pruning with Stability Driven Subnetwork Search</h2>
-          <p>यो कामले deep vision models लाई हल्का र deployable बनाउन one-cycle structured pruning strategy प्रस्तुत गर्छ। Stability-driven subnetwork search प्रयोग गरेर लामो multi-stage pruning pipeline बिना model compression गर्ने लक्ष्य राखिएको छ।</p>
-          <div class="pub-actions">
-            <a href="https://openaccess.thecvf.com/content/WACV2026/html/Ghimire_One-Cycle_Structured_Pruning_via_Stability-Driven_Subnetwork_Search_WACV_2026_paper.html" target="_blank" rel="noopener"><span class="action-icon link-icon"></span>लेख</a>
-            <a href="https://openaccess.thecvf.com/content/WACV2026/papers/Ghimire_One-Cycle_Structured_Pruning_via_Stability-Driven_Subnetwork_Search_WACV_2026_paper.pdf" target="_blank" rel="noopener"><span class="action-icon pdf-icon"></span>PDF</a>
-            <a href="https://arxiv.org/abs/2501.13439" target="_blank" rel="noopener"><span class="action-icon arxiv-icon"></span>arXiv</a>
-            <a href="https://github.com/ghimiredhikura/OCSPruner" target="_blank" rel="noopener"><span class="action-icon github-icon"></span>GitHub</a>
-          </div>
-        </div>
-      </article>
-
-      <article class="publication-card" data-topic="edge-ai">
-        <div class="pub-visual"><span class="pub-icon accelerator"></span><em>Efficient AI</em></div>
-        <div class="pub-body">
-          <span class="pub-meta">Image and Vision Computing, 2023 · Q1 Journal</span>
-          <h2>Loss-Aware Automatic Selection of Structured Pruning Criteria for Deep Neural Network Acceleration</h2>
-          <p>यो paper ले loss behavior हेरेर structured pruning criteria automatically छान्ने तरिका प्रस्ताव गर्छ। उद्देश्य compressed networks लाई छिटो र हल्का बनाउँदै accuracy जोगाउनु हो।</p>
-          <div class="pub-actions">
-            <a href="https://doi.org/10.1016/j.imavis.2023.104745" target="_blank" rel="noopener"><span class="action-icon link-icon"></span>लेख</a>
-            <a href="https://arxiv.org/abs/2506.20152" target="_blank" rel="noopener"><span class="action-icon arxiv-icon"></span>arXiv</a>
-            <a href="https://github.com/ghimiredhikura/laasp-filter-pruning" target="_blank" rel="noopener"><span class="action-icon github-icon"></span>GitHub</a>
-          </div>
-        </div>
-      </article>
-
-      <article class="publication-card" data-topic="agri">
-        <div class="pub-visual"><span class="pub-icon leaf"></span><em>Agriculture</em></div>
-        <div class="pub-body">
-          <span class="pub-meta">Sensors, 2025 · Q2 Journal</span>
-          <h2>FUSE-Net: Multi-Scale CNN for NIR Band Prediction from RGB Using GNDVI-Guided Green Channel Enhancement</h2>
-          <p>यो कामले ordinary RGB images बाट near-infrared information predict गर्ने model प्रस्तुत गर्छ। महँगो sensor मा कम निर्भर भएर crop monitoring र smart farming मा उपयोगी हुने उद्देश्य छ।</p>
-          <div class="pub-actions">
-            <a href="https://doi.org/10.3390/s25134076" target="_blank" rel="noopener"><span class="action-icon link-icon"></span>लेख</a>
-            <a href="https://www.mdpi.com/1424-8220/25/13/4076/pdf" target="_blank" rel="noopener"><span class="action-icon pdf-icon"></span>PDF</a>
-          </div>
-        </div>
-      </article>
-
-      <article class="publication-card" data-topic="vision">
-        <div class="pub-visual"><span class="pub-icon face"></span><em>Vision</em></div>
-        <div class="pub-body">
-          <span class="pub-meta">Multimedia Tools and Applications, 2016</span>
-          <h2>Facial Expression Recognition Based on Local Region Specific Features and Support Vector Machines</h2>
-          <p>यो paper ले local facial regions बाट discriminative features निकालेर facial expression recognition सुधार्ने प्रयास गर्छ। Appearance-based features र SVM classification प्रयोग गरिएको छ।</p>
-          <div class="pub-actions">
-            <a href="https://doi.org/10.1007/s11042-016-3418-y" target="_blank" rel="noopener"><span class="action-icon link-icon"></span>लेख</a>
-            <a href="https://arxiv.org/abs/1604.04337" target="_blank" rel="noopener"><span class="action-icon arxiv-icon"></span>arXiv</a>
-          </div>
-        </div>
-      </article>
-    </section>
-
-    <section class="gallery-note">
-      <h2>पूरा publication list</h2>
-      <p>नेपाली version हाल test/preview को रूपमा राखिएको छ। सबै 30 publication cards को complete list English page मा उपलब्ध छ, र क्रमशः नेपाली summaries थप्दै जान सकिन्छ।</p>
-      <a class="button secondary" href="../publications.html">English full list हेर्नुहोस्</a>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <p>दीपक घिमिरे, Ph.D. - Computer Vision, AI/ML, Robotics, and Autonomous Systems</p>
-    <p class="copyright">&copy; २०२६ दीपक घिमिरे. सर्वाधिकार सुरक्षित.</p>
-  </footer>
-  <script src="../assets/js/main.js"></script>
+<header class="site-header">
+<a class="brand" href="index.html" aria-label="दीपक घिमिरेको गृहपृष्ठ"><span class="brand-mark"><img src="../assets/images/deepak-profile.jpg" alt="" width="43" height="43"></span><span>दीपक घिमिरे, विद्यावारिधि</span></a>
+<button class="nav-toggle" aria-label="मेनु खोल्नुहोस्" aria-expanded="false" aria-controls="site-nav"><span></span><span></span><span></span></button>
+<nav id="site-nav" class="site-nav">
+<a href="index.html">गृहपृष्ठ</a>
+<a class="active" href="publications.html">प्रकाशन</a>
+<a href="writing.html">लेख</a>
+<a href="gallery.html">फोटो</a>
+<span class="language-switch"><a href="../publications.html">EN</a><span>|</span><a href="publications.html" class="active-lang">नेपाली</a></span>
+</nav>
+</header>
+<main>
+<section class="page-hero publication-hero">
+<p class="eyebrow">अनुसन्धान प्रकाशन</p>
+<h1>मेरा अनुसन्धान प्रकाशनहरू।</h1>
+<p>कम्प्युटर दृष्टि र कृत्रिम बुद्धिमत्तालाई कृषि, स्वास्थ्य, सवारी र साना उपकरणमा प्रयोग गर्ने अनुसन्धानका चयनित शोधपत्रहरू। विषय बुझ्न सजिलो होस् भनेर नेपाली शीर्षक र छोटो परिचय राखिएको छ; शोधपत्रको आधिकारिक अङ्ग्रेजी शीर्षक पनि सँगै छ।</p>
+</section>
+<section class="publication-controls" aria-label="प्रकाशन छान्ने विकल्प">
+<button class="filter-button active" data-filter="all">सबै</button>
+<button class="filter-button" data-filter="edge-ai">कुशल कृत्रिम बुद्धिमत्ता</button>
+<button class="filter-button" data-filter="vision">कम्प्युटर दृष्टि</button>
+<button class="filter-button" data-filter="agri">कृषि</button>
+<button class="filter-button" data-filter="health">स्वास्थ्यमा कृत्रिम बुद्धिमत्ता</button>
+<button class="filter-button" data-filter="systems">प्रणाली</button>
+</section>
+<section class="publication-list" data-publication-list aria-live="polite"></section>
+<noscript>प्रकाशन सूची हेर्न ब्राउजरमा जाभास्क्रिप्ट सक्रिय गर्नुहोस्।</noscript>
+<section class="other-publications">
+<div class="section-heading">
+<p class="section-kicker">पूरा अभिलेख</p>
+<h2>थप शोधपत्रहरू</h2>
+<p>सहकर्मी समीक्षा भएका थप प्रकाशनहरू। पूरा सूची <a href="https://scholar.google.com/citations?user=pkJSvXwAAAAJ&amp;hl=en" target="_blank" rel="noopener">गुगल स्कलरमा हेर्नुहोस् ↗</a></p>
+</div>
+<ul class="other-pub-list">
+<li><a href="https://scholar.google.com/scholar?q=%22Adaptive%20ROI%20technique%20for%20lane%20detection%20and%20vehicle%20detection%22" target="_blank" rel="noopener"><div class="other-pub-head">
+<span class="other-pub-type conf">सम्मेलन</span><span class="other-pub-meta">KSAE Spring Conference Proceedings · २०१८, दक्षिण कोरिया</span>
+</div>
+<strong>सडकको लेन र सवारी चिन्न तस्वीरको आवश्यक भाग छान्ने विधि</strong><small class="other-pub-original" lang="en">Adaptive ROI technique for lane detection and vehicle detection</small><span class="other-pub-authors">S. J. Jung, <b>दीपक घिमिरे</b>, C. J. Park, S. H. Park</span></a></li>
+<li><a href="https://scholar.google.com/scholar?q=%22LASPI%3A%20Hardware%20friendly%20LArge-scale%20stereo%20matching%20using%20Support%20Point%20Interpolation%22" target="_blank" rel="noopener"><div class="other-pub-head">
+<span class="other-pub-type journal">जर्नल</span><span class="other-pub-meta">Journal of KIISE · २०१७</span>
+</div>
+<strong>दुई क्यामेराका दृश्य मिलाएर दूरी निकाल्ने छिटो LASPI विधि</strong><small class="other-pub-original" lang="en">LASPI: Hardware friendly LArge-scale stereo matching using Support Point Interpolation</small><span class="other-pub-authors">Sanghyun Park, <b>दीपक घिमिरे</b>, Jung-guk Kim, Youngki Han</span></a></li>
+<li><a href="https://scholar.google.com/scholar?q=%22A%20Study%20on%20Performance%20Improvement%20of%20ROI%20Detection%20Algorithm%20Based%20on%20Depth%20Map%22" target="_blank" rel="noopener"><div class="other-pub-head">
+<span class="other-pub-type conf">सम्मेलन</span><span class="other-pub-meta">Korea Telecommunications Society Conference · २०१७, दक्षिण कोरिया</span>
+</div>
+<strong>गहिराइ देखाउने तस्वीरबाट आवश्यक भाग छान्ने विधि छिटो बनाउने अध्ययन</strong><small class="other-pub-original" lang="en">A Study on Performance Improvement of ROI Detection Algorithm Based on Depth Map</small><span class="other-pub-authors">S. Park, M. J. Kim, <b>दीपक घिमिरे</b></span></a></li>
+<li><a href="https://scholar.google.com/scholar?q=%22A%20Development%20of%20SSUPI%20Algorithm%20for%20Stereo%20Vision%20System%20in%20Vehicle%20and%20Implementation%20in%20FPGA%20System%22" target="_blank" rel="noopener"><div class="other-pub-head">
+<span class="other-pub-type journal">जर्नल</span><span class="other-pub-meta">Advanced Science Letters · २०१७</span>
+</div>
+<strong>सवारीमा दुई क्यामेराबाट गहिराइ बुझ्ने SSUPI विधि र विशेष उपकरणमा यसको प्रयोग</strong><small class="other-pub-original" lang="en">A Development of SSUPI Algorithm for Stereo Vision System in Vehicle and Implementation in FPGA System</small><span class="other-pub-authors">M. J. Kim, <b>दीपक घिमिरे</b>, S. H. Park</span></a></li>
+<li><a href="https://scholar.google.com/scholar?q=%22Implementation%20of%20Water%20Flow%20Recognition%20Algorithm%22" target="_blank" rel="noopener"><div class="other-pub-head">
+<span class="other-pub-type conf">सम्मेलन</span><span class="other-pub-meta">IEIE Conference · २०१७, दक्षिण कोरिया</span>
+</div>
+<strong>पानीको बहाव चिन्ने कम्प्युटर विधि</strong><small class="other-pub-original" lang="en">Implementation of Water Flow Recognition Algorithm</small><span class="other-pub-authors">H. S. Choi, <b>दीपक घिमिरे</b>, J. H. Kang</span></a></li>
+<li><a href="https://scholar.google.com/scholar?q=%22A%20study%20on%20river%20water%20level%20monitoring%20method%20in%20a%20debris%20barrier%22" target="_blank" rel="noopener"><div class="other-pub-head">
+<span class="other-pub-type conf">सम्मेलन</span><span class="other-pub-meta">International SoC Design Conference (ISOCC) · २०१६, जेजु, दक्षिण कोरिया</span>
+</div>
+<strong>नदीको अवरोध संरचनामा पानीको सतह निगरानी गर्ने विधि</strong><small class="other-pub-original" lang="en">A study on river water level monitoring method in a debris barrier</small><span class="other-pub-authors">H. S. Choi, <b>दीपक घिमिरे</b></span></a></li>
+<li><a href="https://scholar.google.com/scholar?q=%22Automatic%20music%20genre%20classification%20using%20timbral%20texture%20and%20rhythmic%20content%20features%22" target="_blank" rel="noopener"><div class="other-pub-head">
+<span class="other-pub-type conf">सम्मेलन</span><span class="other-pub-meta">ICACT · २०१५, प्योङचाङ, दक्षिण कोरिया</span>
+</div>
+<strong>ध्वनिको स्वरूप र लयबाट सङ्गीतको शैली स्वतः छुट्याउने विधि</strong><small class="other-pub-original" lang="en">Automatic music genre classification using timbral texture and rhythmic content features</small><span class="other-pub-authors">B. K. Baniya, <b>दीपक घिमिरे</b>, J. Lee</span></a></li>
+<li><a href="https://scholar.google.com/scholar?q=%22Recognition%20of%20facial%20expressions%20based%20on%20tracking%20and%20selection%20of%20discriminative%20geometric%20features%22" target="_blank" rel="noopener"><div class="other-pub-head">
+<span class="other-pub-type journal">जर्नल</span><span class="other-pub-meta">Intl. Journal of Multimedia and Ubiquitous Engineering · २०१५</span>
+</div>
+<strong>अनुहारका मुख्य बिन्दुको चाल र आकारबाट भाव पहिचान</strong><small class="other-pub-original" lang="en">Recognition of facial expressions based on tracking and selection of discriminative geometric features</small><span class="other-pub-authors"><b>दीपक घिमिरे</b>, J. Lee, Z. N. Li, S. Jeong, S. H. Park, H. S. Choi</span></a></li>
+<li><a href="https://scholar.google.com/scholar?q=%22Extreme%20learning%20machine%20ensemble%20using%20bagging%20for%20facial%20expression%20recognition%22" target="_blank" rel="noopener"><div class="other-pub-head">
+<span class="other-pub-type journal">जर्नल</span><span class="other-pub-meta">Journal of Information Processing Systems · २०१४</span>
+</div>
+<strong>धेरै सिकाइ मोडेलको नतिजा जोडेर अनुहारको भाव पहिचान</strong><small class="other-pub-original" lang="en">Extreme learning machine ensemble using bagging for facial expression recognition</small><span class="other-pub-authors"><b>दीपक घिमिरे</b>, J. Lee</span></a></li>
+<li><a href="https://scholar.google.com/scholar?q=%22A%20novel%20approach%20of%20automatic%20music%20genre%20classification%20based%20on%20timbral%20texture%20and%20rhythmic%20content%20features%22" target="_blank" rel="noopener"><div class="other-pub-head">
+<span class="other-pub-type conf">सम्मेलन</span><span class="other-pub-meta">ICACT · २०१४, प्योङचाङ, दक्षिण कोरिया</span>
+</div>
+<strong>स्वर र लयका विशेषताबाट सङ्गीतको शैली छुट्याउने नयाँ तरिका</strong><small class="other-pub-original" lang="en">A novel approach of automatic music genre classification based on timbral texture and rhythmic content features</small><span class="other-pub-authors">B. K. Baniya, <b>दीपक घिमिरे</b>, J. Lee</span></a></li>
+<li><a href="https://scholar.google.com/scholar?q=%22A%20robust%20face%20detection%20method%20based%20on%20skin%20color%20and%20edges%22" target="_blank" rel="noopener"><div class="other-pub-head">
+<span class="other-pub-type journal">जर्नल</span><span class="other-pub-meta">Journal of Information Processing Systems · २०१३</span>
+</div>
+<strong>छालाको रङ र बाहिरी रेखाबाट अनुहार पत्ता लगाउने विधि</strong><small class="other-pub-original" lang="en">A robust face detection method based on skin color and edges</small><span class="other-pub-authors"><b>दीपक घिमिरे</b>, J. Lee</span></a></li>
+<li><a href="https://scholar.google.com/scholar?q=%22Evaluation%20of%20different%20audio%20features%20for%20musical%20genre%20classification%22" target="_blank" rel="noopener"><div class="other-pub-head">
+<span class="other-pub-type conf">सम्मेलन</span><span class="other-pub-meta">SiPS · २०१३, ताइपे, ताइवान</span>
+</div>
+<strong>सङ्गीतको शैली छुट्याउन ध्वनिका विभिन्न विशेषताको मूल्याङ्कन</strong><small class="other-pub-original" lang="en">Evaluation of different audio features for musical genre classification</small><span class="other-pub-authors">B. K. Baniya, <b>दीपक घिमिरे</b>, J. Lee</span></a></li>
+<li><a href="https://scholar.google.com/scholar?q=%22Rough%20clustering%20of%20Korean%20foods%20based%20on%20adjectives%20for%20taste%20evaluation%22" target="_blank" rel="noopener"><div class="other-pub-head">
+<span class="other-pub-type conf">सम्मेलन</span><span class="other-pub-meta">FSKD · २०१३, शेनयाङ, चीन</span>
+</div>
+<strong>स्वाद वर्णन गर्ने शब्दबाट कोरियाली परिकारको वर्गीकरण</strong><small class="other-pub-original" lang="en">Rough clustering of Korean foods based on adjectives for taste evaluation</small><span class="other-pub-authors">J. Lee, <b>दीपक घिमिरे</b>, J. Rho</span></a></li>
+<li><a href="https://scholar.google.com/scholar?q=%22Music%20Genre%20Classification%20Based%20on%20Timbral%20Texture%20and%20Rhythmic%20Content%20Features%22" target="_blank" rel="noopener"><div class="other-pub-head">
+<span class="other-pub-type conf">सम्मेलन</span><span class="other-pub-meta">KIPS Spring Conference · २०१३, बुसान, दक्षिण कोरिया</span>
+</div>
+<strong>स्वरको बनावट र लयबाट सङ्गीतको शैली वर्गीकरण</strong><small class="other-pub-original" lang="en">Music Genre Classification Based on Timbral Texture and Rhythmic Content Features</small><span class="other-pub-authors">B. K. Baniya, <b>दीपक घिमिरे</b>, J. Lee</span></a></li>
+<li><a href="https://scholar.google.com/scholar?q=%22Enhancement%20of%20Color%20Images%20with%20Blue%20Sky%20Using%20Different%20Method%20for%20Sky%20and%20Non-Sky%20Regions%22" target="_blank" rel="noopener"><div class="other-pub-head">
+<span class="other-pub-type conf">सम्मेलन</span><span class="other-pub-meta">KIPS Spring Conference · २०१३, बुसान, दक्षिण कोरिया</span>
+</div>
+<strong>निलो आकाश र अन्य भाग छुट्टाछुट्टै सुधारेर रङ्गीन तस्वीर स्पष्ट बनाउने विधि</strong><small class="other-pub-original" lang="en">Enhancement of Color Images with Blue Sky Using Different Method for Sky and Non-Sky Regions</small><span class="other-pub-authors"><b>दीपक घिमिरे</b>, S. R. Pant, J. Lee</span></a></li>
+<li><a href="https://scholar.google.com/scholar?q=%22Histogram%20of%20orientation%20gradient%20feature-based%20facial%20expression%20classification%20using%20bagging%20with%20extreme%20learning%20machine%22" target="_blank" rel="noopener"><div class="other-pub-head">
+<span class="other-pub-type journal">जर्नल</span><span class="other-pub-meta">Advanced Science Letters · २०१२</span>
+</div>
+<strong>अनुहारका किनाराको दिशा र धेरै मोडेलको संयुक्त नतिजाबाट भाव पहिचान</strong><small class="other-pub-original" lang="en">Histogram of orientation gradient feature-based facial expression classification using bagging with extreme learning machine</small><span class="other-pub-authors"><b>दीपक घिमिरे</b>, J. Lee</span></a></li>
+<li><a href="https://scholar.google.com/scholar?q=%22Security%20Verification%20of%20Video%20Telephony%20System%20Implemented%20on%20the%20DM6446%20DaVinci%20Processor%22" target="_blank" rel="noopener"><div class="other-pub-head">
+<span class="other-pub-type journal">जर्नल</span><span class="other-pub-meta">International Journal of Contents · २०१२</span>
+</div>
+<strong>विशेष प्रशोधन एकाइमा बनाइएको भिडियो फोन प्रणालीको सुरक्षा परीक्षण</strong><small class="other-pub-original" lang="en">Security Verification of Video Telephony System Implemented on the DM6446 DaVinci Processor</small><span class="other-pub-authors"><b>दीपक घिमिरे</b>, J. C. Kim, J. W. Lee</span></a></li>
+<li><a href="https://scholar.google.com/scholar?q=%22Implementation%20of%20Video%20Security%20Telephony%20System%20on%20Davinci%20Processor%22" target="_blank" rel="noopener"><div class="other-pub-head">
+<span class="other-pub-type conf">सम्मेलन</span><span class="other-pub-meta">Korea Information Science Society Conference · २०११, दक्षिण कोरिया</span>
+</div>
+<strong>विशेष प्रशोधन एकाइमा सुरक्षित भिडियो फोन प्रणालीको निर्माण</strong><small class="other-pub-original" lang="en">Implementation of Video Security Telephony System on Davinci Processor</small><span class="other-pub-authors">J. Kim, <b>दीपक घिमिरे</b>, J. Lee</span></a></li>
+</ul>
+</section>
+</main>
+<footer class="site-footer">
+<p>दीपक घिमिरे — कम्प्युटर दृष्टि, साना उपकरणमै चल्ने कृत्रिम बुद्धिमत्ता, रोबोट र स्वचालित प्रणाली</p>
+<p class="copyright">© २०२६ दीपक घिमिरे। सर्वाधिकार सुरक्षित।</p>
+</footer>
+<script src="../assets/js/publications-data.js"></script>
+<script src="../assets/js/publications-ne.js?v=3"></script>
+<script src="../assets/js/main.js?v=2"></script>
 </body>
 </html>

@@ -3,75 +3,140 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="दीपक घिमिरेका लेख, विचार, भ्लग र सार्वजनिक टिप्पणीहरू।">
-  <title>लेख र भ्लग | दीपक घिमिरे</title>
-  <link rel="stylesheet" href="../assets/css/styles.css?v=6">
+  <meta name="description" content="दीपक घिमिरेका प्रविधि, नेपाल, डिजिटल शासन र अनुसन्धानसम्बन्धी लेख तथा विचार।">
+  <title>लेख र विचार | दीपक घिमिरे</title>
+  <link rel="stylesheet" href="../assets/css/styles.css?v=7">
+  <link rel="stylesheet" href="../assets/css/redesign.css?v=17">
 </head>
 <body>
   <header class="site-header">
-    <a class="brand" href="index.html"><span class="brand-mark">DG</span><span>दीपक घिमिरे</span></a>
-    <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav"><span></span><span></span><span></span></button>
+    <a class="brand" href="index.html" aria-label="दीपक घिमिरेको गृहपृष्ठ"><span class="brand-mark"><img src="../assets/images/deepak-profile.jpg" alt="" width="43" height="43"></span><span>दीपक घिमिरे, विद्यावारिधि</span></a>
+    <button class="nav-toggle" aria-label="मेनु खोल्नुहोस्" aria-expanded="false" aria-controls="site-nav"><span></span><span></span><span></span></button>
     <nav id="site-nav" class="site-nav">
       <a href="index.html">गृहपृष्ठ</a>
       <a href="publications.html">प्रकाशन</a>
       <a class="active" href="writing.html">लेख</a>
       <a href="gallery.html">फोटो</a>
-      <span class="language-switch"><a href="../writing.html">EN</a><span>|</span><a class="active-lang" href="writing.html">नेपाली</a></span>
+      <span class="language-switch"><a href="../writing.html">EN</a><span>|</span><a href="writing.html" class="active-lang">नेपाली</a></span>
     </nav>
   </header>
 
   <main>
     <section class="page-hero writing-hero">
       <p class="eyebrow">लेख, विचार र भ्लग</p>
-      <h1>CV भन्दा बाहिरका सार्वजनिक सोच र अभिव्यक्तिका लागि।</h1>
-      <p>यो पृष्ठमा नेपाली वा अंग्रेजी लेख, अनलाइन समाचार पोर्टलमा प्रकाशित विचार, व्यक्तिगत टिप्पणी, अनुसन्धानका field notes, video/vlog, र प्रविधि तथा समाजलाई जोड्ने विचारहरू राखिनेछन्।</p>
+      <h1>प्रविधि, नेपाल र सार्वजनिक जीवन।</h1>
+      <p>प्रविधि, डिजिटल शासन, कृत्रिम बुद्धिमत्ता, नेपाल, अनुसन्धान र कामभन्दा बाहिरको जीवनबारे लेख तथा सार्वजनिक टिप्पणी।</p>
     </section>
 
-    <section class="writing-layout">
-      <article class="feature-post">
-        <span class="post-type">प्रकाशित विचार</span>
-        <h2>डिजिटल शासन : गतिसँगै सुरक्षा र मर्यादाको खाँचो</h2>
-        <p class="post-source">Bikash News · १८ जेठ २०८३</p>
-        <p>नेपालको डिजिटल शासनबारे लेखिएको यो विचारमा गति र सहजता मात्र पर्याप्त हुँदैन भन्ने कुरा उठाइएको छ। सरकारी सञ्चार र निर्णय प्रक्रियामा सुरक्षा, उत्तरदायित्व, संस्थागत स्मृति र सार्वजनिक विश्वास पनि उत्तिकै महत्त्वपूर्ण हुन्छन्।</p>
-        <a href="https://bikashnews.com/story/569572/" target="_blank" rel="noopener">Bikash News मा पढ्नुहोस्</a>
-      </article>
-      <div class="post-list">
-        <article>
-          <span>विचार</span>
-          <h3>डिजिटल शासन, सुरक्षा र सार्वजनिक उत्तरदायित्व</h3>
-          <p>अनौपचारिक च्याट समूहले औपचारिक सरकारी प्रक्रिया प्रतिस्थापन गर्नु हुँदैन; सुरक्षित, अभिलेखयोग्य र राज्य-नियन्त्रित प्रणाली किन आवश्यक छ भन्नेबारे टिप्पणी।</p>
+    <section class="writing-section" aria-label="प्रकाशित लेखहरू">
+      <div class="writing-section-heading">
+        <p class="section-kicker">प्रकाशित लेखहरू</p>
+      </div>
+      <div class="writing-entry-list">
+        <article class="writing-entry">
+          <div class="writing-entry-meta">
+            <span>विचार</span>
+            <img class="source-logo" src="../assets/images/clickmandu_logo.png" alt="Clickmandu">
+            <time datetime="2026-07-24T12:55:00+05:45">८ श्रावण २०८३, शुक्रबार १२:५५</time>
+          </div>
+          <div class="writing-entry-copy">
+            <h3>नेपालको एआई कम्प्युट सपना: नयाँ सम्भावना कि अर्को ‘आईटी पार्क’?</h3>
+            <p>सरकारको बजेट भाषणमा काठमाडौँको स्युचाटारमा देशकै पहिलो “सार्वभौम एआई कम्प्युट केन्द्र” स्थापना गर्ने आकर्षक घोषणा आएको छ। यो योजना नेपाललाई ज्ञान, प्रविधि र डिजिटल निर्याततर्फ लैजाने अवसर बन्न सक्छ कि अर्को महँगो प्रतीक मात्र?</p>
+            <div class="writing-entry-actions" aria-label="पढ्ने विकल्प">
+              <span>पूरा लेख</span>
+              <a class="read-local" href="../writing/nepal-ai-compute-dream.html">यहीँ पढ्नुहोस्</a>
+              <span class="read-separator">|</span>
+              <a class="read-source" href="https://clickmandu.com/2026/07/476474.html" target="_blank" rel="noopener">क्लिकमाण्डुमा पढ्नुहोस्</a>
+            </div>
+          </div>
         </article>
-        <article>
-          <span>भ्लग</span>
-          <h3>जेन्जु र नेपालबीचको अनुसन्धान जीवन</h3>
-          <p>Video diary, व्याख्यान, सार्वजनिक प्रस्तुति वा यात्रा-अनुभव प्रकाशित भएपछि यहाँ YouTube वा Vimeo link राख्न सकिन्छ।</p>
+        <article class="writing-entry">
+          <div class="writing-entry-meta">
+            <span>विचार</span>
+            <img class="source-logo" src="../assets/images/clickmandu_logo.png" alt="Clickmandu">
+            <time datetime="2026-06-19T10:32:00+05:45">५ असार २०८३, शुक्रबार १० : ३२</time>
+          </div>
+          <div class="writing-entry-copy">
+            <h3>नेपाललाई विश्वसनीय र काम गर्ने डिजिटल राज्य आवश्यक</h3>
+            <p>नयाँ सरकारले प्रविधिलाई शासकीय सुधारको मुख्य औजारका रूपमा प्रस्तुत गरेको छ। तर डिजिटल रूपान्तरण केवल एप वा पोर्टल होइन; नागरिकले भरोसा गर्न सक्ने सुरक्षित, अन्तर-आबद्ध र जवाफदेही राज्य प्रणाली हो।</p>
+            <div class="writing-entry-actions" aria-label="पढ्ने विकल्प">
+              <span>पूरा लेख</span>
+              <a class="read-local" href="../writing/reliable-digital-state-nepal.html">यहीँ पढ्नुहोस्</a>
+              <span class="read-separator">|</span>
+              <a class="read-source" href="https://clickmandu.com/2026/06/467242.html" target="_blank" rel="noopener">क्लिकमाण्डुमा पढ्नुहोस्</a>
+            </div>
+          </div>
         </article>
-        <article>
-          <span>फिल्ड नोट</span>
-          <h3>फिल्ड रोबोटिक्सले कम्प्युटर भिजन इन्जिनियरलाई के सिकाउँछ</h3>
-          <p>Camera, LiDAR, GPS, IMU र edge devices प्रयोग भएका परियोजनाबाट आएका अनौपचारिक प्राविधिक notes र अनुभवहरू राख्ने ठाउँ।</p>
+        <article class="writing-entry">
+          <div class="writing-entry-meta">
+            <span>विचार</span>
+            <img class="source-logo" src="../assets/images/bikash_news_logo.png" alt="Bikash News">
+            <time datetime="2026-06-01T15:24:00+05:45">सोमबार, १८ जेठ, २०८३ १५:२४</time>
+          </div>
+          <div class="writing-entry-copy">
+            <h3>डिजिटल शासन : गतिसँगै सुरक्षा र मर्यादाको खाँचो</h3>
+            <p>बालेन नेतृत्वको सरकार आएपछि डिजिटल शासनको चर्चा एजेन्डामा मात्र सीमित नभएर अभ्यासमा पनि देखिन थालेको छ। तर एपहरूको प्रयोगमा देखिएको हतारोले सुरक्षा, अभिलेख र संस्थागत मर्यादाका प्रश्न पनि उठाएको छ।</p>
+            <div class="writing-entry-actions" aria-label="पढ्ने विकल्प">
+              <span>पूरा लेख</span>
+              <a class="read-local" href="../writing/bikash-news-digital-governance.html">यहीँ पढ्नुहोस्</a>
+              <span class="read-separator">|</span>
+              <a class="read-source" href="https://bikashnews.com/story/569572/" target="_blank" rel="noopener">बिकास न्युजमा पढ्नुहोस्</a>
+            </div>
+          </div>
         </article>
+        <a class="explore-more" href="#" hidden>थप प्रकाशित लेखहरू</a>
+      </div>
+    </section>
+
+    <section class="writing-section" aria-label="अनुसन्धान, यात्रा र फिल्ड नोट">
+      <div class="writing-section-heading">
+        <p class="section-kicker">अनुसन्धान, भ्लग र नोट</p>
+      </div>
+      <div class="writing-entry-list">
+        <article class="writing-entry">
+          <div class="writing-entry-meta">
+            <span>अनुसन्धान / नीतिगत नोट</span>
+            <time datetime="2026-06-11">११ जुन २०२६</time>
+          </div>
+          <div class="writing-entry-copy">
+            <h3>हेलो सरकारका गुनासोले सेवा सुधारमा के बताउँछन्?</h3>
+            <p>सार्वजनिक रूपमा उपलब्ध २७९ गुनासो हेरेर नागरिकले बारम्बार भोग्ने समस्या, सरकारी जवाफको क्रम र सही कार्यालयमा गुनासो पुर्‍याउन प्रविधिले कसरी मद्दत गर्न सक्छ भन्ने अनुसन्धान प्रस्ताव। <a href="writing/hello-sarkar-grievance-ai-pilot.html">नोट पढ्नुहोस्</a></p>
+          </div>
+        </article>
+        <a class="explore-more" href="#" hidden>थप नोटहरू</a>
       </div>
     </section>
 
     <section class="editorial-guide">
-      <p class="section-kicker">सम्भावित विषयहरू</p>
+      <p class="section-kicker">विषयहरू</p>
       <div class="tag-cloud">
-        <span>नेपालका लागि AI</span>
-        <span>एज AI नोट</span>
-        <span>अनुसन्धान जीवन</span>
+        <span>नेपालका लागि कृत्रिम बुद्धिमत्ता</span>
+        <span>साना उपकरणमै चल्ने कृत्रिम बुद्धिमत्ता</span>
+        <span>अनुसन्धानका अनुभव</span>
         <span>सार्वजनिक विचार</span>
         <span>शैक्षिक मार्गदर्शन</span>
         <span>यात्रा र सम्झना</span>
-        <span>रोबोटिक्स फिल्ड नोट</span>
+        <span>रोबोटसँग काम गर्दाका अनुभव</span>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <p>दीपक घिमिरे, Ph.D. - Computer Vision, AI/ML, Robotics, and Autonomous Systems</p>
-    <p class="copyright">&copy; २०२६ दीपक घिमिरे. सर्वाधिकार सुरक्षित.</p>
+    <p>दीपक घिमिरे — कम्प्युटर दृष्टि, साना उपकरणमै चल्ने कृत्रिम बुद्धिमत्ता, रोबोट र स्वचालित प्रणाली</p>
+    <p class="copyright">© २०२६ दीपक घिमिरे। सर्वाधिकार सुरक्षित।</p>
   </footer>
-  <script src="../assets/js/main.js"></script>
+  <script>
+    document.querySelectorAll(".writing-section").forEach((section) => {
+      const entries = Array.from(section.querySelectorAll(".writing-entry"));
+      const explore = section.querySelector(".explore-more");
+      entries.slice(3).forEach((entry) => {
+        entry.hidden = true;
+      });
+      if (explore) {
+        explore.hidden = entries.length <= 3;
+      }
+    });
+  </script>
+  <script src="../assets/js/main.js?v=2"></script>
 </body>
 </html>

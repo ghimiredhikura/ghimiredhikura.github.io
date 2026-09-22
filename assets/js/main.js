@@ -1,5 +1,7 @@
 const navToggle = document.querySelector(".nav-toggle");
 const siteNav = document.querySelector(".site-nav");
+const isNepali = document.documentElement.lang === "ne";
+const nepaliDigits = (value) => String(value).replace(/[0-9]/g, (digit) => "०१२३४५६७८९"[Number(digit)]);
 
 if (navToggle && siteNav) {
   navToggle.addEventListener("click", () => {
@@ -38,12 +40,19 @@ const thumbnailSrc = (imagePath) => {
 };
 
 const renderPublicationCard = (publication) => {
-  const fullImage = publication.image ? escapeHtml(publication.image) : "";
-  const thumbImage = publication.image ? escapeHtml(thumbnailSrc(publication.image)) : "";
-  const imageAlt = escapeHtml(publication.imageAlt || publication.title);
-  const imageTitle = escapeHtml(publication.title);
+  const imagePrefix = isNepali ? "../" : "";
+  const localizedTitle = isNepali
+    ? window.PUBLICATION_TITLES_NE?.[publication.title] || publication.title
+    : publication.title;
+  const fullImage = publication.image ? escapeHtml(imagePrefix + publication.image) : "";
+  const thumbImage = publication.image ? escapeHtml(imagePrefix + thumbnailSrc(publication.image)) : "";
+  const imageAlt = escapeHtml(isNepali ? localizedTitle : publication.imageAlt || publication.title);
+  const imageTitle = escapeHtml(localizedTitle);
+  const summary = isNepali
+    ? window.PUBLICATION_SUMMARIES_NE?.[publication.title] || publication.summary
+    : publication.summary;
   const visual = publication.image
-    ? `<button class="pub-image-button" type="button" data-full-image="${fullImage}" data-image-title="${imageTitle}" aria-label="Expand graphical abstract for ${imageTitle}">
+    ? `<button class="pub-image-button" type="button" data-full-image="${fullImage}" data-image-title="${imageTitle}" aria-label="${isNepali ? `चित्रात्मक सार ठूलो बनाएर हेर्नुहोस्: ${imageTitle}` : `Expand graphical abstract for ${imageTitle}`}">
         <picture>
           <source media="(max-width: 700px)" srcset="${fullImage}">
           <img class="pub-abstract" src="${thumbImage}" loading="lazy" decoding="async" alt="${imageAlt}">
@@ -54,14 +63,16 @@ const renderPublicationCard = (publication) => {
   const links = (publication.links || [])
     .map((link) => {
       const iconClass = actionIconClass[link.type] || "link-icon";
-      return `<a href="${escapeHtml(link.url)}" target="_blank" rel="noopener"><span class="action-icon ${iconClass}"></span>${escapeHtml(link.label)}</a>`;
+      const nepaliActionLabels = { Paper: "शोधपत्र", PDF: "पीडीएफ", Code: "स्रोत कोड" };
+      const label = isNepali ? (nepaliActionLabels[link.label] || link.label) : link.label;
+      return `<a href="${escapeHtml(link.url)}" target="_blank" rel="noopener"><span class="action-icon ${iconClass}"></span>${escapeHtml(label)}</a>`;
     })
     .join("");
 
   const details = publication.detailsHtml
     ? `<details class="pub-details">
-        <summary>Expand</summary>
-        <div class="pub-details-body">${publication.detailsHtml}</div>
+        <summary>${isNepali ? "मूल विवरण (अङ्ग्रेजी)" : "Expand"}</summary>
+        <div class="pub-details-body" lang="en">${isNepali ? '<p class="source-language-note" lang="ne">मूल विवरण अङ्ग्रेजीमा</p>' : ""}${publication.detailsHtml}</div>
       </details>`
     : "";
 
@@ -72,9 +83,10 @@ const renderPublicationCard = (publication) => {
         ${visual}
       </div>
       <div class="pub-body">
-        <h2>${escapeHtml(publication.title)}</h2>
+        <h2>${escapeHtml(localizedTitle)}</h2>
+        ${isNepali && localizedTitle !== publication.title ? `<p class="pub-original-title" lang="en">${escapeHtml(publication.title)}</p>` : ""}
         <div class="pub-summary-row">
-          <p>${escapeHtml(publication.summary)}</p>
+          <p>${escapeHtml(summary)}</p>
           ${details}
         </div>
         <div class="pub-actions">${links}</div>
@@ -89,10 +101,13 @@ if (publicationList && Array.isArray(window.PUBLICATIONS)) {
 const NEWS_VISIBLE_COUNT = 4;
 const NEWS_RECENT_MONTHS = 3;
 const newsMonthLabels = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+const nepaliNewsMonthLabels = ["जनवरी", "फेब्रुअरी", "मार्च", "अप्रिल", "मे", "जुन", "जुलाई", "अगस्ट", "सेप्टेम्बर", "अक्टोबर", "नोभेम्बर", "डिसेम्बर"];
 
 const formatNewsDate = (date) => {
   const [year, month] = date.split("-").map(Number);
-  return `${newsMonthLabels[month - 1]} ${year}`;
+  return isNepali
+    ? `${nepaliNewsMonthLabels[month - 1]} ${nepaliDigits(year)}`
+    : `${newsMonthLabels[month - 1]} ${year}`;
 };
 
 const isNewsRecent = (date) => {
@@ -131,7 +146,7 @@ const renderNewsItem = (item, index) => {
   return `
     <article class="${itemClass}"${hiddenAttr}>
       <time datetime="${escapeHtml(item.date)}">${escapeHtml(formatNewsDate(item.date))}</time>
-      <span class="news-tags"><span class="news-tag news-tag--${escapeHtml(item.tag)}">${escapeHtml(item.tagLabel)}</span><span class="news-new"${newBadgeHidden}>New</span></span>
+      <span class="news-tags"><span class="news-tag news-tag--${escapeHtml(item.tag)}">${escapeHtml(item.tagLabel)}</span><span class="news-new"${newBadgeHidden}>${isNepali ? "नयाँ" : "New"}</span></span>
       <p>${highlightNewsText(item.text)}</p>
     </article>`;
 };
@@ -150,7 +165,9 @@ if (newsToggle) {
       newsExtraItems.forEach((item) => {
         item.hidden = expanded;
       });
-      newsToggle.textContent = expanded ? "More" : "Less";
+      newsToggle.textContent = isNepali
+        ? (expanded ? "थप हेर्नुहोस्" : "कम देखाउनुहोस्")
+        : (expanded ? "More" : "Less");
     });
   } else {
     newsToggle.hidden = true;
@@ -164,8 +181,8 @@ if (lightboxTriggers.length) {
   lightbox.className = "image-lightbox";
   lightbox.setAttribute("aria-hidden", "true");
   lightbox.innerHTML = `
-    <div class="image-lightbox-panel" role="dialog" aria-modal="true" aria-label="Expanded image">
-      <button class="image-lightbox-close" type="button" aria-label="Close expanded image">&times;</button>
+    <div class="image-lightbox-panel" role="dialog" aria-modal="true" aria-label="${isNepali ? "ठूलो तस्वीर" : "Expanded image"}">
+      <button class="image-lightbox-close" type="button" aria-label="${isNepali ? "तस्वीर बन्द गर्नुहोस्" : "Close expanded image"}">&times;</button>
       <img class="image-lightbox-img" alt="">
       <p class="image-lightbox-title"></p>
     </div>`;
@@ -174,7 +191,6 @@ if (lightboxTriggers.length) {
   const lightboxImage = lightbox.querySelector(".image-lightbox-img");
   const lightboxTitle = lightbox.querySelector(".image-lightbox-title");
   const lightboxClose = lightbox.querySelector(".image-lightbox-close");
-  const desktopMedia = window.matchMedia("(min-width: 701px)");
 
   const closeLightbox = () => {
     lightbox.classList.remove("open");
@@ -184,7 +200,7 @@ if (lightboxTriggers.length) {
 
   document.addEventListener("click", (event) => {
     const button = event.target.closest(".pub-image-button, .focus-image-button");
-    if (!button || !desktopMedia.matches) return;
+    if (!button) return;
     lightboxImage.src = button.dataset.fullImage;
     lightboxImage.alt = button.querySelector("img")?.alt || "";
     lightboxTitle.textContent = button.dataset.imageTitle || "";
