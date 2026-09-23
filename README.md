@@ -210,7 +210,7 @@ Important behavior:
 - Items are displayed in array order, so place the newest item first.
 - The first four items are visible initially.
 - Older items appear behind the **More / थप हेर्नुहोस्** control.
-- Items from the current month or previous three months receive the automatic **New / नयाँ** badge.
+- Items dated in 2026 receive the automatic **New / नयाँ** badge; older items do not.
 - Venue names listed in `newsHighlights` in `assets/js/main.js` are emphasized. Add a new venue there only when it should receive the same emphasis.
 
 Validate both files:

@@ -10,22 +10,34 @@
   }
 
   Only the first 4 items show by default; the rest collapse behind the
-  "More" toggle. Items dated within the last 3 months get an automatic
-  "New" badge (handled in main.js).
+  "More" toggle. Items dated in 2026 get an automatic "New" badge
+  (handled in main.js).
 */
 
 window.NEWS = [
   {
-    date: "2026-06",
-    tag: "review",
-    tagLabel: "Under Review",
-    text: "Deployment-Stack Effects for ARM Edge DNN Inference paper submitted to Elsevier Journal of Systems Architecture."
+    date: "2026-09",
+    tag: "journal",
+    tagLabel: "Published",
+    text: "Public Enterprise Decline and the Industrial Replacement Gap in Nepal: Evidence from Product-Level Trade Data and Explainable Machine Learning published in MDPI Sustainability."
+  },
+  {
+    date: "2026-08",
+    tag: "journal",
+    tagLabel: "Published",
+    text: "Video-based fire and smoke detection and verification paper published in MDPI Sensors."
+  },
+  {
+    date: "2026-07",
+    tag: "journal",
+    tagLabel: "Published",
+    text: "Vision-Based Strawberry Ripeness Grading for Harvest Decision Support in Smart Greenhouses published in MDPI Agriculture."
   },
   {
     date: "2026-06",
     tag: "review",
     tagLabel: "Under Review",
-    text: "Video-based fire and smoke detection and verification paper submitted to IEEE Access."
+    text: "Deployment-Stack Effects for ARM Edge DNN Inference paper submitted to Elsevier Journal of Systems Architecture."
   },
   {
     date: "2026-03",
@@ -43,7 +55,7 @@ window.NEWS = [
     date: "2025-06",
     tag: "journal",
     tagLabel: "Journal",
-    text: "FUSE-Net paper on RGB-to-NIR prediction published in Sensors."
+    text: "FUSE-Net paper on RGB-to-NIR prediction published in MDPI Sensors."
   },
   {
     date: "2025-03",
@@ -54,7 +66,7 @@ window.NEWS = [
   {
     date: "2025-01",
     tag: "service",
-    tagLabel: "Academic Service",
+    tagLabel: "Editorial Board",
     text: "Joined the Editorial Board of Discover Artificial Intelligence, Springer Nature."
   },
   {

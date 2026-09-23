@@ -16,6 +16,8 @@ const publicationList = document.querySelector("[data-publication-list]");
 const scrollCue = document.querySelector(".scroll-cue");
 const newsToggle = document.querySelector("[data-news-toggle]");
 const newsList = document.querySelector("[data-news-list]");
+const experienceToggle = document.querySelector("[data-experience-toggle]");
+const experienceExtraItems = document.querySelectorAll(".timeline-extra");
 
 const escapeHtml = (value = "") =>
   String(value)
@@ -99,7 +101,6 @@ if (publicationList && Array.isArray(window.PUBLICATIONS)) {
 }
 
 const NEWS_VISIBLE_COUNT = 4;
-const NEWS_RECENT_MONTHS = 3;
 const newsMonthLabels = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 const nepaliNewsMonthLabels = ["जनवरी", "फेब्रुअरी", "मार्च", "अप्रिल", "मे", "जुन", "जुलाई", "अगस्ट", "सेप्टेम्बर", "अक्टोबर", "नोभेम्बर", "डिसेम्बर"];
 
@@ -111,11 +112,8 @@ const formatNewsDate = (date) => {
 };
 
 const isNewsRecent = (date) => {
-  const [year, month] = date.split("-").map(Number);
-  const itemDate = new Date(year, month - 1, 1);
-  const now = new Date();
-  const monthsAgo = (now.getFullYear() - itemDate.getFullYear()) * 12 + (now.getMonth() - itemDate.getMonth());
-  return monthsAgo >= 0 && monthsAgo <= NEWS_RECENT_MONTHS;
+  const [year] = date.split("-").map(Number);
+  return year === 2026;
 };
 
 const newsHighlights = [
@@ -124,9 +122,11 @@ const newsHighlights = [
   "Springer Nature",
   "IEEE Access",
   "WACV 2026",
+  "MDPI Sustainability",
+  "MDPI Sensors",
+  "MDPI Agriculture",
   "Diagnostics",
   "ICCAS 2024",
-  "Sensors",
 ];
 
 const highlightNewsText = (text) => {
@@ -167,10 +167,27 @@ if (newsToggle) {
       });
       newsToggle.textContent = isNepali
         ? (expanded ? "थप हेर्नुहोस्" : "कम देखाउनुहोस्")
-        : (expanded ? "More" : "Less");
+        : (expanded ? "See more" : "Less");
     });
   } else {
     newsToggle.hidden = true;
+  }
+}
+
+if (experienceToggle) {
+  if (experienceExtraItems.length) {
+    experienceToggle.addEventListener("click", () => {
+      const expanded = experienceToggle.getAttribute("aria-expanded") === "true";
+      experienceToggle.setAttribute("aria-expanded", String(!expanded));
+      experienceExtraItems.forEach((item) => {
+        item.hidden = expanded;
+      });
+      experienceToggle.textContent = expanded
+        ? experienceToggle.dataset.moreLabel
+        : experienceToggle.dataset.lessLabel;
+    });
+  } else {
+    experienceToggle.hidden = true;
   }
 }
 

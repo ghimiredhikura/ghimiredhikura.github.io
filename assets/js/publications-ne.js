@@ -1,6 +1,9 @@
 // Paper titles and expanded abstracts stay in their original publication language.
 // These short Nepali summaries are keyed by title so English list reordering is safe.
 window.PUBLICATION_TITLES_NE = {
+  "Public Enterprise Decline and the Industrial Replacement Gap in Nepal: Evidence from Product-Level Trade Data and Explainable Machine Learning": "नेपालका सार्वजनिक उद्योगको अवनतिपछि घरेलु उत्पादनमा देखिएको खाडल",
+  "STV-FSANet: Track-Level Spatio-Temporal Verification for Fire and Smoke Alarm Validation in Video Surveillance": "भिडियो निगरानीमा आगो र धुवाँको चेतावनी पुष्टि गर्ने STV-FSANet प्रणाली",
+  "Vision-Based Strawberry Ripeness Grading for Harvest Decision Support in Smart Greenhouses": "स्मार्ट हरितगृहमा स्ट्रबेरी टिप्ने सही समयका लागि पाकेको अवस्था छुट्याउने क्यामेरा प्रणाली",
   "One-cycle Structured Pruning with Stability Driven Subnetwork Search": "गहन सिकाइ मोडेललाई एकै चरणमा छाँटेर हलुका बनाउने विधि",
   "Precision Biomarker Identification in Gynecological Cancers Using Coexpression Networks and Attention-Based LSTM in Healthcare 4.0": "पाठेघरको मुख र डिम्बाशयको क्यान्सरका जैविक सङ्केत खोज्ने अध्ययन",
   "Temporal Trends and Machine Learning-Based Risk Prediction of Female Infertility: A Cross-Cohort Analysis Using NHANES Data (2015-2023)": "स्वास्थ्य तथ्याङ्कबाट महिला बाँझोपनको बदलिँदो अवस्था र जोखिम अनुमान",
@@ -37,6 +40,9 @@ window.PUBLICATION_TITLES_NE = {
 };
 
 window.PUBLICATION_SUMMARIES_NE = {
+  "Public Enterprise Decline and the Industrial Replacement Gap in Nepal: Evidence from Product-Level Trade Data and Explainable Machine Learning": "नेपालका सार्वजनिक उद्योग बन्द वा कमजोर भएपछि तिनले छाडेको उत्पादन क्षमता स्वदेशी उद्योगले कति पूरा गर्न सके भन्ने अध्ययन हो। वस्तुअनुसारको आयात–निर्यात तथ्याङ्क, सरकारी अभिलेख र नतिजाको कारण देखाउन सक्ने यन्त्र सिकाइ प्रयोग गर्दा उत्पादन क्षेत्रमा लामो समयदेखि सुस्ती र आयातमाथि ठूलो निर्भरता देखियो।",
+  "STV-FSANet: Track-Level Spatio-Temporal Verification for Fire and Smoke Alarm Validation in Video Surveillance": "निगरानी भिडियोमा देखिएको आगो वा धुवाँ वास्तविक हो कि घाम, प्रतिबिम्ब, बादल, कुहिरो वा बाफका कारण आएको गलत चेतावनी हो भन्ने पुष्टि गर्ने प्रणाली हो। यसले दृश्यको बनावट र समयसँगै बदलिने स्थान तथा चाल दुवै हेरेर छिटो र भरपर्दो निर्णय गर्छ।",
+  "Vision-Based Strawberry Ripeness Grading for Harvest Decision Support in Smart Greenhouses": "हरितगृहको तस्वीरमा स्ट्रबेरी कहाँ छ भन्ने पत्ता लगाएर त्यसलाई पाकेको पाँच अवस्थामध्ये एउटामा राख्ने प्रणाली हो। सामान्य रङसँगै हरियोपन र रङको सूक्ष्म फेरबदलसम्बन्धी थप जानकारी प्रयोग भएकाले टिप्ने समय नजिकका अवस्थाहरू पनि राम्रोसँग छुट्याउन मद्दत गर्छ।",
   "One-cycle Structured Pruning with Stability Driven Subnetwork Search": "तस्वीर बुझ्ने ठूलो गहन सिकाइ मोडेलबाट कम उपयोगी भाग हटाएर सानो तर भरपर्दो मोडेल खोज्ने अध्ययन हो। एकै चरणमा आकार घटाउँदा पनि सही नतिजा दिने भाग कसरी छान्ने भन्नेमा यसले ध्यान दिन्छ।",
   "Precision Biomarker Identification in Gynecological Cancers Using Coexpression Networks and Attention-Based LSTM in Healthcare 4.0": "पाठेघरको मुख र डिम्बाशयको क्यान्सर चाँडै पत्ता लगाउन तथा रोग कसरी अघि बढ्न सक्छ भन्ने बुझ्न उपयोगी जीनसम्बन्धी सङ्केत खोजिएको छ। कुन जीनहरू सँगै सक्रिय हुन्छन् भन्ने तथ्य र क्रमिक सिकाइ विधि यसमा प्रयोग भएका छन्।",
   "Temporal Trends and Machine Learning-Based Risk Prediction of Female Infertility: A Cross-Cohort Analysis Using NHANES Data (2015-2023)": "सन् २०१५ देखि २०२३ सम्मका स्वास्थ्य सर्वेक्षणको तथ्याङ्क हेरेर महिला बाँझोपनको अवस्था समयसँगै कसरी बदलियो भन्ने अध्ययन गरिएको छ। सोही तथ्याङ्कबाट बाँझोपनको जोखिम अनुमान गर्न यन्त्र सिकाइ विधि जाँचिएको छ।",

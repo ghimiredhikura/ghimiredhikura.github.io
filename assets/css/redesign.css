@@ -23,7 +23,7 @@
   --radius: 3px;
   --max: 1280px;
   --minimum-text-size: .88rem;
-  --section-kicker-size: 1.1rem;
+  --section-kicker-size: calc(1.1rem - 1pt);
 }
 
 html { scroll-padding-top: 92px; }
@@ -121,8 +121,8 @@ html[lang="ne"] .brand > span:last-child::after { content: "कम्प्य�
 .section-kicker,
 .writing-section-heading .section-kicker { font-size: var(--section-kicker-size); }
 .hero .eyebrow { margin-bottom: 15px; }
-.hero h1 { max-width: none; margin-bottom: 15px; font-size: calc(clamp(2.5rem, 4vw, 4.2rem) - 2pt); }
-html[lang="ne"] .hero h1 { font-size: calc(clamp(2.5rem, 4vw, 4.2rem) - 4pt); }
+.hero h1 { max-width: none; margin-bottom: 15px; font-size: calc(clamp(2.5rem, 4vw, 4.2rem) - 6pt); }
+html[lang="ne"] .hero h1 { font-size: calc(clamp(2.5rem, 4vw, 4.2rem) - 8pt); }
 .hero-text { max-width: 670px; margin-bottom: 0; font-size: 1.06rem; line-height: 1.58; }
 .hero-actions { gap: 12px; margin-top: 22px; }
 .button {
@@ -141,15 +141,28 @@ html[lang="ne"] .hero h1 { font-size: calc(clamp(2.5rem, 4vw, 4.2rem) - 4pt); }
 .button.secondary:hover { background: #edf5f2; }
 .hero-assurance {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, .8fr);
   gap: 20px;
-  max-width: 610px;
+  width: 100%;
+  max-width: 680px;
   margin-top: 27px;
   padding-top: 16px;
   border-top: 1px solid #cbd7d3;
 }
-.hero-assurance span { display: grid; gap: 3px; color: var(--muted); font-size: var(--minimum-text-size); line-height: 1.4; }
-.hero-assurance strong { color: var(--ink); font-size: .9rem; }
+.hero-assurance span {
+  display: grid;
+  gap: 3px;
+  padding: 11px 13px;
+  border-left: 2px solid rgba(29, 111, 120, .32);
+  background: rgba(29, 111, 120, .055);
+  color: var(--muted);
+  font-size: var(--minimum-text-size);
+  line-height: 1.4;
+}
+.hero-assurance strong { color: var(--river); font-size: .9rem; }
+@media (min-width: 720px) {
+  .hero-assurance span:nth-child(2) { white-space: nowrap; }
+}
 .hero-visual {
   display: block;
   justify-self: end;
@@ -265,7 +278,25 @@ html[lang="ne"] .hero h1 { font-size: calc(clamp(2.5rem, 4vw, 4.2rem) - 4pt); }
 .news-item { grid-template-columns: minmax(88px, max-content) minmax(155px, max-content) minmax(0, 1fr); padding: 11px 0; border-bottom-color: var(--line); }
 .news-item time { color: var(--river); }
 .news-item time, .news-item p { font-size: var(--minimum-text-size); }
+.news-tags {
+  display: grid;
+  grid-template-columns: 100px 46px;
+  align-items: center;
+  gap: 6px;
+  width: 152px;
+}
 .news-item .news-tag, .news-item .news-new { font-size: calc(var(--minimum-text-size) - 2pt); }
+.news-item .news-tag,
+.news-item .news-new {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 100%;
+}
+.news-item .news-new[hidden] { display: none; }
+html[lang="ne"] .news-item .news-tag,
+html[lang="ne"] .news-item .news-new { font-size: calc(var(--minimum-text-size) - 1pt); }
 .news-tag { border-radius: 1px; }
 .news-toggle { margin-top: 8px; font-size: var(--minimum-text-size); }
 .timeline { padding: 0; border-top: 2px solid var(--night); }
@@ -275,13 +306,17 @@ html[lang="ne"] .hero h1 { font-size: calc(clamp(2.5rem, 4vw, 4.2rem) - 4pt); }
   border-bottom: 1px solid var(--line);
 }
 .timeline article::before, .timeline article::after { display: none; }
-.timeline-meta { justify-items: start; padding: 16px 0; text-align: left; }
+.timeline article[hidden] { display: none; }
+.timeline-meta { justify-items: start; padding: 16px 0; background: transparent; text-align: left; }
 .timeline-meta span { padding: 0; background: none; border-radius: 0; color: var(--muted); font-size: var(--minimum-text-size); }
 .timeline-meta .timeline-date { color: var(--river); font-size: var(--minimum-text-size); }
-.timeline-content { grid-column: 2; margin: 0; padding: 15px 0 16px; border: 0; border-radius: 0; box-shadow: none; }
+.timeline-content { grid-column: 2; margin: 0; padding: 15px 0 16px; border: 0; border-radius: 0; background: transparent; box-shadow: none; }
 .timeline h3 { font-size: 1.2rem; }
+html[lang="en"] .timeline-meta .timeline-date { text-transform: uppercase; }
+html[lang="en"] .timeline h3 { font-size: calc(1.2rem - 1pt); }
 .timeline-org { color: var(--river); font-size: .89rem; }
 .timeline summary, .pub-details summary { border-radius: 2px; color: var(--river); border-color: #b9d0ca; }
+.experience-toggle { margin-top: 10px; }
 
 /* Credentials use the reference site's ruled column format. */
 .credentials-section { margin-bottom: 39px; }
@@ -290,8 +325,8 @@ html[lang="ne"] .hero h1 { font-size: calc(clamp(2.5rem, 4vw, 4.2rem) - 4pt); }
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 36px;
   align-items: start;
-  padding: 32px 36px;
-  background: #f2f3ed;
+  padding: 0;
+  background: transparent;
 }
 .two-column .panel {
   min-width: 0;
@@ -446,7 +481,7 @@ html[lang="ne"] .hero h1 { font-size: calc(clamp(2.5rem, 4vw, 4.2rem) - 4pt); }
 }
 .origin-intro { gap: 5px; }
 .origin-intro h2 { max-width: 900px; margin-bottom: 0; font-size: clamp(1.65rem, 2vw, 2.05rem); line-height: 1.22; }
-.origin-copy { max-width: 1040px; gap: 10px; }
+.origin-copy { width: 100%; max-width: none; gap: 10px; }
 .origin-copy p { max-width: none; margin: 0; color: var(--ink); font-size: 1rem; line-height: 1.6; }
 .origin-copy .origin-footprint { color: var(--muted); font-size: .94rem; }
 
@@ -454,6 +489,7 @@ html[lang="ne"] .hero h1 { font-size: calc(clamp(2.5rem, 4vw, 4.2rem) - 4pt); }
 .page-hero { margin: 0 0 17px; padding: 40px 0 18px; border-bottom: 1px solid var(--line); }
 .page-hero h1, .publication-hero h1, .writing-hero h1 { max-width: none; font-size: clamp(2.1rem, 3.2vw, 3.15rem); }
 .page-hero p { max-width: 980px; line-height: 1.55; }
+.publication-hero > p:not(.eyebrow) { width: 100%; max-width: none; }
 .publication-controls { gap: 7px; margin-bottom: 12px; }
 .filter-button { border-radius: 2px; font-size: var(--minimum-text-size); font-weight: 750; }
 .filter-button.active, .filter-button:hover { background: var(--night); }
@@ -515,8 +551,8 @@ html[lang="ne"] .pub-details[open] summary::before { content: "लुकाउ�
 }
 @media (max-width: 1000px) {
   .hero { grid-template-columns: minmax(0, 1fr) minmax(300px, .8fr); gap: 25px; }
-  .hero h1 { font-size: calc(clamp(2.5rem, 4.4vw, 3.6rem) - 2pt); }
-  html[lang="ne"] .hero h1 { font-size: calc(clamp(2.5rem, 4.4vw, 3.6rem) - 4pt); }
+  .hero h1 { font-size: calc(clamp(2.5rem, 4.4vw, 3.6rem) - 6pt); }
+  html[lang="ne"] .hero h1 { font-size: calc(clamp(2.5rem, 4.4vw, 3.6rem) - 8pt); }
   .hero-visual { width: min(100%, 390px); min-height: 0; padding: 19px; }
   .portrait-frame { height: 280px; }
 }
@@ -538,7 +574,7 @@ html[lang="ne"] .pub-details[open] summary::before { content: "लुकाउ�
   .timeline { gap: 0; }
   .timeline article { grid-template-columns: 165px minmax(0, 1fr); gap: 30px; }
   .timeline-meta, .timeline-content { grid-column: auto; }
-  .two-column { grid-template-columns: 1fr; gap: 24px; padding: 28px; }
+  .two-column { grid-template-columns: 1fr; gap: 24px; padding: 0; }
   .profiles { grid-template-columns: 1fr; }
   .contact-section { grid-template-columns: 1fr; }
   .writing-section { grid-template-columns: 1fr; gap: 14px; }
@@ -556,8 +592,8 @@ html[lang="ne"] .pub-details[open] summary::before { content: "लुकाउ�
   .hero { gap: 22px; padding: 28px 0 26px; }
   .hero-copy { display: block; min-height: 0; padding: 0; }
   .hero .eyebrow { margin-bottom: 14px; }
-  .hero h1 { font-size: calc(clamp(2.3rem, 10vw, 3.2rem) - 2pt); }
-  html[lang="ne"] .hero h1 { font-size: calc(clamp(2.3rem, 10vw, 3.2rem) - 4pt); }
+  .hero h1 { font-size: calc(clamp(2.3rem, 10vw, 3.2rem) - 6pt); }
+  html[lang="ne"] .hero h1 { font-size: calc(clamp(2.3rem, 10vw, 3.2rem) - 8pt); }
   .hero-text { font-size: .98rem; }
   .hero-actions { gap: 8px; margin-top: 24px; }
   .button { min-height: 46px; padding: 10px 14px; font-size: var(--minimum-text-size); }
@@ -580,7 +616,7 @@ html[lang="ne"] .pub-details[open] summary::before { content: "लुकाउ�
   .timeline article { grid-template-columns: 1fr; gap: 0; }
   .timeline-meta { display: flex; justify-content: flex-start; gap: 12px; padding: 16px 0 0; }
   .timeline-content { padding: 8px 0 18px; }
-  .two-column { gap: 22px; padding: 20px; }
+  .two-column { gap: 22px; padding: 0; }
   .profiles { gap: 18px; padding: 0; }
   .profile-links { grid-template-columns: 1fr; gap: 26px; }
   .contact-section { gap: 24px; padding: 25px 19px; }
@@ -645,5 +681,9 @@ html[lang="ne"] .pub-details[open] summary::before { content: "लुकाउ�
 .publication-card p,
 .site-footer .copyright {
   font-size: var(--minimum-text-size);
+}
+.pub-visual .pub-meta,
+.pub-visual::after {
+  font-size: calc(var(--minimum-text-size) - 2pt);
 }
 .pub-visual { --pub-tag-height: 25px; }

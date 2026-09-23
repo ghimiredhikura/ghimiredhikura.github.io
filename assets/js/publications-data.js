@@ -22,6 +22,72 @@
 
 window.PUBLICATIONS = [
   {
+    "topic": "systems",
+    "venue": "Sustainability, 2026 · MDPI Journal",
+    "title": "Public Enterprise Decline and the Industrial Replacement Gap in Nepal: Evidence from Product-Level Trade Data and Explainable Machine Learning",
+    "summary": "Examines whether Nepal developed enough domestic industrial capacity after the decline of public enterprises. Product-level trade data, enterprise records, and explainable machine learning reveal persistent manufacturing stagnation and substantial gaps between lost public production and its domestic replacement.",
+    "image": "assets/images/sustainability-18-09548-g006.png",
+    "imageAlt": "Explainable machine learning feature importance for Nepal's industrial replacement gap analysis",
+    "icon": "",
+    "links": [
+      {
+        "label": "Paper",
+        "url": "https://www.mdpi.com/2071-1050/18/18/9548",
+        "type": "paper"
+      },
+      {
+        "label": "PDF",
+        "url": "https://www.mdpi.com/2071-1050/18/18/9548/pdf",
+        "type": "pdf"
+      }
+    ],
+    "detailsHtml": "<dl>\n  <div>\n    <dt>Venue</dt>\n    <dd>Sustainability, 2026, 18(18), 9548. Published 17 September 2026. DOI: <a href=\"https://doi.org/10.3390/su18189548\" target=\"_blank\" rel=\"noopener\">10.3390/su18189548</a>.</dd>\n  </div>\n  <div>\n    <dt>Authors</dt>\n    <dd class=\"author-list\">Anisha Dhakal<sup>1</sup>, Sabina Ghimire<sup>2</sup>, <strong>Deepak Ghimire<sup>3,*</sup></strong>, Seong-heum Kim<sup>4,*</sup></dd>\n  </div>\n  <div>\n    <dt>Affiliations</dt>\n    <dd><ol class=\"affiliation-list\"><li>Independent Researcher, Jeonju 54917, Republic of Korea</li><li>Agricultural Development Bank Ltd., Kathmandu 44600, Nepal</li><li>AI Application Research Center, Korea Electronics Technology Institute, Jeonju 54853, Republic of Korea</li><li>Department of Intelligent Semiconductors, Soongsil University, Seoul 06978, Republic of Korea</li></ol><span class=\"corresponding-note\">* Corresponding authors: Deepak Ghimire and Seong-heum Kim.</span></dd>\n  </div>\n  <div>\n    <dt>Study</dt>\n    <dd>The study introduces the industrial replacement gap as a framework for assessing whether domestic productive capacity replaced Nepal's declining public industrial enterprises. It combines World Bank indicators, UN Comtrade product data, government enterprise records, and industry registrations. The findings indicate persistent manufacturing stagnation, import-dominated trade in several linked product groups, and falling average employment per newly registered manufacturing firm. An exploratory Random Forest and SHAP analysis identifies foreign direct investment inflows and trade openness as the strongest predictors within the fitted model, while the limited sample does not support causal interpretation.</dd>\n  </div>\n  <div>\n    <dt>Keywords</dt>\n    <dd>Public enterprises; industrial replacement gap; Nepal; product-level trade; manufacturing; explainable machine learning; SHAP; sustainable industrialization.</dd>\n  </div>\n</dl>"
+  },
+  {
+    "topic": "vision",
+    "venue": "Sensors, 2026 · MDPI Journal",
+    "title": "STV-FSANet: Track-Level Spatio-Temporal Verification for Fire and Smoke Alarm Validation in Video Surveillance",
+    "summary": "Presents a detect-track-verify framework that distinguishes real fire and smoke from difficult false alarms such as reflections, clouds, mist, and steam. A dual-branch recurrent model combines appearance and motion geometry across video tracks for fast, reliable online verification.",
+    "image": "assets/images/sensors-26-04970-g001.png",
+    "imageAlt": "STV-FSANet framework for track-level fire and smoke alarm verification",
+    "icon": "",
+    "links": [
+      {
+        "label": "Paper",
+        "url": "https://www.mdpi.com/1424-8220/26/15/4970",
+        "type": "paper"
+      },
+      {
+        "label": "PDF",
+        "url": "https://www.mdpi.com/1424-8220/26/15/4970/pdf",
+        "type": "pdf"
+      }
+    ],
+    "detailsHtml": "<dl>\n  <div>\n    <dt>Venue</dt>\n    <dd>Sensors, 2026, 26(15), 4970. Published 5 August 2026. DOI: <a href=\"https://doi.org/10.3390/s26154970\" target=\"_blank\" rel=\"noopener\">10.3390/s26154970</a>.</dd>\n  </div>\n  <div>\n    <dt>Authors</dt>\n    <dd class=\"author-list\"><strong>Deepak Ghimire</strong>, Donghoon Kim, Yeonho Jo, Eunhee Lee, Sunghwan Jeong, Byoungjun Kim</dd>\n  </div>\n  <div>\n    <dt>Affiliation</dt>\n    <dd>AI Application Research Center, Korea Electronics Technology Institute, Jeonju 54853, Republic of Korea.</dd>\n  </div>\n  <div>\n    <dt>Study</dt>\n    <dd>STV-FSANet first detects possible fire or smoke regions, links them across frames, and verifies each active track as fire, smoke, or a false alarm. Its two GRU branches combine visual appearance with lightweight geometric cues. The accompanying FSAV Tracklet Dataset contains 58,733 parent tracks and 2.06 million annotated track frames from 1,347 videos. The matched-context model achieved 97.09% accuracy and 95.81% macro-F1, while TensorRT FP16 deployment reached 109.55 frames per second on an RTX 4060 Laptop GPU and 39.51 frames per second on a Jetson AGX Orin DevKit.</dd>\n  </div>\n  <div>\n    <dt>Keywords</dt>\n    <dd>Fire detection; smoke detection; temporal verification; video surveillance; false alarm suppression; recurrent neural network; GRU; track-based analysis.</dd>\n  </div>\n</dl>"
+  },
+  {
+    "topic": "agri",
+    "venue": "Agriculture, 2026 · MDPI Journal",
+    "title": "Vision-Based Strawberry Ripeness Grading for Harvest Decision Support in Smart Greenhouses",
+    "summary": "Uses a two-stage computer vision system to locate strawberries and grade five ripeness levels for harvest decisions. The model combines RGB, Excess Green, and Hue information with multi-scale feature fusion to better distinguish subtle transitions between adjacent ripeness stages.",
+    "image": "assets/images/agriculture-16-01550-g001.png",
+    "imageAlt": "Two-stage framework for strawberry detection and five-level ripeness grading",
+    "icon": "",
+    "links": [
+      {
+        "label": "Paper",
+        "url": "https://www.mdpi.com/2077-0472/16/14/1550",
+        "type": "paper"
+      },
+      {
+        "label": "PDF",
+        "url": "https://www.mdpi.com/2077-0472/16/14/1550/pdf",
+        "type": "pdf"
+      }
+    ],
+    "detailsHtml": "<dl>\n  <div>\n    <dt>Venue</dt>\n    <dd>Agriculture, 2026, 16(14), 1550. Published 20 July 2026. DOI: <a href=\"https://doi.org/10.3390/agriculture16141550\" target=\"_blank\" rel=\"noopener\">10.3390/agriculture16141550</a>.</dd>\n  </div>\n  <div>\n    <dt>Authors</dt>\n    <dd class=\"author-list\">Gwanghyeong Lee, <strong>Deepak Ghimire</strong>, Sewoon Cho, Jihwan Seo, Sunghwan Jeong, Byoungjun Kim</dd>\n  </div>\n  <div>\n    <dt>Affiliation</dt>\n    <dd>AI Application Research Center, Korea Electronics Technology Institute, Jeonju 54853, Republic of Korea.</dd>\n  </div>\n  <div>\n    <dt>Study</dt>\n    <dd>The first stage uses YOLO11m to locate strawberries in greenhouse images. The second stage grades each detected fruit into five ripeness levels using a five-channel RGB, Excess Green, and Hue representation and a CP2-A2C2F network that fuses high-resolution P2 features with deeper P4 features. The proposed model achieved 87.7% accuracy, a weighted F1 score of 0.877, and a mean absolute error of 0.162, supporting more precise harvest timing under the tested greenhouse conditions.</dd>\n  </div>\n  <div>\n    <dt>Keywords</dt>\n    <dd>Strawberry ripeness classification; smart greenhouse; YOLO11m; RGB image; Excess Green; Hue; CP2-A2C2F; computer vision; harvest decision support.</dd>\n  </div>\n</dl>"
+  },
+  {
     "topic": "edge-ai",
     "venue": "WACV 2026, Tucson, USA · IEEE/CVF Conference",
     "title": "One-cycle Structured Pruning with Stability Driven Subnetwork Search",
