@@ -24,7 +24,11 @@
   --max: 1280px;
   --minimum-text-size: .88rem;
   --section-kicker-size: calc(1.1rem - 1pt);
+  --home-hero-heading-size: calc(clamp(2.5rem, 4vw, 4.2rem) - 12pt);
+  --secondary-heading-cap: calc(var(--home-hero-heading-size) - 2pt);
 }
+html[lang="en"] { --hero-card-max: 502px; --hero-portrait-height: 350px; }
+html[lang="ne"] { --hero-card-max: 507px; --hero-portrait-height: 354px; }
 
 html { scroll-padding-top: 92px; }
 body {
@@ -122,8 +126,10 @@ html[lang="ne"] .brand > span:last-child::after { content: "कम्प्य�
 .writing-section-heading .section-kicker { font-size: var(--section-kicker-size); }
 .hero .eyebrow { margin-bottom: 15px; }
 .hero h1 { max-width: none; margin-bottom: 15px; font-size: calc(clamp(2.5rem, 4vw, 4.2rem) - 6pt); }
-html[lang="ne"] .hero h1 { font-size: calc(clamp(2.5rem, 4vw, 4.2rem) - 8pt); }
+html[lang="en"] .hero h1 { font-size: calc(clamp(2.5rem, 4vw, 4.2rem) - 12pt); }
+html[lang="ne"] .hero h1 { font-size: calc(clamp(2.5rem, 4vw, 4.2rem) - 12pt); }
 .hero-text { max-width: 670px; margin-bottom: 0; font-size: 1.06rem; line-height: 1.58; }
+html[lang="en"] .hero-text { width: 100%; max-width: none; }
 .hero-actions { gap: 12px; margin-top: 22px; }
 .button {
   gap: 15px;
@@ -139,6 +145,41 @@ html[lang="ne"] .hero h1 { font-size: calc(clamp(2.5rem, 4vw, 4.2rem) - 8pt); }
 .button.primary:hover { background: #075b5b; }
 .button.secondary { border-color: #a8c1bb; background: transparent; }
 .button.secondary:hover { background: #edf5f2; }
+.cv-download-menu { position: relative; }
+.cv-download-menu summary { list-style: none; cursor: pointer; }
+.cv-download-menu summary::-webkit-details-marker { display: none; }
+.cv-download-menu summary::after {
+  content: "↓";
+  margin-left: 2px;
+  color: var(--river);
+  font-weight: 850;
+}
+.cv-download-menu[open] summary { border-color: var(--river); background: #edf5f2; }
+.cv-download-options {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  z-index: 20;
+  display: grid;
+  width: 224px;
+  padding: 6px;
+  border: 1px solid #b9ccc7;
+  border-radius: 2px;
+  background: #fff;
+  box-shadow: 0 16px 36px rgba(17, 54, 58, .16);
+}
+.cv-download-options a {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 3px 12px;
+  padding: 10px 11px;
+  color: var(--ink);
+  text-decoration: none;
+}
+.cv-download-options a + a { border-top: 1px solid var(--line); }
+.cv-download-options a:hover { background: #edf5f2; }
+.cv-download-options strong { color: var(--river); font-size: .9rem; }
+.cv-download-options span { align-self: center; color: var(--muted); font-size: var(--minimum-text-size); }
 .hero-assurance {
   display: grid;
   grid-template-columns: minmax(0, 1.2fr) minmax(0, .8fr);
@@ -166,7 +207,7 @@ html[lang="ne"] .hero h1 { font-size: calc(clamp(2.5rem, 4vw, 4.2rem) - 8pt); }
 .hero-visual {
   display: block;
   justify-self: end;
-  width: min(100%, 430px);
+  width: min(100%, var(--hero-card-max));
   min-height: 0;
   padding: 20px;
   overflow: visible;
@@ -191,7 +232,7 @@ html[lang="ne"] .hero h1 { font-size: calc(clamp(2.5rem, 4vw, 4.2rem) - 8pt); }
 }
 .portrait-frame {
   width: 100%;
-  height: 300px;
+  height: var(--hero-portrait-height);
   aspect-ratio: auto;
   border: 0;
   border-radius: 0;
@@ -328,6 +369,10 @@ html[lang="en"] .timeline h3 { font-size: calc(1.2rem - 1pt); }
   padding: 0;
   background: transparent;
 }
+.credentials-grid {
+  grid-template-columns: minmax(0, 1.12fr) minmax(0, .94fr) minmax(0, 1.04fr);
+  gap: clamp(22px, 2.4vw, 34px);
+}
 .two-column .panel {
   min-width: 0;
   padding: 0;
@@ -390,6 +435,32 @@ html[lang="en"] .timeline h3 { font-size: calc(1.2rem - 1pt); }
 }
 .two-column .service-sublist a:hover { background: none; color: var(--river); }
 .two-column .service-tags span { padding: 3px 7px; border-radius: 2px; background: #fff; }
+.skills-list { display: grid; gap: 0; }
+.skill-group {
+  padding: 13px 0;
+  border-bottom: 1px solid var(--line);
+}
+.skill-group h3 {
+  margin: 0;
+  color: var(--deep-red);
+  font-size: .82rem;
+  font-weight: 850;
+  letter-spacing: .035em;
+  line-height: 1.35;
+  text-transform: uppercase;
+}
+.skill-group p {
+  margin: 4px 0 0;
+  color: var(--muted);
+  font-size: var(--minimum-text-size);
+  line-height: 1.48;
+  overflow-wrap: anywhere;
+}
+html[lang="ne"] .skill-group h3 {
+  font-size: var(--minimum-text-size);
+  letter-spacing: 0;
+  text-transform: none;
+}
 /* Profiles are editorial directories rather than boxed buttons. */
 .profiles {
   grid-template-columns: 1fr;
@@ -523,7 +594,7 @@ html[lang="en"] .timeline h3 { font-size: calc(1.2rem - 1pt); }
 .other-pub-list a { padding: 15px; border-width: 0 1px 1px 0; border-radius: 0; box-shadow: none; }
 .other-pub-list a:hover { transform: none; box-shadow: none; background: #f0f7f3; }
 .publication-grid, .publication-list, .gallery-grid, .writing-layout { margin-bottom: 18px; }
-.writing-section { grid-template-columns: 220px minmax(0, 1fr); gap: 24px; margin-bottom: 27px; }
+.writing-section { grid-template-columns: 176px minmax(0, 1fr); gap: 24px; margin-bottom: 27px; }
 .writing-section-heading { top: 104px; }
 .writing-entry-list { gap: 0; border-top: 2px solid var(--night); }
 .writing-entry { gap: 20px; padding: 16px 0; border-width: 0 0 1px; border-radius: 0; box-shadow: none; background: none; }
@@ -550,13 +621,21 @@ html[lang="ne"] .pub-details[open] summary::before { content: "लुकाउ�
   .metrics-band { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
 @media (max-width: 1000px) {
+  :root {
+    --home-hero-heading-size: calc(clamp(2.5rem, 4.4vw, 3.6rem) - 12pt);
+  }
+  html[lang="en"] { --hero-card-max: 455px; --hero-portrait-height: 326px; }
+  html[lang="ne"] { --hero-card-max: 459px; --hero-portrait-height: 329px; }
   .hero { grid-template-columns: minmax(0, 1fr) minmax(300px, .8fr); gap: 25px; }
   .hero h1 { font-size: calc(clamp(2.5rem, 4.4vw, 3.6rem) - 6pt); }
-  html[lang="ne"] .hero h1 { font-size: calc(clamp(2.5rem, 4.4vw, 3.6rem) - 8pt); }
-  .hero-visual { width: min(100%, 390px); min-height: 0; padding: 19px; }
-  .portrait-frame { height: 280px; }
+  html[lang="en"] .hero h1 { font-size: calc(clamp(2.5rem, 4.4vw, 3.6rem) - 12pt); }
+  html[lang="ne"] .hero h1 { font-size: calc(clamp(2.5rem, 4.4vw, 3.6rem) - 12pt); }
+  .hero-visual { width: min(100%, var(--hero-card-max)); min-height: 0; padding: 19px; }
+  .portrait-frame { height: var(--hero-portrait-height); }
 }
 @media (max-width: 900px) {
+  html[lang="en"] { --hero-portrait-height: 338px; }
+  html[lang="ne"] { --hero-portrait-height: 342px; }
   .site-header { padding: 10px 24px; }
   .nav-toggle { display: block; border-radius: 2px; }
   .site-nav {
@@ -569,8 +648,8 @@ html[lang="ne"] .pub-details[open] summary::before { content: "लुकाउ�
   .site-nav > a.active::after { left: 12px; right: auto; width: 28px; bottom: 5px; }
   .language-switch { margin: 8px 0 0; padding: 12px; border: 0; border-top: 1px solid var(--line); }
   .hero { grid-template-columns: 1fr; gap: 26px; padding: 34px 0 29px; }
-  .hero-visual { width: min(100%, 390px); min-height: 0; justify-self: center; }
-  .portrait-frame { height: 290px; }
+  .hero-visual { width: min(100%, var(--hero-card-max)); min-height: 0; justify-self: center; }
+  .portrait-frame { height: var(--hero-portrait-height); }
   .timeline { gap: 0; }
   .timeline article { grid-template-columns: 165px minmax(0, 1fr); gap: 30px; }
   .timeline-meta, .timeline-content { grid-column: auto; }
@@ -581,6 +660,11 @@ html[lang="ne"] .pub-details[open] summary::before { content: "लुकाउ�
   .writing-section-heading { position: static; }
 }
 @media (max-width: 620px) {
+  :root {
+    --home-hero-heading-size: calc(clamp(2.3rem, 10vw, 3.2rem) - 12pt);
+  }
+  html[lang="en"] { --hero-card-max: 455px; --hero-portrait-height: min(82vw, 326px); }
+  html[lang="ne"] { --hero-card-max: 459px; --hero-portrait-height: min(83vw, 329px); }
   main, .site-footer { width: min(var(--max), calc(100% - 36px)); }
   .site-header { width: 100%; min-height: 66px; gap: 10px; padding: 9px 18px; }
   .site-nav { right: 18px; width: min(310px, calc(100vw - 36px)); }
@@ -593,16 +677,17 @@ html[lang="ne"] .pub-details[open] summary::before { content: "लुकाउ�
   .hero-copy { display: block; min-height: 0; padding: 0; }
   .hero .eyebrow { margin-bottom: 14px; }
   .hero h1 { font-size: calc(clamp(2.3rem, 10vw, 3.2rem) - 6pt); }
-  html[lang="ne"] .hero h1 { font-size: calc(clamp(2.3rem, 10vw, 3.2rem) - 8pt); }
+  html[lang="en"] .hero h1 { font-size: calc(clamp(2.3rem, 10vw, 3.2rem) - 12pt); }
+  html[lang="ne"] .hero h1 { font-size: calc(clamp(2.3rem, 10vw, 3.2rem) - 12pt); }
   .hero-text { font-size: .98rem; }
   .hero-actions { gap: 8px; margin-top: 24px; }
   .button { min-height: 46px; padding: 10px 14px; font-size: var(--minimum-text-size); }
   .hero-assurance { gap: 12px; margin-top: 21px; padding-top: 13px; }
   .hero-assurance strong { font-size: var(--minimum-text-size); }
   .hero-assurance span { font-size: var(--minimum-text-size); }
-  .hero-visual { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; width: min(100%, 390px); margin: 0; padding: 14px; }
+  .hero-visual { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; width: min(100%, var(--hero-card-max)); margin: 0; padding: 14px; }
   .hero-visual::before { inset: 9px; }
-  .portrait-frame { grid-column: 1 / -1; height: min(70vw, 280px); }
+  .portrait-frame { grid-column: 1 / -1; height: var(--hero-portrait-height); }
   .portrait-caption { grid-column: 1 / -1; margin: 2px 0 5px; }
   .metrics-band { grid-template-columns: repeat(2, minmax(0, 1fr)); margin-bottom: 30px; }
   .metrics-band div, .metrics-band a { min-height: 82px; padding: 12px 14px; }
@@ -633,6 +718,21 @@ html[lang="ne"] .pub-details[open] summary::before { content: "लुकाउ�
   .long-article { padding-top: 28px; }
   .article-hero h1 { font-size: 2.1rem; }
   .article-body { padding: 6px 0 20px; }
+}
+@media (min-width: 901px) {
+  html[lang="en"] .hero .eyebrow { margin-bottom: 11px; }
+  html[lang="en"] .hero h1 { margin-bottom: 11px; line-height: 1.08; }
+  html[lang="en"] .hero-text { line-height: 1.5; }
+  html[lang="en"] .hero-actions { margin-top: 16px; }
+  html[lang="en"] .hero-assurance { margin-top: 20px; padding-top: 12px; }
+  html[lang="en"] .hero-assurance span { padding: 9px 12px; }
+  html[lang="en"] .origin-intro h2 { white-space: nowrap; }
+  .writing-entry { grid-template-columns: 176px minmax(0, 1fr); }
+  .writing-entry:has(.source-logo) .writing-entry-meta time { white-space: nowrap; }
+}
+@media (min-width: 1001px) {
+  html[lang="en"] .hero { grid-template-columns: minmax(0, 1.19fr) minmax(350px, .81fr); }
+  html[lang="ne"] .hero { grid-template-columns: minmax(0, 1.185fr) minmax(350px, .815fr); }
 }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; }
@@ -686,4 +786,39 @@ html[lang="ne"] .pub-details[open] summary::before { content: "लुकाउ�
 .pub-visual::after {
   font-size: calc(var(--minimum-text-size) - 2pt);
 }
+html[lang="ne"] .pub-visual .pub-meta,
+html[lang="ne"] .pub-visual::after {
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: calc(var(--minimum-text-size) - 2pt);
+}
 .pub-visual { --pub-tag-height: 25px; }
+
+/* Keep the homepage hero as the largest text at every viewport width. */
+html[lang="en"] .hero h1,
+html[lang="ne"] .hero h1 {
+  font-size: var(--home-hero-heading-size);
+}
+h1 { font-size: min(clamp(2.5rem, 4vw, 4.2rem), var(--secondary-heading-cap)); }
+h2 { font-size: min(clamp(1.65rem, 2.35vw, 2.35rem), var(--secondary-heading-cap)); }
+h3 { font-size: min(1.15rem, var(--secondary-heading-cap)); }
+.section-grid h2 { font-size: min(clamp(1.7rem, 2.3vw, 2.3rem), var(--secondary-heading-cap)); }
+.focus-card h3 { font-size: min(1.24rem, var(--secondary-heading-cap)); }
+.timeline h3 { font-size: min(1.2rem, var(--secondary-heading-cap)); }
+html[lang="en"] .timeline h3 { font-size: min(calc(1.2rem - 1pt), var(--secondary-heading-cap)); }
+.two-column .panel h2 { font-size: min(1.5rem, var(--secondary-heading-cap)); }
+.profiles h2 { font-size: min(clamp(1.75rem, 2.4vw, 2.4rem), var(--secondary-heading-cap)); }
+.contact-intro h2 { font-size: min(clamp(2.1rem, 3vw, 3rem), var(--secondary-heading-cap)); }
+.origin-intro h2 { font-size: min(clamp(1.65rem, 2vw, 2.05rem), var(--secondary-heading-cap)); }
+.page-hero h1,
+.publication-hero h1,
+.writing-hero h1 { font-size: min(clamp(2.1rem, 3.2vw, 3.15rem), var(--secondary-heading-cap)); }
+.publication-card h2 { font-size: min(1.25rem, var(--secondary-heading-cap)); }
+.writing-section-heading h2,
+.article-body h2 { font-size: min(clamp(1.12rem, 1.4vw, 1.35rem), var(--secondary-heading-cap)); }
+.writing-entry-copy h3 { font-size: min(clamp(1.12rem, 1.3vw, 1.28rem), var(--secondary-heading-cap)); }
+.article-hero h1 { font-size: min(clamp(2.1rem, 3vw, 3.15rem), var(--secondary-heading-cap)); }
+.generated-tile span { font-size: min(2rem, var(--secondary-heading-cap)); }
+.image-lightbox-close { font-size: min(1.3rem, var(--secondary-heading-cap)); }
+.metrics-band strong {
+  font-size: min(clamp(calc(1.58rem - 2pt), 2vw, calc(1.72rem - 2pt)), var(--secondary-heading-cap));
+}

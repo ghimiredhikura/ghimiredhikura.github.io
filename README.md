@@ -331,6 +331,17 @@ Most profile content is written directly in `index.html` and `ne/index.html`, in
 
 When changing one of these areas, update both files in the same edit. Keep dates, organization names, links, and claims consistent while allowing the Nepali wording to read naturally.
 
+### Replace the CV files
+
+Keep the public filenames unchanged so the English and Nepali homepage links continue to work:
+
+```text
+assets/docs/deepak-ghimire-short-cv.pdf
+assets/docs/deepak-ghimire-full-cv.pdf
+```
+
+Replace the first file with the one-page CV and the second with the complete CV. Confirm their displayed page counts remain accurate in `index.html` and `ne/index.html`.
+
 ## Add a Gallery Image
 
 1. Put the optimized image in `assets/images/`.
