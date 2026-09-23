@@ -145,6 +145,7 @@ html[lang="en"] .hero-text { width: 100%; max-width: none; }
 .button.primary:hover { background: #075b5b; }
 .button.secondary { border-color: #a8c1bb; background: transparent; }
 .button.secondary:hover { background: #edf5f2; }
+.button-label-short { display: none; }
 .cv-download-menu { position: relative; }
 .cv-download-menu summary { list-style: none; cursor: pointer; }
 .cv-download-menu summary::-webkit-details-marker { display: none; }
@@ -680,8 +681,12 @@ html[lang="ne"] .pub-details[open] summary::before { content: "लुकाउ�
   html[lang="en"] .hero h1 { font-size: calc(clamp(2.3rem, 10vw, 3.2rem) - 12pt); }
   html[lang="ne"] .hero h1 { font-size: calc(clamp(2.3rem, 10vw, 3.2rem) - 12pt); }
   .hero-text { font-size: .98rem; }
-  .hero-actions { gap: 8px; margin-top: 24px; }
-  .button { min-height: 46px; padding: 10px 14px; font-size: var(--minimum-text-size); }
+  .hero-actions { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; margin-top: 24px; }
+  .hero-actions > a,
+  .hero-actions > details { min-width: 0; }
+  .hero-actions .button { justify-content: center; width: 100%; min-height: 44px; padding: 9px 7px; gap: 5px; font-size: calc(var(--minimum-text-size) - 1pt); white-space: nowrap; }
+  .button-label-long { display: none; }
+  .button-label-short { display: inline; }
   .hero-assurance { gap: 12px; margin-top: 21px; padding-top: 13px; }
   .hero-assurance strong { font-size: var(--minimum-text-size); }
   .hero-assurance span { font-size: var(--minimum-text-size); }
