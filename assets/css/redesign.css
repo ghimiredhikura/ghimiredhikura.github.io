@@ -26,6 +26,16 @@
   --section-kicker-size: calc(1.1rem - 1pt);
   --home-hero-heading-size: calc(clamp(2.5rem, 4vw, 4.2rem) - 12pt);
   --secondary-heading-cap: calc(var(--home-hero-heading-size) - 2pt);
+  --section-title-size: min(clamp(1.65rem, 2.35vw, 2.35rem), var(--secondary-heading-cap));
+  --focus-section-title-size: min(clamp(1.7rem, 2.3vw, 2.3rem), var(--secondary-heading-cap));
+  --profile-title-size: min(clamp(1.75rem, 2.4vw, 2.4rem), var(--secondary-heading-cap));
+  --contact-title-size: min(clamp(2.1rem, 3vw, 3rem), var(--secondary-heading-cap));
+  --origin-title-size: min(clamp(1.65rem, 2vw, 2.05rem), var(--secondary-heading-cap));
+  --page-title-size: min(clamp(2.1rem, 3.2vw, 3.15rem), var(--secondary-heading-cap));
+  --article-title-size: min(clamp(2.1rem, 3vw, 3.15rem), var(--secondary-heading-cap));
+  --focus-card-title-base: min(1.24rem, var(--secondary-heading-cap));
+  --panel-title-base: min(1.5rem, var(--secondary-heading-cap));
+  --panel-title-size: min(var(--panel-title-base), calc(var(--section-title-size) - 1pt));
 }
 html[lang="en"] { --hero-card-max: 502px; --hero-portrait-height: 350px; }
 html[lang="ne"] { --hero-card-max: 507px; --hero-portrait-height: 354px; }
@@ -804,24 +814,29 @@ html[lang="ne"] .hero h1 {
   font-size: var(--home-hero-heading-size);
 }
 h1 { font-size: min(clamp(2.5rem, 4vw, 4.2rem), var(--secondary-heading-cap)); }
-h2 { font-size: min(clamp(1.65rem, 2.35vw, 2.35rem), var(--secondary-heading-cap)); }
+h2 { font-size: var(--section-title-size); }
 h3 { font-size: min(1.15rem, var(--secondary-heading-cap)); }
-.section-grid h2 { font-size: min(clamp(1.7rem, 2.3vw, 2.3rem), var(--secondary-heading-cap)); }
-.focus-card h3 { font-size: min(1.24rem, var(--secondary-heading-cap)); }
-.timeline h3 { font-size: min(1.2rem, var(--secondary-heading-cap)); }
-html[lang="en"] .timeline h3 { font-size: min(calc(1.2rem - 1pt), var(--secondary-heading-cap)); }
-.two-column .panel h2 { font-size: min(1.5rem, var(--secondary-heading-cap)); }
-.profiles h2 { font-size: min(clamp(1.75rem, 2.4vw, 2.4rem), var(--secondary-heading-cap)); }
-.contact-intro h2 { font-size: min(clamp(2.1rem, 3vw, 3rem), var(--secondary-heading-cap)); }
-.origin-intro h2 { font-size: min(clamp(1.65rem, 2vw, 2.05rem), var(--secondary-heading-cap)); }
+.section-heading > h2 { font-size: var(--section-title-size); }
+.section-grid > div:first-child > h2 { font-size: var(--focus-section-title-size); }
+.focus-card h3 { font-size: min(var(--focus-card-title-base), calc(var(--focus-section-title-size) - 1pt)); }
+.timeline h3 { font-size: min(1.2rem, calc(var(--section-title-size) - 1pt)); }
+html[lang="en"] .timeline h3 { font-size: min(calc(1.2rem - 1pt), calc(var(--section-title-size) - 1pt)); }
+.two-column .panel > h2 { font-size: var(--panel-title-size); }
+.two-column .stacked-list article h3 { font-size: min(1.03rem, calc(var(--panel-title-size) - 1pt)); }
+.skill-group h3 { font-size: min(.82rem, calc(var(--panel-title-size) - 1pt)); }
+html[lang="ne"] .skill-group h3 { font-size: min(var(--minimum-text-size), calc(var(--panel-title-size) - 1pt)); }
+.profiles > div:first-child > h2 { font-size: var(--profile-title-size); }
+.contact-intro > h2 { font-size: var(--contact-title-size); }
+.origin-intro > h2 { font-size: var(--origin-title-size); }
 .page-hero h1,
 .publication-hero h1,
-.writing-hero h1 { font-size: min(clamp(2.1rem, 3.2vw, 3.15rem), var(--secondary-heading-cap)); }
-.publication-card h2 { font-size: min(1.25rem, var(--secondary-heading-cap)); }
+.writing-hero h1 { font-size: var(--page-title-size); }
+.publication-card h2 { font-size: min(1.25rem, calc(var(--page-title-size) - 1pt)); }
 .writing-section-heading h2,
-.article-body h2 { font-size: min(clamp(1.12rem, 1.4vw, 1.35rem), var(--secondary-heading-cap)); }
-.writing-entry-copy h3 { font-size: min(clamp(1.12rem, 1.3vw, 1.28rem), var(--secondary-heading-cap)); }
-.article-hero h1 { font-size: min(clamp(2.1rem, 3vw, 3.15rem), var(--secondary-heading-cap)); }
+.editorial-guide > h2 { font-size: min(clamp(1.12rem, 1.4vw, 1.35rem), calc(var(--page-title-size) - 1pt)); }
+.article-body h2 { font-size: min(clamp(1.12rem, 1.4vw, 1.35rem), calc(var(--article-title-size) - 1pt)); }
+.writing-entry-copy h3 { font-size: min(clamp(1.12rem, 1.3vw, 1.28rem), calc(var(--page-title-size) - 1pt)); }
+.article-hero h1 { font-size: var(--article-title-size); }
 .generated-tile span { font-size: min(2rem, var(--secondary-heading-cap)); }
 .image-lightbox-close { font-size: min(1.3rem, var(--secondary-heading-cap)); }
 .metrics-band strong {
@@ -829,33 +844,17 @@ html[lang="en"] .timeline h3 { font-size: min(calc(1.2rem - 1pt), var(--secondar
 }
 
 @media (max-width: 620px) {
+  :root {
+    --section-title-size: max(calc(var(--minimum-text-size) + 2pt), calc(min(clamp(1.65rem, 2.35vw, 2.35rem), var(--secondary-heading-cap)) - 2pt));
+    --focus-section-title-size: calc(min(clamp(1.7rem, 2.3vw, 2.3rem), var(--secondary-heading-cap)) - 2pt);
+    --profile-title-size: calc(min(clamp(1.75rem, 2.4vw, 2.4rem), var(--secondary-heading-cap)) - 2pt);
+    --contact-title-size: calc(min(clamp(2.1rem, 3vw, 3rem), var(--secondary-heading-cap)) - 2pt);
+    --origin-title-size: calc(min(clamp(1.65rem, 2vw, 2.05rem), var(--secondary-heading-cap)) - 2pt);
+    --focus-card-title-base: calc(min(1.24rem, var(--secondary-heading-cap)) - 1pt);
+    --panel-title-base: calc(min(1.5rem, var(--secondary-heading-cap)) - 1pt);
+  }
   .hero .eyebrow,
   main .section-kicker {
     font-size: calc(var(--section-kicker-size) - 2pt);
-  }
-  .section-heading > h2 {
-    font-size: calc(min(clamp(1.65rem, 2.35vw, 2.35rem), var(--secondary-heading-cap)) - 2pt);
-  }
-  .section-grid > div:first-child > h2 {
-    font-size: calc(min(clamp(1.7rem, 2.3vw, 2.3rem), var(--secondary-heading-cap)) - 2pt);
-  }
-  .profiles > div:first-child > h2 {
-    font-size: calc(min(clamp(1.75rem, 2.4vw, 2.4rem), var(--secondary-heading-cap)) - 2pt);
-  }
-  .contact-intro > h2 {
-    font-size: calc(min(clamp(2.1rem, 3vw, 3rem), var(--secondary-heading-cap)) - 2pt);
-  }
-  .origin-intro > h2 {
-    font-size: calc(min(clamp(1.65rem, 2vw, 2.05rem), var(--secondary-heading-cap)) - 2pt);
-  }
-  .writing-section-heading > h2,
-  .editorial-guide > h2 {
-    font-size: calc(min(clamp(1.12rem, 1.4vw, 1.35rem), var(--secondary-heading-cap)) - 2pt);
-  }
-  .focus-card h3 {
-    font-size: calc(min(1.24rem, var(--secondary-heading-cap)) - 1pt);
-  }
-  .two-column .panel > h2 {
-    font-size: calc(min(1.5rem, var(--secondary-heading-cap)) - 1pt);
   }
 }
