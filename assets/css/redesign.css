@@ -827,3 +827,35 @@ html[lang="en"] .timeline h3 { font-size: min(calc(1.2rem - 1pt), var(--secondar
 .metrics-band strong {
   font-size: min(clamp(calc(1.58rem - 2pt), 2vw, calc(1.72rem - 2pt)), var(--secondary-heading-cap));
 }
+
+@media (max-width: 620px) {
+  .hero .eyebrow,
+  main .section-kicker {
+    font-size: calc(var(--section-kicker-size) - 2pt);
+  }
+  .section-heading > h2 {
+    font-size: calc(min(clamp(1.65rem, 2.35vw, 2.35rem), var(--secondary-heading-cap)) - 2pt);
+  }
+  .section-grid > div:first-child > h2 {
+    font-size: calc(min(clamp(1.7rem, 2.3vw, 2.3rem), var(--secondary-heading-cap)) - 2pt);
+  }
+  .profiles > div:first-child > h2 {
+    font-size: calc(min(clamp(1.75rem, 2.4vw, 2.4rem), var(--secondary-heading-cap)) - 2pt);
+  }
+  .contact-intro > h2 {
+    font-size: calc(min(clamp(2.1rem, 3vw, 3rem), var(--secondary-heading-cap)) - 2pt);
+  }
+  .origin-intro > h2 {
+    font-size: calc(min(clamp(1.65rem, 2vw, 2.05rem), var(--secondary-heading-cap)) - 2pt);
+  }
+  .writing-section-heading > h2,
+  .editorial-guide > h2 {
+    font-size: calc(min(clamp(1.12rem, 1.4vw, 1.35rem), var(--secondary-heading-cap)) - 2pt);
+  }
+  .focus-card h3 {
+    font-size: calc(min(1.24rem, var(--secondary-heading-cap)) - 1pt);
+  }
+  .two-column .panel > h2 {
+    font-size: calc(min(1.5rem, var(--secondary-heading-cap)) - 1pt);
+  }
+}
