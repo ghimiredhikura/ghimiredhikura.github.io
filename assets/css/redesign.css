@@ -136,11 +136,20 @@ html[lang="ne"] .brand > span:last-child::after { content: "कम्प्य�
 /* Fixed desktop navigation, with a clear gutter beside the page content. */
 .quick-menu { display: none; }
 @media (min-width: 901px) {
+  .has-quick-menu {
+    --content-left: max(18px, calc((100% - var(--max) - 158px) / 2));
+    --content-right: max(176px, calc((100% - var(--max) + 158px) / 2));
+  }
+  .has-quick-menu:has(> .article-page) { --max: 1040px; }
+  .has-quick-menu .site-header {
+    padding-left: var(--content-left);
+    padding-right: var(--content-right);
+  }
   .has-quick-menu main,
   .has-quick-menu .site-footer {
-    width: min(var(--max), calc(100% - 194px));
-    margin-left: max(18px, calc((100% - var(--max) - 158px) / 2));
-    margin-right: auto;
+    width: calc(100% - var(--content-left) - var(--content-right));
+    margin-left: var(--content-left);
+    margin-right: var(--content-right);
   }
   .quick-menu:not([hidden]) {
     position: fixed;
@@ -196,6 +205,10 @@ html[lang="ne"] .brand > span:last-child::after { content: "कम्प्य�
     border-top: 1px solid var(--line);
     border-radius: 0;
   }
+}
+
+@media (min-width: 901px) and (max-width: 1100px) {
+  .has-quick-menu .brand > span:last-child::after { display: none; }
 }
 
 /* Hero */
