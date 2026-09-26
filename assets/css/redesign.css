@@ -541,6 +541,18 @@ html[lang="en"] .timeline h3 { font-size: calc(1.2rem - 1pt); }
 }
 .two-column .service-sublist a:hover { background: none; color: var(--river); }
 .two-column .service-tags span { padding: 3px 7px; border-radius: 2px; background: #fff; }
+
+/* Keep degree titles and service roles prominent; lighten supporting details. */
+.credentials-grid .service-row > span { font-weight: 700; }
+.credentials-grid .stacked-list .timeline-org,
+.credentials-grid .degree-meta span:first-child,
+.credentials-grid .thesis-link,
+.credentials-grid .thesis-link strong,
+.credentials-grid .service-sublist span,
+.credentials-grid .service-sublist strong,
+.credentials-grid .service-tags span { font-weight: 400; }
+.credentials-grid .thesis-link > span { font-weight: 500; }
+
 .skills-list { display: grid; gap: 0; }
 .skill-group {
   padding: 13px 0;
