@@ -83,6 +83,7 @@ main { width: min(var(--max), calc(100% - 36px)); }
   font-weight: 800;
   letter-spacing: .12em;
 }
+html[lang="en"] .brand > span:last-child::after { font-size: calc(var(--minimum-text-size) - 2pt); }
 html[lang="ne"] .brand > span:last-child::after { content: "कम्प्युटर दृष्टि · कृत्रिम बुद्धिमत्ता"; }
 .brand-mark {
   width: 43px; height: 43px;
