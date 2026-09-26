@@ -4,11 +4,97 @@ const isNepali = document.documentElement.lang === "ne";
 const nepaliDigits = (value) => String(value).replace(/[0-9]/g, (digit) => "०१२३४५६७८९"[Number(digit)]);
 
 if (navToggle && siteNav) {
+  const setMenuExpanded = (expanded) => {
+    navToggle.setAttribute("aria-expanded", String(expanded));
+    navToggle.setAttribute("aria-label", isNepali
+      ? (expanded ? "मेनु बन्द गर्नुहोस्" : "मेनु खोल्नुहोस्")
+      : (expanded ? "Close menu" : "Open menu"));
+    siteNav.classList.toggle("open", expanded);
+  };
+
   navToggle.addEventListener("click", () => {
     const expanded = navToggle.getAttribute("aria-expanded") === "true";
-    navToggle.setAttribute("aria-expanded", String(!expanded));
-    siteNav.classList.toggle("open");
+    setMenuExpanded(!expanded);
   });
+  siteNav.addEventListener("click", (event) => {
+    if (event.target.closest("a")) setMenuExpanded(false);
+  });
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && siteNav.classList.contains("open")) {
+      setMenuExpanded(false);
+      navToggle.focus();
+    }
+  });
+}
+
+// Reuse each page's navigation so nested pages retain their language and paths.
+if (siteNav) {
+  const quickMenu = document.createElement("nav");
+  quickMenu.className = "quick-menu";
+  quickMenu.setAttribute("aria-label", isNepali ? "छिटो पहुँच" : "Quick menu");
+  quickMenu.hidden = true;
+
+  const heading = document.createElement("p");
+  heading.className = "quick-menu-heading";
+  heading.textContent = isNepali ? "छिटो पहुँच" : "Quick menu";
+  quickMenu.appendChild(heading);
+
+  siteNav.querySelectorAll(":scope > a").forEach((link) => {
+    const quickLink = link.cloneNode(true);
+    if (quickLink.classList.contains("active")) {
+      quickLink.setAttribute("aria-current", "page");
+    }
+    quickMenu.appendChild(quickLink);
+  });
+
+  const homeLink = document.querySelector(".site-header .brand");
+  if (homeLink) {
+    const contactLink = document.createElement("a");
+    contactLink.href = document.getElementById("contact")
+      ? "#contact"
+      : `${homeLink.getAttribute("href")}#contact`;
+    contactLink.textContent = isNepali ? "सम्पर्क" : "Contact";
+    quickMenu.appendChild(contactLink);
+  }
+
+  const backToTop = document.createElement("button");
+  backToTop.type = "button";
+  backToTop.className = "quick-menu-top";
+  backToTop.textContent = isNepali ? "↑ माथि जानुहोस्" : "↑ Back to top";
+  backToTop.addEventListener("click", () => {
+    homeLink?.focus({ preventScroll: true });
+    window.scrollTo({
+      top: 0,
+      behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "instant" : "smooth",
+    });
+  });
+  quickMenu.appendChild(backToTop);
+  document.body.appendChild(quickMenu);
+  document.body.classList.add("has-quick-menu");
+
+  const desktopQuery = window.matchMedia("(min-width: 901px)");
+  const updateQuickMenu = () => {
+    quickMenu.hidden = !desktopQuery.matches || window.scrollY < 240;
+  };
+  let scrollQueued = false;
+  window.addEventListener("scroll", () => {
+    if (scrollQueued) return;
+    scrollQueued = true;
+    window.requestAnimationFrame(() => {
+      updateQuickMenu();
+      scrollQueued = false;
+    });
+  }, { passive: true });
+  desktopQuery.addEventListener("change", () => {
+    updateQuickMenu();
+    if (navToggle && desktopQuery.matches) {
+      navToggle.setAttribute("aria-expanded", "false");
+      navToggle.setAttribute("aria-label", isNepali ? "मेनु खोल्नुहोस्" : "Open menu");
+      siteNav.classList.remove("open");
+    }
+  });
+  window.addEventListener("pageshow", updateQuickMenu);
+  updateQuickMenu();
 }
 
 const filterButtons = document.querySelectorAll(".filter-button");
