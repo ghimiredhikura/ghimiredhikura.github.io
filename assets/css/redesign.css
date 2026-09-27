@@ -920,6 +920,17 @@ html[lang="ne"] .pub-details[open] summary::before { content: "लुकाउ�
 .site-footer .copyright {
   font-size: var(--minimum-text-size);
 }
+.news-toggle,
+.timeline summary,
+.timeline details[open] summary::before,
+.pub-details summary,
+.pub-details[open] summary::before {
+  font-size: calc(var(--minimum-text-size) - 2pt);
+}
+.timeline details[open] summary,
+.pub-details[open] summary {
+  font-size: 0;
+}
 .pub-visual .pub-meta,
 .pub-visual::after {
   font-size: calc(var(--minimum-text-size) - 2pt);
