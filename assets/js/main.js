@@ -118,6 +118,7 @@ const actionIconClass = {
   pdf: "pdf-icon",
   arxiv: "arxiv-icon",
   github: "github-icon",
+  media: "link-icon",
 };
 
 const thumbnailSrc = (imagePath) => {
@@ -151,7 +152,7 @@ const renderPublicationCard = (publication) => {
   const links = (publication.links || [])
     .map((link) => {
       const iconClass = actionIconClass[link.type] || "link-icon";
-      const nepaliActionLabels = { Paper: "शोधपत्र", PDF: "पीडीएफ", Code: "स्रोत कोड" };
+      const nepaliActionLabels = { Paper: "शोधपत्र", PDF: "पीडीएफ", Code: "स्रोत कोड", "Media Coverage": "सञ्चारमाध्यममा" };
       const label = isNepali ? (nepaliActionLabels[link.label] || link.label) : link.label;
       return `<a href="${escapeHtml(link.url)}" target="_blank" rel="noopener"><span class="action-icon ${iconClass}"></span>${escapeHtml(label)}</a>`;
     })
@@ -211,6 +212,8 @@ const newsHighlights = [
   "MDPI Sustainability",
   "MDPI Sensors",
   "MDPI Agriculture",
+  "Clickmandu",
+  "क्लिकमान्डु",
   "Diagnostics",
   "ICCAS 2024",
 ];
@@ -228,12 +231,15 @@ const renderNewsItem = (item, index) => {
   const itemClass = index >= NEWS_VISIBLE_COUNT ? "news-item news-extra" : "news-item";
   const hiddenAttr = index >= NEWS_VISIBLE_COUNT ? " hidden" : "";
   const newBadgeHidden = isNewsRecent(item.date) ? "" : " hidden";
+  const sourceLink = item.url
+    ? ` <a class="news-source-link" href="${escapeHtml(item.url)}" target="_blank" rel="noopener">${escapeHtml(item.linkLabel || (isNepali ? "स्रोत पढ्नुहोस्" : "Read source"))}<span aria-hidden="true"> ↗</span></a>`
+    : "";
 
   return `
     <article class="${itemClass}"${hiddenAttr}>
       <time datetime="${escapeHtml(item.date)}">${escapeHtml(formatNewsDate(item.date))}</time>
       <span class="news-tags"><span class="news-tag news-tag--${escapeHtml(item.tag)}">${escapeHtml(item.tagLabel)}</span><span class="news-new"${newBadgeHidden}>${isNepali ? "नयाँ" : "New"}</span></span>
-      <p>${highlightNewsText(item.text)}</p>
+      <p>${highlightNewsText(item.text)}${sourceLink}</p>
     </article>`;
 };
 

@@ -14,7 +14,8 @@
       { label: "Paper", url: "https://...", type: "paper" },
       { label: "PDF", url: "https://...", type: "pdf" },
       { label: "arXiv", url: "https://...", type: "arxiv" },
-      { label: "GitHub", url: "https://...", type: "github" }
+      { label: "GitHub", url: "https://...", type: "github" },
+      { label: "Media Coverage", url: "https://...", type: "media" }
     ],
     detailsHtml: "" // optional expanded paper details; use <dl>...</dl> when needed
   }
@@ -39,6 +40,11 @@ window.PUBLICATIONS = [
         "label": "PDF",
         "url": "https://www.mdpi.com/2071-1050/18/18/9548/pdf",
         "type": "pdf"
+      },
+      {
+        "label": "Media Coverage",
+        "url": "https://clickmandu.com/2026/09/494861.html",
+        "type": "media"
       }
     ],
     "detailsHtml": "<dl>\n  <div>\n    <dt>Venue</dt>\n    <dd>Sustainability, 2026, 18(18), 9548. Published 17 September 2026. DOI: <a href=\"https://doi.org/10.3390/su18189548\" target=\"_blank\" rel=\"noopener\">10.3390/su18189548</a>.</dd>\n  </div>\n  <div>\n    <dt>Authors</dt>\n    <dd class=\"author-list\">Anisha Dhakal<sup>1</sup>, Sabina Ghimire<sup>2</sup>, <strong>Deepak Ghimire<sup>3,*</sup></strong>, Seong-heum Kim<sup>4,*</sup></dd>\n  </div>\n  <div>\n    <dt>Affiliations</dt>\n    <dd><ol class=\"affiliation-list\"><li>Independent Researcher, Jeonju 54917, Republic of Korea</li><li>Agricultural Development Bank Ltd., Kathmandu 44600, Nepal</li><li>AI Application Research Center, Korea Electronics Technology Institute, Jeonju 54853, Republic of Korea</li><li>Department of Intelligent Semiconductors, Soongsil University, Seoul 06978, Republic of Korea</li></ol><span class=\"corresponding-note\">* Corresponding authors: Deepak Ghimire and Seong-heum Kim.</span></dd>\n  </div>\n  <div>\n    <dt>Study</dt>\n    <dd>The study introduces the industrial replacement gap as a framework for assessing whether domestic productive capacity replaced Nepal's declining public industrial enterprises. It combines World Bank indicators, UN Comtrade product data, government enterprise records, and industry registrations. The findings indicate persistent manufacturing stagnation, import-dominated trade in several linked product groups, and falling average employment per newly registered manufacturing firm. An exploratory Random Forest and SHAP analysis identifies foreign direct investment inflows and trade openness as the strongest predictors within the fitted model, while the limited sample does not support causal interpretation.</dd>\n  </div>\n  <div>\n    <dt>Keywords</dt>\n    <dd>Public enterprises; industrial replacement gap; Nepal; product-level trade; manufacturing; explainable machine learning; SHAP; sustainable industrialization.</dd>\n  </div>\n</dl>"

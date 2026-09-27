@@ -95,7 +95,8 @@ Add the new object near the top of `window.PUBLICATIONS` in `assets/js/publicati
   links: [
     { label: "Paper", url: "https://doi.org/...", type: "paper" },
     { label: "PDF", url: "https://example.com/paper.pdf", type: "pdf" },
-    { label: "GitHub", url: "https://github.com/...", type: "github" }
+    { label: "GitHub", url: "https://github.com/...", type: "github" },
+    { label: "Media Coverage", url: "https://news.example.com/...", type: "media" }
   ],
   detailsHtml: ""
 },
@@ -110,7 +111,7 @@ edge-ai | vision | agri | health | systems
 Common link types are:
 
 ```text
-paper | pdf | arxiv | github
+paper | pdf | arxiv | github | media
 ```
 
 For expanded authors, affiliations, abstract, DOI, and keywords, copy the `detailsHtml` structure from an existing complete publication record. Escape double quotes inside the JavaScript string as `\"`.
@@ -183,7 +184,9 @@ Add the newest item at the top of both `window.NEWS` arrays:
   date: "2026-09",
   tag: "journal",
   tagLabel: "Journal",
-  text: "Paper title or concise update published in Journal Name."
+  text: "Paper title or concise update published in Journal Name.",
+  url: "https://example.com/source", // optional
+  linkLabel: "Read source"           // include when url is present
 },
 ```
 
@@ -201,7 +204,7 @@ Nepali counterpart:
 Available tag styles are:
 
 ```text
-review | conference | journal | health | service
+review | conference | journal | health | service | media
 ```
 
 Important behavior:

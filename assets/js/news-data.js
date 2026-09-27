@@ -4,9 +4,11 @@
   Add new items to the TOP of the array (newest first) using this shape:
   {
     date: "2026-06",        // "YYYY-MM", used for sorting/display and the "New" badge
-    tag: "review",          // review | conference | journal | health | service
+    tag: "review",          // review | conference | journal | health | service | media
     tagLabel: "Under Review",
-    text: "Short one-line update."
+    text: "Short one-line update.",
+    url: "https://...",     // optional source link
+    linkLabel: "Read source" // required when url is present
   }
 
   Only the first 4 items show by default; the rest collapse behind the
@@ -15,6 +17,14 @@
 */
 
 window.NEWS = [
+  {
+    date: "2026-09",
+    tag: "media",
+    tagLabel: "Media Coverage",
+    text: "Clickmandu featured our Sustainability study on Nepal's declining public enterprises, industrial replacement gap, and employment capacity.",
+    url: "https://clickmandu.com/2026/09/494861.html",
+    linkLabel: "Read coverage"
+  },
   {
     date: "2026-09",
     tag: "journal",
