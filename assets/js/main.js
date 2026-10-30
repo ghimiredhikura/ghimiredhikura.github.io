@@ -212,6 +212,7 @@ const newsHighlights = [
   "MDPI Sustainability",
   "MDPI Sensors",
   "MDPI Agriculture",
+  "MDPI Electronics",
   "Clickmandu",
   "क्लिकमान्डु",
   "Diagnostics",

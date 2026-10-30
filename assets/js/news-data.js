@@ -18,10 +18,18 @@
 
 window.NEWS = [
   {
+    date: "2026-10",
+    tag: "journal",
+    tagLabel: "Published",
+    text: "GeoBASP, a geography-aware pruning method for Nepal Himalaya landslide segmentation, published in MDPI Electronics.",
+    url: "https://www.mdpi.com/2079-9292/15/20/4792",
+    linkLabel: "Read paper"
+  },
+  {
     date: "2026-09",
     tag: "media",
     tagLabel: "Media Coverage",
-    text: "Clickmandu featured our Sustainability study on Nepal's declining public enterprises, industrial replacement gap, and employment capacity.",
+    text: "Clickmandu covered our Sustainability study on Nepal's public-enterprise decline and industrial replacement gap.",
     url: "https://clickmandu.com/2026/09/494861.html",
     linkLabel: "Read coverage"
   },
@@ -29,7 +37,7 @@ window.NEWS = [
     date: "2026-09",
     tag: "journal",
     tagLabel: "Published",
-    text: "Public Enterprise Decline and the Industrial Replacement Gap in Nepal: Evidence from Product-Level Trade Data and Explainable Machine Learning published in MDPI Sustainability."
+    text: "Nepal public-enterprise decline and industrial replacement-gap study published in MDPI Sustainability."
   },
   {
     date: "2026-08",
@@ -41,19 +49,19 @@ window.NEWS = [
     date: "2026-07",
     tag: "journal",
     tagLabel: "Published",
-    text: "Vision-Based Strawberry Ripeness Grading for Harvest Decision Support in Smart Greenhouses published in MDPI Agriculture."
+    text: "Vision-based strawberry ripeness grading study published in MDPI Agriculture."
   },
   {
     date: "2026-06",
     tag: "review",
     tagLabel: "Under Review",
-    text: "Deployment-Stack Effects for ARM Edge DNN Inference paper submitted to Elsevier Journal of Systems Architecture."
+    text: "ARM edge-DNN deployment-stack study submitted to Elsevier Journal of Systems Architecture."
   },
   {
     date: "2026-03",
     tag: "conference",
     tagLabel: "Conference",
-    text: "Paper on one-cycle structured pruning published at WACV 2026, held March 6–10, 2026, in Tucson, Arizona."
+    text: "One-cycle structured-pruning paper published at WACV 2026."
   },
   {
     date: "2025-09",

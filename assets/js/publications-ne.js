@@ -1,6 +1,7 @@
 // Paper titles and expanded abstracts stay in their original publication language.
 // These short Nepali summaries are keyed by title so English list reordering is safe.
 window.PUBLICATION_TITLES_NE = {
+  "GeoBASP: Geography-Aware Structured Pruning for Landslide-Scar Segmentation in the Nepal Himalaya": "नेपाल हिमालयमा पहिरोका दाग छुट्याउने एआई मोडेललाई भूगोलअनुसार हलुका बनाउने GeoBASP विधि",
   "Public Enterprise Decline and the Industrial Replacement Gap in Nepal: Evidence from Product-Level Trade Data and Explainable Machine Learning": "नेपालका सार्वजनिक उद्योगको अवनतिपछि घरेलु उत्पादनमा देखिएको खाडल",
   "STV-FSANet: Track-Level Spatio-Temporal Verification for Fire and Smoke Alarm Validation in Video Surveillance": "भिडियो निगरानीमा आगो र धुवाँको चेतावनी पुष्टि गर्ने STV-FSANet प्रणाली",
   "Vision-Based Strawberry Ripeness Grading for Harvest Decision Support in Smart Greenhouses": "स्मार्ट हरितगृहमा स्ट्रबेरी टिप्ने सही समयका लागि पाकेको अवस्था छुट्याउने क्यामेरा प्रणाली",
@@ -40,6 +41,7 @@ window.PUBLICATION_TITLES_NE = {
 };
 
 window.PUBLICATION_SUMMARIES_NE = {
+  "GeoBASP: Geography-Aware Structured Pruning for Landslide-Scar Segmentation in the Nepal Himalaya": "नेपालको कोशी जलाधारका उपग्रह तस्वीरमा पहिरोले बनाएका दाग छुट्याउने एआई मोडेललाई कम गणना र भण्डारणमा चलाउन GeoBASP विधि विकास गरिएको छ। यसले भूगोल, पहिरोको सीमा, साना दाग र झुक्याउने गैर-पहिरो क्षेत्रलाई ध्यानमा राखेर मोडेलका अनावश्यक च्यानल हटाउँछ; मध्यम तहको छँटाइमा गणनाको भार घटाउँदै नतिजा धेरै हदसम्म जोगियो।",
   "Public Enterprise Decline and the Industrial Replacement Gap in Nepal: Evidence from Product-Level Trade Data and Explainable Machine Learning": "नेपालका सार्वजनिक उद्योग बन्द वा कमजोर भएपछि तिनले छाडेको उत्पादन क्षमता स्वदेशी उद्योगले कति पूरा गर्न सके भन्ने अध्ययन हो। वस्तुअनुसारको आयात–निर्यात तथ्याङ्क, सरकारी अभिलेख र नतिजाको कारण देखाउन सक्ने यन्त्र सिकाइ प्रयोग गर्दा उत्पादन क्षेत्रमा लामो समयदेखि सुस्ती र आयातमाथि ठूलो निर्भरता देखियो।",
   "STV-FSANet: Track-Level Spatio-Temporal Verification for Fire and Smoke Alarm Validation in Video Surveillance": "निगरानी भिडियोमा देखिएको आगो वा धुवाँ वास्तविक हो कि घाम, प्रतिबिम्ब, बादल, कुहिरो वा बाफका कारण आएको गलत चेतावनी हो भन्ने पुष्टि गर्ने प्रणाली हो। यसले दृश्यको बनावट र समयसँगै बदलिने स्थान तथा चाल दुवै हेरेर छिटो र भरपर्दो निर्णय गर्छ।",
   "Vision-Based Strawberry Ripeness Grading for Harvest Decision Support in Smart Greenhouses": "हरितगृहको तस्वीरमा स्ट्रबेरी कहाँ छ भन्ने पत्ता लगाएर त्यसलाई पाकेको पाँच अवस्थामध्ये एउटामा राख्ने प्रणाली हो। सामान्य रङसँगै हरियोपन र रङको सूक्ष्म फेरबदलसम्बन्धी थप जानकारी प्रयोग भएकाले टिप्ने समय नजिकका अवस्थाहरू पनि राम्रोसँग छुट्याउन मद्दत गर्छ।",

@@ -23,6 +23,28 @@
 
 window.PUBLICATIONS = [
   {
+    "topic": "edge-ai",
+    "venue": "Electronics, 2026 · MDPI Journal",
+    "title": "GeoBASP: Geography-Aware Structured Pruning for Landslide-Scar Segmentation in the Nepal Himalaya",
+    "summary": "Introduces GeoBASP, a geography-, boundary-, and scar-aware structured pruning method for compact landslide-scar segmentation in Nepal's Koshi Basin. Across ResNet-50 U-Net, ConvNeXt-V2-Tiny U-Net, and SegFormer-B2, moderate pruning reduced computation while retaining competitive segmentation accuracy under spatially separated validation.",
+    "image": "assets/images/electronics-15-04792-g001.png",
+    "imageAlt": "Koshi Basin study area and spatial partitions used to evaluate GeoBASP",
+    "icon": "",
+    "links": [
+      {
+        "label": "Paper",
+        "url": "https://www.mdpi.com/2079-9292/15/20/4792",
+        "type": "paper"
+      },
+      {
+        "label": "PDF",
+        "url": "https://www.mdpi.com/2079-9292/15/20/4792/pdf",
+        "type": "pdf"
+      }
+    ],
+    "detailsHtml": "<dl>\n  <div>\n    <dt>Venue</dt>\n    <dd>Electronics, 2026, 15(20), 4792. Published 17 October 2026. DOI: <a href=\"https://doi.org/10.3390/electronics15204792\" target=\"_blank\" rel=\"noopener\">10.3390/electronics15204792</a>.</dd>\n  </div>\n  <div>\n    <dt>Author</dt>\n    <dd class=\"author-list\"><strong>Deepak Ghimire</strong></dd>\n  </div>\n  <div>\n    <dt>Affiliation</dt>\n    <dd>AI Application Research Center, Korea Electronics Technology Institute, Jeonju 54853, Republic of Korea.</dd>\n  </div>\n  <div>\n    <dt>Timeline</dt>\n    <dd>Received 21 September 2026; revised 14 October 2026; accepted 16 October 2026; published 17 October 2026.</dd>\n  </div>\n  <div>\n    <dt>Study</dt>\n    <dd>GeoBASP ranks removable channel groups using complete-mask accuracy, boundary delineation, small-scar detection, and rejection of difficult non-landslide areas. Experiments on spatially separated Koshi Basin data evaluated ResNet-50 U-Net, ConvNeXt-V2-Tiny U-Net, and SegFormer-B2 at 25%, 50%, and 70% MAC-reduction targets. GeoBASP achieved the highest overall mean validation Dice in the three-architecture comparison and was the only evaluated method to satisfy the predefined non-inferiority condition, with qualifying runs at the 25% target. At a moderate operating point, it reduced MACs by 24.2% and parameters by 12.3% while retaining a test Dice of 0.505 versus 0.516 for the dense model.</dd>\n  </div>\n  <div>\n    <dt>Keywords</dt>\n    <dd>Landslide segmentation; Sentinel-2; Nepal Himalaya; structured channel pruning; model compression; remote sensing; spatial validation.</dd>\n  </div>\n</dl>"
+  },
+  {
     "topic": "systems",
     "venue": "Sustainability, 2026 · MDPI Journal",
     "title": "Public Enterprise Decline and the Industrial Replacement Gap in Nepal: Evidence from Product-Level Trade Data and Explainable Machine Learning",

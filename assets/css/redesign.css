@@ -21,7 +21,8 @@
   --night: #123d42;
   --shadow: 0 22px 56px rgba(17, 54, 58, .11);
   --radius: 3px;
-  --max: 1280px;
+  --max: 1160px;
+  --page-gutter: clamp(18px, 4vw, 48px);
   --minimum-text-size: .88rem;
   --section-kicker-size: calc(1.1rem - 1pt);
   --home-hero-heading-size: calc(clamp(2.5rem, 4vw, 4.2rem) - 12pt);
@@ -62,14 +63,14 @@ h1 { font-size: clamp(2.5rem, 4vw, 4.2rem); line-height: 1.08; }
 h2 { font-size: clamp(1.65rem, 2.35vw, 2.35rem); line-height: 1.18; }
 h3 { font-size: 1.15rem; }
 p { line-height: 1.65; }
-main { width: min(var(--max), calc(100% - 36px)); }
+main { width: min(var(--max), calc(100% - var(--page-gutter) - var(--page-gutter))); }
 
 /* Navigation */
 .site-header {
   width: 100%;
   min-height: 80px;
   margin: 0;
-  padding: 12px max(18px, calc((100% - var(--max)) / 2));
+  padding: 12px max(var(--page-gutter), calc((100% - var(--max)) / 2));
   background: rgba(250, 251, 248, .96);
   border-bottom: 1px solid var(--line);
   box-shadow: 0 5px 20px rgba(18, 61, 66, .035);
@@ -138,8 +139,8 @@ html[lang="ne"] .brand > span:last-child::after { content: "कम्प्य�
 .quick-menu { display: none; }
 @media (min-width: 901px) {
   .has-quick-menu {
-    --content-left: max(18px, calc((100% - var(--max) - 158px) / 2));
-    --content-right: max(176px, calc((100% - var(--max) + 158px) / 2));
+    --content-left: max(var(--page-gutter), calc((100% - var(--max) - 158px) / 2));
+    --content-right: max(calc(158px + var(--page-gutter)), calc((100% - var(--max) + 158px) / 2));
   }
   .has-quick-menu:has(> .article-page) { --max: 1040px; }
   .has-quick-menu .site-header {
@@ -422,7 +423,7 @@ html[lang="en"] .hero-text { width: 100%; max-width: none; }
 /* News and career */
 .news-section .section-heading { margin-bottom: 16px; }
 .news-card { padding: 5px 0 10px; border: 0; border-top: 2px solid var(--night); border-radius: 0; background: none; box-shadow: none; }
-.news-item { grid-template-columns: minmax(88px, max-content) minmax(167px, max-content) minmax(0, 1fr); padding: 11px 0; border-bottom-color: var(--line); }
+.news-item { grid-template-columns: minmax(88px, max-content) minmax(167px, max-content) minmax(0, 1fr); padding: 8px 0; border-bottom-color: var(--line); }
 .news-item time { color: var(--river); }
 .news-item time, .news-item p { font-size: var(--minimum-text-size); }
 .news-tags {
@@ -739,7 +740,7 @@ html[lang="ne"] .skill-group h3 {
 .generated-tile.warm { background: #f3ece1; }
 .generated-tile.green { background: #e7eee3; }
 .editorial-guide { margin: 9px 0 23px; padding: 20px; }
-.site-footer { width: min(var(--max), calc(100% - 36px)); padding: 22px 0 32px; }
+.site-footer { width: min(var(--max), calc(100% - var(--page-gutter) - var(--page-gutter))); padding: 22px 0 32px; }
 html[lang="ne"] .timeline details[open] summary::before,
 html[lang="ne"] .pub-details[open] summary::before { content: "लुकाउनुहोस्"; }
 
@@ -762,12 +763,12 @@ html[lang="ne"] .pub-details[open] summary::before { content: "लुकाउ�
 @media (max-width: 900px) {
   html[lang="en"] { --hero-portrait-height: 338px; }
   html[lang="ne"] { --hero-portrait-height: 342px; }
-  .site-header { gap: 12px; padding: 10px 24px; }
+  .site-header { gap: 12px; padding: 10px var(--page-gutter); }
   .brand { flex: 1; min-width: 0; }
   .nav-toggle { display: block; border-radius: 2px; }
   .site-nav {
-    top: calc(100% - 1px); right: 24px;
-    gap: 3px; width: min(310px, calc(100vw - 48px));
+    top: calc(100% - 1px); right: var(--page-gutter);
+    gap: 3px; width: min(310px, calc(100vw - var(--page-gutter) - var(--page-gutter)));
     padding: 12px; border: 1px solid var(--line);
     border-radius: 2px; background: #fff; box-shadow: var(--shadow);
   }
@@ -829,7 +830,7 @@ html[lang="ne"] .pub-details[open] summary::before { content: "लुकाउ�
   .focus-grid { grid-template-columns: 1fr; }
   .focus-card { min-height: 0; padding: 18px 20px; }
   .focus-card-image { width: 100%; height: auto; margin: 13px 0 0; padding: 0; }
-  .news-item { grid-template-columns: auto 1fr; padding: 10px 0; }
+  .news-item { grid-template-columns: auto 1fr; padding: 8px 0; }
   .timeline article { grid-template-columns: 1fr; gap: 0; }
   .timeline-meta { display: flex; flex-wrap: wrap; justify-content: flex-start; gap: 12px; padding: 16px 0 0; }
   .timeline-content { padding: 8px 0 18px; }
