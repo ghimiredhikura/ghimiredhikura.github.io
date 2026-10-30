@@ -739,7 +739,14 @@ html[lang="ne"] .skill-group h3 {
 .long-article { padding-top: 42px; }
 .article-hero { padding-bottom: 18px; border-bottom: 2px solid var(--night); }
 .article-hero h1 { max-width: none; font-size: clamp(2.1rem, 3vw, 3.15rem); }
-.article-body { padding: 9px 0 19px; border: 0; border-radius: 0; box-shadow: none; background: none; text-align: left; }
+.article-body {
+  padding: clamp(20px, 4vw, 40px);
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  background: #fff;
+  box-shadow: 0 18px 48px rgba(17, 54, 58, .07);
+  text-align: left;
+}
 .gallery-grid { gap: 10px; }
 .gallery-item { border-radius: 0; box-shadow: none; }
 .gallery-item figcaption { border-radius: 1px; }
@@ -858,7 +865,7 @@ html[lang="ne"] .pub-details[open] summary::before { content: "लुकाउ�
   .writing-entry-copy h3 { font-size: 1.12rem; }
   .long-article { padding-top: 28px; }
   .article-hero h1 { font-size: 2.1rem; }
-  .article-body { padding: 6px 0 20px; }
+  .article-body { padding: 18px 16px 20px; }
 }
 @media (min-width: 901px) {
   html[lang="en"] .hero .eyebrow { margin-bottom: 11px; }
