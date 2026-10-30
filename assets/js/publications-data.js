@@ -27,8 +27,8 @@ window.PUBLICATIONS = [
     "venue": "Electronics, 2026 · MDPI Journal",
     "title": "GeoBASP: Geography-Aware Structured Pruning for Landslide-Scar Segmentation in the Nepal Himalaya",
     "summary": "Introduces GeoBASP, a geography-, boundary-, and scar-aware structured pruning method for compact landslide-scar segmentation in Nepal's Koshi Basin. Across ResNet-50 U-Net, ConvNeXt-V2-Tiny U-Net, and SegFormer-B2, moderate pruning reduced computation while retaining competitive segmentation accuracy under spatially separated validation.",
-    "image": "assets/images/electronics-15-04792-g001.png",
-    "imageAlt": "Koshi Basin study area and spatial partitions used to evaluate GeoBASP",
+    "image": "assets/images/electronics-15-04792-g003.png",
+    "imageAlt": "GeoBASP landslide-scar segmentation examples showing strong, partial, and missed detections",
     "icon": "",
     "links": [
       {
