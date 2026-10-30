@@ -727,6 +727,14 @@ html[lang="ne"] .skill-group h3 {
 .writing-entry { gap: 20px; padding: 16px 0; border-width: 0 0 1px; border-radius: 0; box-shadow: none; background: none; }
 .writing-entry-copy h3 { font-size: 1.28rem; }
 .source-logo { border-radius: 0; }
+.writing-entry-actions .is-pending,
+.writing-entry-actions .is-pending:hover {
+  color: var(--muted);
+  cursor: not-allowed;
+  opacity: .72;
+  text-decoration: underline dotted;
+  text-underline-offset: 3px;
+}
 .article-page { max-width: 1040px; }
 .long-article { padding-top: 42px; }
 .article-hero { padding-bottom: 18px; border-bottom: 2px solid var(--night); }
