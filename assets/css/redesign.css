@@ -739,6 +739,17 @@ html[lang="ne"] .skill-group h3 {
 .long-article { padding-top: 42px; }
 .article-hero { padding-bottom: 18px; border-bottom: 2px solid var(--night); }
 .article-hero h1 { max-width: none; font-size: clamp(2.1rem, 3vw, 3.15rem); }
+.article-source-link {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 7px;
+  color: var(--muted);
+  font-size: var(--minimum-text-size);
+}
+.article-source-link .article-source-label { color: var(--night); font-weight: 850; }
+.article-source-link a { color: var(--river); font-weight: 850; }
+.article-source-link .is-pending { opacity: .72; }
 .article-body {
   padding: clamp(20px, 4vw, 40px);
   border: 1px solid var(--line);
