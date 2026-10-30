@@ -43,7 +43,8 @@
             <h3>कोरिया–नेपाल उडान : प्रतिस्पर्धाको पर्खाइ कहिलेसम्म?</h3>
             <p>कोरिया–नेपाल मार्गमा एउटै प्रत्यक्ष वायुसेवा, महँगो भाडा र ट्रान्जिटको झन्झटबीच दोस्रो सिधा उडान किन आवश्यक छ, र त्यसका लागि बजार, सुरक्षा स्वीकृति तथा दिगो सञ्चालनका आधार के हुन् भन्ने तथ्यमा आधारित विश्लेषण।</p>
             <div class="writing-entry-actions" aria-label="पढ्ने विकल्प">
-              <span>प्रकाशन तय</span>
+              <span>पूरा लेख</span>
+              <a class="read-local" href="../writing/korea-nepal-flight-competition.html">यहीँ पढ्नुहोस्</a>
               <span class="read-separator">|</span>
               <a class="read-source is-pending" role="link" tabindex="0" aria-disabled="true" title="प्रकाशन भएपछि क्लिकमाण्डुको लिङ्क थपिनेछ">क्लिकमाण्डुमा पढ्नुहोस्</a>
             </div>
@@ -142,14 +143,15 @@
     <p class="copyright">© २०२६ दीपक घिमिरे। सर्वाधिकार सुरक्षित।</p>
   </footer>
   <script>
+    const visibleWritingEntryCount = 20;
     document.querySelectorAll(".writing-section").forEach((section) => {
       const entries = Array.from(section.querySelectorAll(".writing-entry"));
       const explore = section.querySelector(".explore-more");
-      entries.slice(3).forEach((entry) => {
+      entries.slice(visibleWritingEntryCount).forEach((entry) => {
         entry.hidden = true;
       });
       if (explore) {
-        explore.hidden = entries.length <= 3;
+        explore.hidden = entries.length <= visibleWritingEntryCount;
       }
     });
   </script>
