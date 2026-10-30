@@ -34,9 +34,14 @@ if (siteNav) {
   quickMenu.setAttribute("aria-label", isNepali ? "छिटो पहुँच" : "Quick menu");
   quickMenu.hidden = true;
 
-  const heading = document.createElement("p");
+  const heading = document.createElement("button");
+  heading.type = "button";
   heading.className = "quick-menu-heading";
   heading.textContent = isNepali ? "छिटो पहुँच" : "Quick menu";
+  heading.title = isNepali
+    ? "मेनु सार्न समातेर तान्नुहोस्; दिशासूचक कुञ्जी पनि प्रयोग गर्न सकिन्छ"
+    : "Drag to move; arrow keys also move the menu";
+  heading.setAttribute("aria-label", heading.title);
   quickMenu.appendChild(heading);
 
   siteNav.querySelectorAll(":scope > a").forEach((link) => {
@@ -73,8 +78,113 @@ if (siteNav) {
   document.body.classList.add("has-quick-menu");
 
   const desktopQuery = window.matchMedia("(min-width: 901px)");
+  const quickMenuPositionKey = "deepak-quick-menu-position-v1";
+  const quickMenuMargin = 12;
+
+  const readQuickMenuPosition = () => {
+    try {
+      return JSON.parse(localStorage.getItem(quickMenuPositionKey) || "null");
+    } catch {
+      return null;
+    }
+  };
+
+  const saveQuickMenuPosition = (left, top) => {
+    try {
+      localStorage.setItem(quickMenuPositionKey, JSON.stringify({ left, top }));
+    } catch {
+      // The menu remains draggable when browser storage is unavailable.
+    }
+  };
+
+  const positionQuickMenu = (left, top, persist = false) => {
+    if (quickMenu.hidden) return;
+    const rect = quickMenu.getBoundingClientRect();
+    const maxLeft = Math.max(quickMenuMargin, window.innerWidth - rect.width - quickMenuMargin);
+    const maxTop = Math.max(quickMenuMargin, window.innerHeight - rect.height - quickMenuMargin);
+    const nextLeft = Math.min(Math.max(quickMenuMargin, left), maxLeft);
+    const nextTop = Math.min(Math.max(quickMenuMargin, top), maxTop);
+
+    quickMenu.style.left = `${nextLeft}px`;
+    quickMenu.style.top = `${nextTop}px`;
+    quickMenu.style.right = "auto";
+    quickMenu.style.transform = "none";
+    if (persist) saveQuickMenuPosition(nextLeft, nextTop);
+  };
+
+  const resetQuickMenuPosition = () => {
+    quickMenu.style.removeProperty("left");
+    quickMenu.style.removeProperty("top");
+    quickMenu.style.removeProperty("right");
+    quickMenu.style.removeProperty("transform");
+    try {
+      localStorage.removeItem(quickMenuPositionKey);
+    } catch {
+      // Ignore unavailable browser storage.
+    }
+  };
+
+  const restoreQuickMenuPosition = () => {
+    const storedPosition = readQuickMenuPosition();
+    if (Number.isFinite(storedPosition?.left) && Number.isFinite(storedPosition?.top)) {
+      positionQuickMenu(storedPosition.left, storedPosition.top);
+    }
+  };
+
+  let dragState = null;
+  heading.addEventListener("pointerdown", (event) => {
+    if (event.button !== 0) return;
+    const rect = quickMenu.getBoundingClientRect();
+    dragState = {
+      pointerId: event.pointerId,
+      offsetX: event.clientX - rect.left,
+      offsetY: event.clientY - rect.top,
+    };
+    heading.setPointerCapture(event.pointerId);
+    quickMenu.classList.add("is-dragging");
+    event.preventDefault();
+  });
+
+  heading.addEventListener("pointermove", (event) => {
+    if (!dragState || event.pointerId !== dragState.pointerId) return;
+    positionQuickMenu(event.clientX - dragState.offsetX, event.clientY - dragState.offsetY);
+  });
+
+  const finishQuickMenuDrag = (event) => {
+    if (!dragState || event.pointerId !== dragState.pointerId) return;
+    const rect = quickMenu.getBoundingClientRect();
+    positionQuickMenu(rect.left, rect.top, true);
+    quickMenu.classList.remove("is-dragging");
+    dragState = null;
+  };
+  heading.addEventListener("pointerup", finishQuickMenuDrag);
+  heading.addEventListener("pointercancel", finishQuickMenuDrag);
+  heading.addEventListener("dblclick", resetQuickMenuPosition);
+  heading.addEventListener("keydown", (event) => {
+    if (event.key === "Home") {
+      resetQuickMenuPosition();
+      event.preventDefault();
+      return;
+    }
+    const movement = event.shiftKey ? 24 : 10;
+    const offsets = {
+      ArrowLeft: [-movement, 0],
+      ArrowRight: [movement, 0],
+      ArrowUp: [0, -movement],
+      ArrowDown: [0, movement],
+    };
+    const offset = offsets[event.key];
+    if (!offset) return;
+    const rect = quickMenu.getBoundingClientRect();
+    positionQuickMenu(rect.left + offset[0], rect.top + offset[1], true);
+    event.preventDefault();
+  });
+
   const updateQuickMenu = () => {
-    quickMenu.hidden = !desktopQuery.matches || window.scrollY < 240;
+    const shouldShow = desktopQuery.matches && window.scrollY >= 240;
+    const wasHidden = quickMenu.hidden;
+    quickMenu.hidden = !shouldShow;
+    if (shouldShow && wasHidden) window.requestAnimationFrame(restoreQuickMenuPosition);
   };
   let scrollQueued = false;
   window.addEventListener("scroll", () => {
@@ -93,6 +203,16 @@ if (siteNav) {
       siteNav.classList.remove("open");
     }
   });
+  let resizeQueued = false;
+  window.addEventListener("resize", () => {
+    if (resizeQueued || quickMenu.hidden || !quickMenu.style.left) return;
+    resizeQueued = true;
+    window.requestAnimationFrame(() => {
+      const rect = quickMenu.getBoundingClientRect();
+      positionQuickMenu(rect.left, rect.top, true);
+      resizeQueued = false;
+    });
+  }, { passive: true });
   window.addEventListener("pageshow", updateQuickMenu);
   updateQuickMenu();
 }

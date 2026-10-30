@@ -135,28 +135,14 @@ html[lang="ne"] .brand > span:last-child::after { content: "कम्प्य�
 .language-switch a.active-lang { text-decoration: underline; text-underline-offset: 5px; }
 .nav-toggle { order: 3; flex-shrink: 0; cursor: pointer; }
 
-/* Fixed desktop navigation, with a clear gutter beside the page content. */
+/* Floating desktop navigation overlays the centered page and can be repositioned. */
 .quick-menu { display: none; }
 @media (min-width: 901px) {
-  .has-quick-menu {
-    --content-left: max(var(--page-gutter), calc((100% - var(--max) - 158px) / 2));
-    --content-right: max(calc(158px + var(--page-gutter)), calc((100% - var(--max) + 158px) / 2));
-  }
   .has-quick-menu:has(> .article-page) { --max: 1040px; }
-  .has-quick-menu .site-header {
-    padding-left: var(--content-left);
-    padding-right: var(--content-right);
-  }
-  .has-quick-menu main,
-  .has-quick-menu .site-footer {
-    width: calc(100% - var(--content-left) - var(--content-right));
-    margin-left: var(--content-left);
-    margin-right: var(--content-right);
-  }
   .quick-menu:not([hidden]) {
     position: fixed;
     top: 50%;
-    right: max(18px, calc(var(--content-right) - 158px));
+    right: var(--page-gutter);
     z-index: 15;
     display: flex;
     flex-direction: column;
@@ -171,14 +157,28 @@ html[lang="ne"] .brand > span:last-child::after { content: "कम्प्य�
     transform: translateY(-50%);
   }
   .quick-menu-heading {
+    display: flex;
+    align-items: center;
+    width: 100%;
     margin: 0 0 3px;
     padding: 4px 6px;
+    border: 0;
+    background: transparent;
     color: var(--muted);
     font-size: calc(var(--minimum-text-size) - 2pt);
     font-weight: 800;
     letter-spacing: .07em;
     text-transform: uppercase;
+    text-align: left;
+    cursor: grab;
+    touch-action: none;
+    user-select: none;
   }
+  .quick-menu-heading::after { content: "⋮⋮"; margin-left: auto; color: var(--line-strong); letter-spacing: -.2em; }
+  .quick-menu-heading:hover,
+  .quick-menu-heading:focus-visible { color: var(--river); }
+  .quick-menu.is-dragging { box-shadow: 0 14px 38px rgba(17, 54, 58, .18); }
+  .quick-menu.is-dragging .quick-menu-heading { cursor: grabbing; }
   .quick-menu > a,
   .quick-menu-top {
     display: flex;
