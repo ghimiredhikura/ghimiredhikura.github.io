@@ -230,7 +230,7 @@ Published article listings are maintained directly in:
 - `writing.html`
 - `ne/writing.html`
 
-The two pages currently show the newest three entries in each writing section. Entries after the third are hidden by the inline script, and the `.explore-more` link becomes visible. Give that link a real archive destination before relying on it for older entries.
+The two pages currently show up to 20 entries in each writing section. Entries after the twentieth are hidden by the inline script, and the `.explore-more` link becomes visible. Give that link a real archive destination before relying on it for older entries.
 
 ### 1. Add or reuse the publisher logo
 
@@ -264,13 +264,12 @@ Copy a complete `<article class="writing-entry">...</article>` block and place i
     <time datetime="2026-09-22T12:00:00+05:45">Displayed publication date</time>
   </div>
   <div class="writing-entry-copy">
-    <h3>Published article title</h3>
-    <p>A concise introduction or excerpt.</p>
-    <div class="writing-entry-actions" aria-label="Read options">
-      <span>Full article</span>
-      <a class="read-local" href="writing/article-slug.html">Read here</a>
+    <h3 lang="ne">प्रकाशित लेखको मूल नेपाली शीर्षक</h3>
+    <p><span class="writing-language-note">Published in Nepali · English summary</span>A natural two- or three-sentence English summary of the article’s main argument.</p>
+    <div class="writing-entry-actions" aria-label="Read the full article in Nepali">
+      <a class="read-local" href="writing/article-slug.html" hreflang="ne">Read full article here (Nepali)</a>
       <span class="read-separator">|</span>
-      <a class="read-source" href="https://publisher.example/article" target="_blank" rel="noopener">Read at Publisher</a>
+      <a class="read-source" href="https://publisher.example/article" hreflang="ne" target="_blank" rel="noopener">Read on Publisher (Nepali)</a>
     </div>
   </div>
 </article>
@@ -285,7 +284,9 @@ Then add the corresponding entry to `ne/writing.html`. Paths from that page norm
 ../writing/...
 ```
 
-For an article originally published in Nepali, keep its published Nepali title and wording in both listings. Do not translate or rewrite the full article body.
+For an article originally published in Nepali, keep its published Nepali title in both listings. In `writing.html`, add `lang="ne"` to the title and any Nepali date, then write a natural two- or three-sentence English summary under the visible label `Published in Nepali · English summary`. Mark both full-article links with `(Nepali)` and `hreflang="ne"` so readers know the language before opening them. Keep the label inside the summary paragraph, as shown above, so it shares the same row in the mobile layout.
+
+In `ne/writing.html`, keep the Nepali introduction and Nepali reading links. Do not translate or rewrite the full published article body; the English listing offers a summary of the Nepali original, not a separate English publication. For an article originally published in English, use its English title and introduction without the Nepali-language label.
 
 ### 3. Add a local full-article page when needed
 

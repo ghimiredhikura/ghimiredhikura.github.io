@@ -726,6 +726,14 @@ html[lang="ne"] .skill-group h3 {
 .writing-entry-list { gap: 0; border-top: 2px solid var(--night); }
 .writing-entry { gap: 20px; padding: 16px 0; border-width: 0 0 1px; border-radius: 0; box-shadow: none; background: none; }
 .writing-entry-copy h3 { font-size: 1.28rem; }
+.writing-language-note {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--river);
+  font-size: var(--minimum-text-size);
+  font-weight: 700;
+  line-height: 1.4;
+}
 .source-logo { border-radius: 0; }
 .writing-entry-actions .is-pending,
 .writing-entry-actions .is-pending:hover {
