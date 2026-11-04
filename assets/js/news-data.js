@@ -21,7 +21,7 @@ window.NEWS = [
     date: "2026-10",
     tag: "journal",
     tagLabel: "Published",
-    text: "GeoBASP model pruning for landslide mapping in MDPI Electronics.",
+    text: "GeoBASP geography-aware pruning for landslide segmentation in Nepal, published in MDPI Electronics.",
     url: "https://www.mdpi.com/2079-9292/15/20/4792",
     linkLabel: "Read paper"
   },
@@ -29,7 +29,7 @@ window.NEWS = [
     date: "2026-09",
     tag: "media",
     tagLabel: "Media Coverage",
-    text: "Clickmandu featured our Nepal industrial-replacement-gap study.",
+    text: "Clickmandu featured our study of public-enterprise decline and Nepal’s industrial replacement gap.",
     url: "https://clickmandu.com/2026/09/494861.html",
     linkLabel: "Read coverage"
   },
@@ -37,49 +37,49 @@ window.NEWS = [
     date: "2026-09",
     tag: "journal",
     tagLabel: "Published",
-    text: "Nepal’s industrial replacement-gap study in MDPI Sustainability."
+    text: "Study on public-enterprise decline and Nepal’s industrial replacement gap published in MDPI Sustainability."
   },
   {
     date: "2026-08",
     tag: "journal",
     tagLabel: "Published",
-    text: "Video fire and smoke detection and verification in MDPI Sensors."
+    text: "Video-based fire and smoke detection with track-level verification published in MDPI Sensors."
   },
   {
     date: "2026-07",
     tag: "journal",
     tagLabel: "Published",
-    text: "Strawberry ripeness grading published in MDPI Agriculture."
+    text: "Vision-based strawberry ripeness grading for greenhouse harvest decisions published in MDPI Agriculture."
   },
   {
     date: "2026-06",
     tag: "review",
     tagLabel: "Under Review",
-    text: "ARM edge-DNN deployment submitted to Elsevier Journal of Systems Architecture."
+    text: "ARM edge-DNN deployment-stack effects paper submitted to Elsevier Journal of Systems Architecture."
   },
   {
     date: "2026-03",
     tag: "conference",
     tagLabel: "Conference",
-    text: "One-cycle structured pruning published at WACV 2026."
+    text: "One-cycle structured pruning with stability-driven subnetwork search published at WACV 2026."
   },
   {
     date: "2025-09",
     tag: "journal",
     tagLabel: "Journal",
-    text: "Infertility risk prediction published in Diagnostics."
+    text: "Machine-learning study of female infertility trends and risk prediction published in Diagnostics."
   },
   {
     date: "2025-06",
     tag: "journal",
     tagLabel: "Journal",
-    text: "FUSE-Net RGB-to-NIR prediction published in MDPI Sensors."
+    text: "FUSE-Net study on predicting near-infrared imagery from RGB images published in MDPI Sensors."
   },
   {
     date: "2025-03",
     tag: "health",
     tagLabel: "Healthcare AI",
-    text: "PCOS and clinical risk factors published in Diagnostics."
+    text: "Data-driven study of PCOS and its clinical, physical, and reproductive factors published in Diagnostics."
   },
   {
     date: "2025-01",
@@ -91,6 +91,6 @@ window.NEWS = [
     date: "2024-10",
     tag: "conference",
     tagLabel: "Conference",
-    text: "Hybrid CNN–transformer pruning presented at ICCAS 2024."
+    text: "Presented structured pruning for hybrid CNN–transformer neural networks at ICCAS 2024."
   }
 ];

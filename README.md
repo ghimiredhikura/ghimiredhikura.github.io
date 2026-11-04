@@ -177,7 +177,7 @@ Recent News is generated from two parallel arrays:
 - English: `assets/js/news-data.js`
 - Nepali: `assets/js/news-ne.js`
 
-On both homepages, Recent News appears before Research Identity. Keep English updates short enough for a single desktop line: state the topic and venue, let the badge show the publication status, and use an optional source link for further details. Keep natural wrapping on narrow screens.
+On both homepages, Recent News appears before Research Identity. Keep English updates concise while retaining the research topic, a useful method or application detail, and the venue. Aim for a single line on desktop without dropping essential context; allow natural wrapping on narrower screens. Use an optional source link for further details.
 
 Add the newest item at the top of both `window.NEWS` arrays:
 
