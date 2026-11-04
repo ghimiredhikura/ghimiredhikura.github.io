@@ -886,7 +886,7 @@ html[lang="ne"] .pub-details[open] summary::before { content: "लुकाउ�
   html[lang="en"] .hero-assurance { margin-top: 20px; padding-top: 12px; }
   html[lang="en"] .hero-assurance span { padding: 9px 12px; }
   html[lang="en"] .origin-intro h2 { white-space: nowrap; }
-  .writing-entry { grid-template-columns: 176px minmax(0, 1fr); }
+  .writing-entry { grid-template-columns: 204px minmax(0, 1fr); }
   .writing-entry:has(.source-logo) .writing-entry-meta time { white-space: nowrap; }
 }
 @media (min-width: 1001px) {
