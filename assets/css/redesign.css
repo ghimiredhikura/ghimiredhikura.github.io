@@ -887,6 +887,8 @@ html[lang="ne"] .pub-details[open] summary::before { content: "लुकाउ�
   .article-body { padding: 18px 16px 20px; }
 }
 @media (min-width: 901px) {
+  html[lang="en"] .news-item { grid-template-columns: 72px 154px minmax(0, 1fr); column-gap: 10px; padding: 7px 0; }
+  html[lang="en"] .news-tags { grid-template-columns: 112px 38px; gap: 4px; width: 154px; }
   html[lang="en"] .hero .eyebrow { margin-bottom: 11px; }
   html[lang="en"] .hero h1 { margin-bottom: 11px; line-height: 1.08; }
   html[lang="en"] .hero-text { line-height: 1.5; }

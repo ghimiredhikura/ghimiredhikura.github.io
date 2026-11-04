@@ -177,6 +177,8 @@ Recent News is generated from two parallel arrays:
 - English: `assets/js/news-data.js`
 - Nepali: `assets/js/news-ne.js`
 
+On both homepages, Recent News appears before Research Identity. Keep English updates short enough for a single desktop line: state the topic and venue, let the badge show the publication status, and use an optional source link for further details. Keep natural wrapping on narrow screens.
+
 Add the newest item at the top of both `window.NEWS` arrays:
 
 ```js
@@ -212,7 +214,7 @@ Important behavior:
 - `date` must use `YYYY-MM`.
 - Items are displayed in array order, so place the newest item first.
 - The first four items are visible initially.
-- Older items appear behind the **More / थप हेर्नुहोस्** control.
+- Older items appear behind the **See more / थप हेर्नुहोस्** control.
 - Items dated in 2026 receive the automatic **New / नयाँ** badge; older items do not.
 - Venue names listed in `newsHighlights` in `assets/js/main.js` are emphasized. Add a new venue there only when it should receive the same emphasis.
 
