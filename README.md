@@ -348,6 +348,8 @@ assets/docs/deepak-ghimire-full-cv.pdf
 
 Replace the first file with the one-page CV and the second with the complete CV. Confirm their displayed page counts remain accurate in `index.html` and `ne/index.html`.
 
+Update the `?v=...` value on all four homepage CV links whenever replacing the PDFs (for example, `?v=20261104`). Use a fresh date or revision for each replacement so browsers request the updated files instead of reusing cached copies. Preserve `target="_blank"` so visitors can view each PDF before downloading it.
+
 ## Add a Gallery Image
 
 1. Put the optimized image in `assets/images/`.
