@@ -284,9 +284,9 @@ Then add the corresponding entry to `ne/writing.html`. Paths from that page norm
 ../writing/...
 ```
 
-For an article originally published in Nepali, keep its published Nepali title in both listings. In `writing.html`, add `lang="ne"` to the title and any Nepali date, then write a natural two- or three-sentence English summary under the visible label `Published in Nepali · English summary`. Mark both full-article links with `(Nepali)` and `hreflang="ne"` so readers know the language before opening them. Keep the label inside the summary paragraph, as shown above, so it shares the same row in the mobile layout.
+For an article originally published in Nepali, keep its published Nepali title in both listings. In `writing.html`, add `lang="ne"` to the title and display the Gregorian publication date in English. Keep dates compact, for example `Nov 3, 2026 · 07:25 NPT`, preserving the original Nepal publication time when available. Write a natural two- or three-sentence English summary under the visible label `Published in Nepali · English summary`. Mark both full-article links with `(Nepali)` and `hreflang="ne"` so readers know the language before opening them. Keep the label inside the summary paragraph, as shown above, so it shares the same row in the mobile layout.
 
-In `ne/writing.html`, keep the Nepali introduction and Nepali reading links. Do not translate or rewrite the full published article body; the English listing offers a summary of the Nepali original, not a separate English publication. For an article originally published in English, use its English title and introduction without the Nepali-language label.
+In `ne/writing.html`, keep the Nepali publication date, Nepali introduction, and Nepali reading links. Do not translate or rewrite the full published article body; the English listing offers a summary of the Nepali original, not a separate English publication. For an article originally published in English, use its English title and introduction without the Nepali-language label.
 
 ### 3. Add a local full-article page when needed
 
