@@ -458,7 +458,7 @@ html[lang="en"] .hero-text { width: 100%; max-width: none; }
 .project-visual {
   width: 100%;
   height: auto;
-  aspect-ratio: 15 / 8;
+  aspect-ratio: 15 / 7;
   border: 1px solid #e9e7ed;
   border-radius: 8px;
   background: #fcfbf9;
