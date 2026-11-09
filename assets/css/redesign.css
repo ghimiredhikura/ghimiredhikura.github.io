@@ -957,7 +957,10 @@ html[lang="ne"] .pub-details[open] summary::before { content: "लुकाउ�
   .article-body { padding: 18px 16px 20px; }
 }
 @media (min-width: 901px) {
-  .site-nav { margin-left: 0; margin-right: auto; }
+  .site-header { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); }
+  .site-header .brand { grid-column: 1; grid-row: 1; justify-self: start; }
+  .site-nav { grid-column: 2; grid-row: 1; justify-self: center; margin: 0; }
+  .language-switch { grid-column: 3; grid-row: 1; justify-self: end; }
   html[lang="en"] .news-item { grid-template-columns: 72px 166px minmax(0, 1fr); column-gap: 10px; padding: 7px 0; }
   html[lang="en"] .news-tags { grid-template-columns: 116px 44px; gap: 6px; width: 166px; }
   html[lang="en"] .hero .eyebrow { margin-bottom: 11px; }
