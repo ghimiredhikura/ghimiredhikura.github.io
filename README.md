@@ -328,6 +328,7 @@ Most profile content is written directly in `index.html` and `ne/index.html`, in
 
 - Hero text and metrics
 - Research areas
+- Independent projects
 - Experience
 - Education
 - Academic service
@@ -336,6 +337,12 @@ Most profile content is written directly in `index.html` and `ne/index.html`, in
 - Origin
 
 When changing one of these areas, update both files in the same edit. Keep dates, organization names, links, and claims consistent while allowing the Nepali wording to read naturally.
+
+### Independent projects
+
+The `.projects-section` appears between Research Identity and Experience on both homepages. Each `.project-feature` contains an illustration, project name, development status, role, concise description, and public website link. SajiloDesk uses `assets/images/sajilodesk-project.svg`, based on its public logo and coral/purple palette. Keep project colors scoped to the feature in `redesign.css`.
+
+Link only to the public SajiloDesk website, using `/en/` on the English homepage and `/ne/` on the Nepali homepage. Do not add its source repository or internal project details to the public portfolio.
 
 ### Replace the CV files
 

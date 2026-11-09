@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="320" viewBox="0 0 600 320" fill="none">
+  <rect width="600" height="320" rx="12" fill="#FCFBF9"/>
+  <circle cx="576" cy="12" r="144" fill="#F45231" opacity=".06"/>
+  <circle cx="15" cy="322" r="147" fill="#292448" opacity=".035"/>
+  <g transform="translate(157 55) scale(1.5)">
+    <path d="M3 13 19 4v12L3 25V13Z" fill="#F45231"/>
+    <path d="m19 16 16-9v12l-16 9V16Z" fill="#292448"/>
+    <path d="m3 28 16-9v12l-16 7V28Z" fill="#F45231" opacity=".28"/>
+    <path d="m19 31 16-9v8l-16 8v-7Z" fill="#292448" opacity=".16"/>
+  </g>
+  <text x="232" y="94" fill="#27233E" font-family="Arial, Helvetica, sans-serif" font-size="36" font-weight="700" letter-spacing="-1">Sajilo<tspan font-weight="400">Desk</tspan></text>
+  <path d="M180 135h240" stroke="#E9E7ED"/>
+  <g fill="#FFF" stroke="#E9E7ED">
+    <rect x="143" y="164" width="90" height="82" rx="12"/>
+    <rect x="255" y="164" width="90" height="82" rx="12"/>
+    <rect x="367" y="164" width="90" height="82" rx="12"/>
+  </g>
+  <g stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+    <g stroke="#302A50">
+      <rect x="171" y="189" width="34" height="32" rx="4"/>
+      <path d="M171 198h34m-26-14v9m18-9v9"/>
+    </g>
+    <g fill="#F45231">
+      <circle cx="180" cy="205" r="1.8"/>
+      <circle cx="188" cy="205" r="1.8"/>
+      <circle cx="196" cy="205" r="1.8"/>
+      <circle cx="180" cy="213" r="1.8"/>
+      <circle cx="188" cy="213" r="1.8"/>
+    </g>
+    <g stroke="#302A50">
+      <path d="M287 184h17l10 10v30h-27z"/>
+      <path d="M304 184v10h10"/>
+      <path d="M293 202h15m-15 7h15m-15 7h9" stroke="#F45231"/>
+    </g>
+    <g stroke="#302A50">
+      <rect x="394" y="188" width="36" height="32" rx="4"/>
+      <path d="m395 213 10-10 9 9 6-6 9 9"/>
+      <circle cx="419" cy="198" r="3" fill="#F45231" stroke="#F45231"/>
+    </g>
+  </g>
+  <g fill="#E9E7ED">
+    <rect x="170" y="260" width="36" height="3" rx="1.5"/>
+    <rect x="282" y="260" width="36" height="3" rx="1.5"/>
+    <rect x="394" y="260" width="36" height="3" rx="1.5"/>
+  </g>
+</svg>
